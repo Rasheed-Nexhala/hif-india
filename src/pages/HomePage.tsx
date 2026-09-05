@@ -9,13 +9,14 @@ import { ProjectCard } from '../components/cards/ProjectCard'
 import { ActivityCard } from '../components/cards/ActivityCard'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
+import { localizeGalleryItem, tx } from '../lib/localizeContent'
 import { UNSPLASH } from '../data/unsplashImages'
 import { Reveal } from '../components/common/Reveal'
 
 export const HomePage: React.FC = () => {
   const { openDonate } = useDonate()
-  const { t } = useLanguage()
-  const galleryPreview = HIF_GALLERY.slice(0, 6)
+  const { t, language } = useLanguage()
+  const galleryPreview = HIF_GALLERY.slice(0, 6).map((item) => localizeGalleryItem(item, language))
 
   return (
     <>
@@ -27,20 +28,20 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <Reveal>
             <span className="badge">{t('about.missionTitle', 'Our Mission')}</span>
-            <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+            <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
               {t('org.tagline', 'Compassion in action, rooted in community.')}
             </h2>
-            <p className="mt-5 text-text-muted dark:text-stone-300 leading-relaxed">
+            <p className="mt-5 text-text-muted leading-relaxed">
               {t('about.missionText', HIF_ORGANIZATION.mission)}
             </p>
             <Link
               to="/about"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary dark:text-emerald-400 hover:text-primary-deep dark:hover:text-emerald-300"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep"
             >
               {t('common.learnMore', 'More about our story')} <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
-          <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border dark:border-emerald-800/40">
+          <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border">
             <img
               src={HIF_ORGANIZATION.siteImages.mission}
               alt="HIF India mission in the field"
@@ -60,11 +61,11 @@ export const HomePage: React.FC = () => {
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
               <span className="badge">{t('projects.eyebrow', 'Our Projects')}</span>
-              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
                 {t('projects.title', 'Flagship programs creating lasting change')}
               </h2>
             </div>
-            <Link to="/projects" className="text-sm font-semibold text-primary dark:text-emerald-400 hover:text-primary-deep dark:hover:text-emerald-300 inline-flex items-center gap-1.5 shrink-0">
+            <Link to="/projects" className="text-sm font-semibold text-primary hover:text-primary-deep inline-flex items-center gap-1.5 shrink-0">
               {t('projects.viewAll', 'View all projects')} <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
@@ -77,16 +78,16 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Activities teaser */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8faf7] dark:bg-[#07231c]">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt">
         <div className="max-w-7xl mx-auto">
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
               <span className="badge">{t('activities.wingsBadge', 'Our Wings')}</span>
-              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
                 {t('activities.wingsTitle', 'Ongoing activities across the community')}
               </h2>
             </div>
-            <Link to="/activities" className="text-sm font-semibold text-primary dark:text-emerald-400 hover:text-primary-deep dark:hover:text-emerald-300 inline-flex items-center gap-1.5 shrink-0">
+            <Link to="/activities" className="text-sm font-semibold text-primary hover:text-primary-deep inline-flex items-center gap-1.5 shrink-0">
               {t('common.viewAll', 'View all activities')} <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
@@ -103,19 +104,23 @@ export const HomePage: React.FC = () => {
         <div className="absolute inset-0">
           <img
             src={UNSPLASH.goldenHourTexture}
-            alt="Shelter and housing construction"
-            className="w-full h-full object-cover"
+            alt="Modest village home in India representing dignified shelter"
+            className="w-full h-full object-cover object-center"
             loading="lazy"
+            decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06231b]/85 via-[#06231b]/80 to-[#06231b]/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark)]/85 via-[var(--color-bg-dark)]/80 to-[var(--color-bg-dark)]/92" />
         </div>
         <Reveal className="relative max-w-3xl mx-auto text-center">
           <span className="badge-on-dark">{t('common.verified', 'In Their Words')}</span>
           <p className="font-display mt-5 text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-snug text-shadow-soft">
-            &ldquo;A home isn&apos;t just walls and a roof — it&apos;s the dignity of not having to worry
-            where your children will sleep tonight.&rdquo;
+            &ldquo;{tx(
+              language,
+              'home.quote',
+              "A home isn't just walls and a roof — it's the dignity of not having to worry where your children will sleep tonight."
+            )}&rdquo;
           </p>
-          <p className="mt-5 text-sm text-emerald-100/80">— {t('projects.ashiyana.title', 'Project Ashiyana')} Beneficiary Family</p>
+          <p className="mt-5 text-sm text-emerald-100/80">— {tx(language, 'home.quoteBy', 'Ashiyana beneficiary family')}</p>
           <Link
             to="/get-involved"
             className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-emerald-950 font-semibold text-sm shadow-lg shadow-black/30 ring-1 ring-amber-300/60 transition-colors"
@@ -131,11 +136,11 @@ export const HomePage: React.FC = () => {
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
               <span className="badge">{t('gallery.eyebrow', 'Impact Gallery')}</span>
-              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+              <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
                 {t('gallery.title', 'Moments from the ground')}
               </h2>
             </div>
-            <Link to="/gallery" className="text-sm font-semibold text-primary dark:text-emerald-400 hover:text-primary-deep dark:hover:text-emerald-300 inline-flex items-center gap-1.5 shrink-0">
+            <Link to="/gallery" className="text-sm font-semibold text-primary hover:text-primary-deep inline-flex items-center gap-1.5 shrink-0">
               {t('common.viewAll', 'View full gallery')} <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
@@ -144,7 +149,7 @@ export const HomePage: React.FC = () => {
               <Link
                 key={g.id}
                 to="/gallery"
-                className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt dark:bg-[#07231c] border border-border/50 dark:border-emerald-800/40 group"
+                className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt border border-border/60 group"
               >
                 <img
                   src={g.imageUrl}
@@ -163,7 +168,7 @@ export const HomePage: React.FC = () => {
         <Reveal className="max-w-7xl mx-auto rounded-2xl bg-emerald-800 dark:bg-[#0a3a2e] border border-emerald-700/60 dark:border-emerald-600/40 shadow-xl px-8 sm:px-14 py-12 sm:py-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <h3 className="font-display text-2xl sm:text-3xl font-semibold text-white">
-              {t('hero.title', 'Your support builds homes, futures, and hope.')}
+              {t('hero.donateBannerTitle', 'Your support builds homes, futures, and hope.')}
             </h3>
             <p className="mt-2 text-emerald-100/90 text-sm max-w-xl">
               {t('org.slogan', 'Every rupee is tracked and disbursed directly — zero administrative deductions.')}

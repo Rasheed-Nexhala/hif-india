@@ -43,7 +43,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 
   if (variant === 'pill') {
     return (
-      <div className={`inline-flex items-center p-1 rounded-full bg-bg-alt dark:bg-[#07231c] border border-border dark:border-[#184e3f] ${className}`}>
+      <div className={`inline-flex items-center p-1 rounded-full bg-bg-alt border border-border dark:border-[#184e3f] ${className}`}>
         {supportedLanguages.map((lang) => {
           const isActive = language === lang.code
           return (
@@ -51,7 +51,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
               key={lang.code}
               type="button"
               onClick={() => setLanguage(lang.code)}
-              className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 ${
+              className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 leading-snug ${
                 isActive
                   ? 'bg-emerald-700 text-white shadow-sm'
                   : 'text-text-muted hover:text-primary-deep dark:hover:text-white'
@@ -110,7 +110,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         aria-label={`Change language, currently ${currentLanguageOption.label}`}
         className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full text-xs font-semibold text-text-muted bg-bg-alt/80 dark:bg-[#0b2f26] hover:bg-stone-200/80 dark:hover:bg-[#0e382e] border border-border/80 dark:border-[#184e3f] transition-all shadow-sm"
       >
-        <Globe className="w-3.5 h-3.5 text-primary dark:text-emerald-400 shrink-0" />
+        <Globe className="w-3.5 h-3.5 text-primary shrink-0" />
         <span className="font-bold tracking-wide">{currentLanguageOption.nativeLabel}</span>
         <ChevronDown
           className={`w-3 h-3 text-text-muted dark:text-emerald-400 transition-transform duration-200 ${

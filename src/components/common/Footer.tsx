@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
   const { t } = useLanguage()
 
   return (
-    <footer className="section-dark border-t border-white/5 pt-14 pb-8 px-4 sm:px-6 lg:px-8">
+    <footer className="surface-dark border-t border-white/5 pt-14 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-white/10">
           <div className="lg:col-span-2 space-y-4">
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-lg bg-card/5 hover:bg-card/10 text-emerald-200 hover:text-white transition-colors flex items-center justify-center"
+                  className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 text-emerald-200 hover:text-white transition-colors flex items-center justify-center"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -89,13 +89,13 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wide">
               {t('footer.supportUs', 'Support Us')}
             </h4>
-            <div className="p-3.5 rounded-xl bg-card/5 border border-white/10 text-xs space-y-1.5">
+            <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs space-y-1.5">
               <p className="font-semibold text-white">{t('footer.bankAccount', 'HDFC Bank A/C')}</p>
               <p className="font-mono text-amber-300">{HIF_ORGANIZATION.bankDetails.accountNumber}</p>
               <p className="text-emerald-200/70">IFSC: {HIF_ORGANIZATION.bankDetails.ifscCode}</p>
               <button
                 onClick={() => openDonate('General Humanitarian Fund')}
-                className="w-full mt-2 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-text-main font-semibold text-xs flex items-center justify-center gap-1.5"
+                className="w-full mt-2 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-semibold text-xs flex items-center justify-center gap-1.5"
               >
                 <Heart className="w-3.5 h-3.5" />
                 {t('footer.donateQr', 'Donate / UPI QR')}
@@ -104,9 +104,22 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-emerald-200/60">
-          <p>© {new Date().getFullYear()} {t('footer.allRightsReserved', 'Highland Islamic Forum (HIF INDIA). All rights reserved.')}</p>
-          <p>{t('footer.addressFull', 'Masjid Ehsaan Complex, Kankanady, Mangalore – 575002')}</p>
+        <div className="pt-6 space-y-3">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-emerald-200/60">
+            <p>© {new Date().getFullYear()} {t('footer.allRightsReserved', 'Highland Islamic Forum (HIF INDIA). All rights reserved.')}</p>
+            <p>{t('footer.addressFull', 'Masjid Ehsaan Complex, Kankanady, Mangalore – 575002')}</p>
+          </div>
+          <p className="text-center text-xs text-emerald-200/70">
+            {t('footer.developedBy', 'Developed by')}{' '}
+            <a
+              href="https://www.nexhala.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-emerald-300 hover:text-white transition-colors underline underline-offset-2 decoration-emerald-400/50 hover:decoration-emerald-300"
+            >
+              Nexhala Solutions LLP
+            </a>
+          </p>
         </div>
       </div>
     </footer>

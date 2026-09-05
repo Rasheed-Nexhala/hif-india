@@ -36,6 +36,7 @@ export interface TranslationDictionary {
     established: string
     regDetails: string
     slogan: string
+    sloganShort: string
     auditBadge: string
     addressLabel: string
     hqLocation: string
@@ -89,12 +90,14 @@ export interface TranslationDictionary {
     call: string
     dayMode: string
     nightMode: string
+    now: string
   }
   hero: {
     establishedBadge: string
     title: string
     subtitle: string
     donateCta: string
+    donateBannerTitle: string
     impactCta: string
     activeVolunteers: string
     emergencyFundBanner: string
@@ -396,6 +399,7 @@ export interface TranslationDictionary {
     allRightsReserved: string
     addressFull: string
     slogan: string
+    developedBy: string
   }
 }
 
@@ -426,6 +430,7 @@ export const translations: Record<Language, any> = {
       established: 'Registered NGO in Mangaluru',
       regDetails: 'Registered NGO under Indian Trusts Act',
       slogan: '100% direct, zero-commission grassroots disbursement',
+      sloganShort: '100% Direct Grassroots Relief',
       auditBadge: 'Audited & Transparent',
       addressLabel: 'Address',
       hqLocation: 'Masjid Ehsaan Complex, Kankanady, Mangalore – 575002',
@@ -478,7 +483,8 @@ export const translations: Record<Language, any> = {
       or: 'or',
       call: 'Call',
       dayMode: 'Day (Light) Mode',
-      nightMode: 'Night (Dark) Mode'
+      nightMode: 'Night (Dark) Mode',
+      now: 'Now'
     },
     hero: {
       establishedBadge: 'Registered NGO in Mangaluru',
@@ -486,6 +492,7 @@ export const translations: Record<Language, any> = {
       subtitle:
         'HIF INDIA builds permanent homes, nurtures orphaned children, revives rural masjids, and delivers free medical relief — with 100% direct, transparent grassroots impact.',
       donateCta: 'Donate Now',
+      donateBannerTitle: 'Your support builds homes, futures, and hope.',
       impactCta: 'See Our Impact',
       activeVolunteers: 'Active Volunteers Across Coastal Karnataka',
       emergencyFundBanner: 'Emergency Relief Active: Providing Flood, Medical, and Food Relief Support.',
@@ -811,7 +818,8 @@ export const translations: Record<Language, any> = {
       donateQr: 'Donate / UPI QR',
       allRightsReserved: 'Highland Islamic Forum (HIF INDIA). All rights reserved.',
       addressFull: 'Masjid Ehsaan Complex, Kankanady, Mangalore – 575002',
-      slogan: 'Empowering Communities, Transforming Lives with Compassion & Dignity'
+      slogan: 'Empowering Communities, Transforming Lives with Compassion & Dignity',
+      developedBy: 'Developed by'
     }
   },
 
@@ -836,11 +844,12 @@ export const translations: Record<Language, any> = {
     org: {
       name: 'HIF INDIA',
       fullName: 'ಹೈಲ್ಯಾಂಡ್ ಇಸ್ಲಾಮಿಕ್ ಫೋರಮ್ (HIF INDIA)',
-      tagline: 'ಸಹಾನುಭೂತಿ ಮತ್ತು ಘನತೆಯೊಂದಿಗೆ ಸಮುದಾಯಗಳ ಬಲಪಡಿಸುವುದು, ಜೀವನ ಪರಿವರ್ತನೆ',
-      shortTagline: 'ಸಮುದಾಯಗಳ ಬಲಪಡಿಸುವುದು, ಜೀವನ ಪರಿವರ್ತನೆ',
+      tagline: 'ಕರುಣೆ ಮತ್ತು ಗೌರವದಿಂದ ಜನರನ್ನು ಬಲಪಡಿಸಿ, ಜೀವನ ಬದಲಿಸಿ',
+      shortTagline: 'ಜನರನ್ನು ಬಲಪಡಿಸಿ, ಜೀವನ ಬದಲಿಸಿ',
       established: 'ಮಂಗಳೂರಿನಲ್ಲಿ ನೋಂದಾಯಿತ ಎನ್‌ಜಿಒ ಸಂಸ್ಥೆ',
       regDetails: 'ಭಾರತೀಯ ಟ್ರಸ್ಟ್ ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಎನ್‌ಜಿಒ',
-      slogan: '100% ನೇರ, ಕಮಿಷನ್ ಇಲ್ಲದ  ನೇರ ವಿತರಣೆ',
+      slogan: 'ನೀಡಿದ ಹಣ 100% ನೇರವಾಗಿ ಜನರಿಗೆ. ಕಮಿಷನ್ ಇಲ್ಲ',
+      sloganShort: '100% ನೇರ ಜನರ ನೆರವು',
       auditBadge: 'ಪರಿಶೀಲಿತ ಮತ್ತು ಸ್ಪಷ್ಟ ಲೆಕ್ಕ',
       addressLabel: 'ವಿಳಾಸ',
       hqLocation: 'ಮಸೀದಿ ಎಹ್ಸಾನ್ ಕಾಂಪ್ಲೆಕ್ಸ್, ಕಂಕನಾಡಿ, ಮಂಗಳೂರು – 575002',
@@ -849,6 +858,7 @@ export const translations: Record<Language, any> = {
       emailLabel: 'ಇಮೇಲ್',
       websiteLabel: 'ವೆಬ್‌ಸೈಟ್',
       workingHours: 'ಕೆಲಸದ ಸಮಯ',
+      workingHoursVal: 'ಬೆಳಗ್ಗೆ 9:00 – ಸಂಜೆ 7:00 (ಸೋಮ–ಶನಿ)'
     },
     common: {
       donateNow: 'ಈಗ ದಾನ ಮಾಡಿ',
@@ -892,7 +902,8 @@ export const translations: Record<Language, any> = {
       or: 'ಅಥವಾ',
       call: 'ಕರೆ',
       dayMode: 'ಹಗಲು ಬಣ್ಣ',
-      nightMode: 'ರಾತ್ರಿ ಬಣ್ಣ'
+      nightMode: 'ರಾತ್ರಿ ಬಣ್ಣ',
+      now: 'ಈಗ'
     },
     hero: {
       establishedBadge: 'ಮಂಗಳೂರಿನಲ್ಲಿ ನೋಂದಾಯಿತ ಎನ್‌ಜಿಒ ಸಂಸ್ಥೆ',
@@ -900,6 +911,7 @@ export const translations: Record<Language, any> = {
       subtitle:
         'HIF INDIA ನಿರಾಶ್ರಿತರಿಗೆ ಶಾಶ್ವತ ಮನೆಗಳನ್ನು ನಿರ್ಮಿಸುತ್ತದೆ, ಅನಾಥ ಮಕ್ಕಳಿಗೆ ಪೋಷಣೆ ನೀಡುತ್ತದೆ, ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳನ್ನು ಸರಿಪಡಿಸುತ್ತದೆ ಮತ್ತು ಉಚಿತ ವೈದ್ಯಕೀಯ ನೆರವನ್ನು ನೀಡುತ್ತದೆ — 100% ಪಾರದರ್ಶಕ ನೇರ ಪ್ರಭಾವದೊಂದಿಗೆ.',
       donateCta: 'ಈಗ ದಾನ ಮಾಡಿ',
+      donateBannerTitle: 'ನಿಮ್ಮ ಸಹಾಯ ಮನೆಗಳು, ಭವಿಷ್ಯ ಮತ್ತು ಭರವಸೆ ನಿರ್ಮಿಸುತ್ತದೆ.',
       impactCta: 'ನಮ್ಮ ಪ್ರಭಾವವನ್ನು ನೋಡಿ',
       activeVolunteers: 'ಕರಾವಳಿ ಕರ್ನಾಟಕದಾದ್ಯಂತ ಸಕ್ರಿಯ ಸ್ವಯಂಸೇವಕರು',
       emergencyFundBanner: 'ತುರ್ತು ಪರಿಹಾರ ಕಾರ್ಯ ಸಕ್ರಿಯ: ಪ್ರವಾಹ, ವೈದ್ಯಕೀಯ ಮತ್ತು ಆಹಾರ ನೆರವು ಒದಗಿಸಲಾಗುತ್ತಿದೆ.',
@@ -916,7 +928,7 @@ export const translations: Record<Language, any> = {
       whoWeAreText1:
         'ಸಹಾನುಭೂತಿ ಮತ್ತು ಘನತೆಯೊಂದಿಗೆ ಸಮುದಾಯಗಳ ಬಲಪಡಿಸುವುದು, ಜೀವನ ಪರಿವರ್ತನೆ. ಸಂಸ್ಥೆಯ ಸ್ಥಾಪನೆಯಿಂದಲೂ, ನಾವು ನೇರ ಮತ್ತು ಅಳೆಯಬಹುದಾದ ಕಾರ್ಯಕ್ರಮಗಳ ಮೇಲೆ ಗಮನಹರಿಸಿದ್ದೇವೆ — ನಿರಾಶ್ರಿತರಿಗೆ ಶಾಶ್ವತ ಮನೆಗಳು, ಅನಾಥ ಬಾಲಕರಿಗೆ ಪ್ರೀತಿಯ ವಸತಿ ಆಶ್ರಯ, ಪಾಳುಬಿದ್ದ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳ ಜೀರ್ಣೋದ್ಧಾರ, ಉಚಿತ ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳ ಸಾಲ ಮತ್ತು ತುರ್ತು ರಕ್ತದಾನ ಸಮನ್ವಯ.',
       whoWeAreText2:
-        'ಭಾರತೀಯ ಟ್ರಸ್ಟ್ ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಸಂಸ್ಥೆಯಾಗಿರುವ HIF INDIA ಕಟ್ಟುನಿಟ್ಟಾದ ಕಮಿಷನ್ ಇಲ್ಲದ  ನೀತಿಯಡಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ: ನಿರ್ದಿಷ್ಟ ಯೋಜನೆಗಾಗಿ ನೀಡಲಾದ ಪ್ರತಿಯೊಂದು ರೂಪಾಯಿಯೂ ನೇರವಾಗಿ ವಸ್ತುಗಳು, ಕಾರ್ಮಿಕ ವೆಚ್ಚ, ಆಹಾರ ಅಥವಾ ವೈದ್ಯಕೀಯ ಪರಿಹಾರಕ್ಕಾಗಿ ಫಲಾನುಭವಿಗಳಿಗೆ ತಲುಪುತ್ತದೆ.',
+        'ಭಾರತೀಯ ಟ್ರಸ್ಟ್ ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಸಂಸ್ಥೆಯಾಗಿರುವ HIF INDIA ಕಮಿಷನ್ ಇಲ್ಲದ ನೀತಿಯಡಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ: ನಿರ್ದಿಷ್ಟ ಯೋಜನೆಗಾಗಿ ನೀಡಲಾದ ಪ್ರತಿಯೊಂದು ರೂಪಾಯಿಯೂ ನೇರವಾಗಿ ವಸ್ತುಗಳು, ಕಾರ್ಮಿಕ ವೆಚ್ಚ, ಆಹಾರ ಅಥವಾ ವೈದ್ಯಕೀಯ ಪರಿಹಾರಕ್ಕಾಗಿ ಫಲಾನುಭವಿಗಳಿಗೆ ತಲುಪುತ್ತದೆ.',
       visionTitle: 'ನಮ್ಮ ಗುರಿ',
       visionText:
         'ಯಾವುದೇ ಕುಟುಂಬವು ಆಸರೆರಹಿತವಾಗಿ ಉಳಿಯದ, ಪ್ರತಿಯೊಬ್ಬ ಅನಾಥ ಮಗುವೂ ಪ್ರೀತಿ ಮತ್ತು ಬೆಳವಣಿಗೆಯ ಆಶ್ರಯ ಪಡೆಯುವ, ಗ್ರಾಮೀಣ ಆರಾಧನಾ ಸ್ಥಳಗಳು ಜ್ಞಾನದಿಂದ ಕಂಗೊಳಿಸುವ ಮತ್ತು ಸಾಮಾಜಿಕ-ಆರ್ಥಿಕ ಸ್ಥಿತಿಯನ್ನು ಲೆಕ್ಕಿಸದೆ ಎಲ್ಲರಿಗೂ ಆರೋಗ್ಯ ರಕ್ಷಣೆ ಸಿಗುವ ಧಾರ್ಮಿಕ, ಸ್ವಾವಲಂಬಿ ಮತ್ತು ಸಹಾನುಭೂತಿಯ ಸಮಾಜವನ್ನು ನಿರ್ಮಿಸುವುದು.',
@@ -934,7 +946,7 @@ export const translations: Record<Language, any> = {
           'ಹಿನ್ನೆಲೆಯನ್ನು ಲೆಕ್ಕಿಸದೆ ಪ್ರತಿಯೊಬ್ಬ ಮಾನವನಿಗೂ ನೈಜ ಕಾಳಜಿ, ಅನುಭೂತಿ ಮತ್ತು ಬೇಷರತ್ ಭ್ರಾತೃತ್ವದೊಂದಿಗೆ ಸೇವೆ ಸಲ್ಲಿಸುವುದು.',
         dignityTitle: 'ಮಾನವ ಘನತೆಯ ರಕ್ಷಣೆ',
         dignityDesc:
-          'ತಾತ್ಕಾಲಿಕ ಉಪಕಾರದ ಬದಲು ಶಾಶ್ವತ ಪರಿಹಾರಗಳು ಮತ್ತು ಗೌರವದ ಮೂಲಕ ಫಲಾನುಭವಿಗಳನ್ನು ಬಲಪಡಿಸುವುದುಗೊಳಿಸುವುದು.',
+          'ತಾತ್ಕಾಲಿಕ ಉಪಕಾರದ ಬದಲು ಶಾಶ್ವತ ಪರಿಹಾರಗಳು ಮತ್ತು ಗೌರವದ ಮೂಲಕ ಜನರನ್ನು ಬಲಪಡಿಸುತ್ತೇವೆ.',
         sustainabilityTitle: 'ಸುಸ್ಥಿರ ಪ್ರಭಾವ',
         sustainabilityDesc:
           'ವಸತಿ, ಶಿಕ್ಷಣ ಮತ್ತು ಸೌರಶಕ್ತಿ ಸೌಲಭ್ಯಗಳಲ್ಲಿ ತಲೆಮಾರುಗಳವರೆಗೆ ಬಾಳಿಕೆ ಬರುವ ದೀರ್ಘಕಾಲೀನ ಯೋಜನೆಗಳನ್ನು ರೂಪಿಸುವುದು.'
@@ -949,7 +961,7 @@ export const translations: Record<Language, any> = {
       pillarsDesc: 'ನೀವು ನೀಡುವ ಪ್ರತಿ ರೂಪಾಯಿ ಈ ನಾಲ್ಕು ಕೆಲಸಗಳಲ್ಲಿ ಒಂದಕ್ಕೆ ನೇರವಾಗಿ ಹೋಗುತ್ತದೆ.',
       trustTitle: 'ಪಾರದರ್ಶಕತೆ ಮತ್ತು ನಂಬಿಕೆ',
       trustPoint1: 'ಕರ್ನಾಟಕದ ಮಂಗಳೂರಿನಲ್ಲಿ ಪ್ರಧಾನ ಕಚೇರಿ ಹೊಂದಿರುವ ನೋಂದಾಯಿತ ಎನ್‌ಜಿಒ.',
-      trustPoint2: 'ನೇರ ಫಲಾನುಭವಿಗಳಿಗೆ 100% ನೇರ, ಕಮಿಷನ್ ಇಲ್ಲದ  ವಿತರಣೆ.',
+      trustPoint2: 'ನೀಡಿದ ಹಣ 100% ನೇರವಾಗಿ ಜನರಿಗೆ. ಕಮಿಷನ್ ಇಲ್ಲ.',
       trustPoint3: 'ವಿನಂತಿಯ ಮೇರೆಗೆ ದಾನಿಗಳಿಗೆ ಲಭ್ಯವಿರುವ ವಾರ್ಷಿಕ ಆರ್ಥಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆ.',
       trustPoint4: 'ಪ್ರತಿಯೊಂದು ಕೊಡುಗೆಗೂ ಬ್ಯಾಂಕ್ ರಸೀದಿ ಮತ್ತು 80G ತೆರಿಗೆ ವಿನಾಯಿತಿ ಪ್ರಮಾಣಪತ್ರ.',
       hqTitle: 'ಕೇಂದ್ರ ಕಚೇರಿ'
@@ -957,14 +969,14 @@ export const translations: Record<Language, any> = {
     stats: {
       housesDelivered: 'ವಿತರಿಸಲಾದ ಮನೆಗಳು',
       housesSubtext: 'ಗುರಿ: ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾದಲ್ಲಿ 2030 ರ ವೇಳೆಗೆ 150 ಮನೆಗಳು',
-      masjidsRevived: 'ಪುನರುಜ್ಜೀವನಗೊಳಿಸಿದ & ನಿರ್ವಹಿಸಿದ ಮಸೀದಿಗಳು',
+      masjidsRevived: 'ಸರಿಪಡಿಸಿದ ಮಸೀದಿಗಳು',
       masjidsSubtext: 'ಕರ್ನಾಟಕ ಮತ್ತು ಆಂಧ್ರಪ್ರದೇಶದಾದ್ಯಂತ',
       orphansNurtured: 'ಪೋಷಿಸಲಾದ ಅನಾಥ ವಿದ್ಯಾರ್ಥಿಗಳು',
       orphansSubtext: 'ಸಮಗ್ರ ವಸತಿ, ಹಿಫ್ಜ್ ಮತ್ತು ಆಧುನಿಕ ಶಿಕ್ಷಣ',
       bloodUnits: 'ಸಂಗ್ರಹಿಸಿದ ರಕ್ತದ ಯೂನಿಟ್‌ಗಳು',
       bloodSubtext: 'ಜೀವ ಉಳಿಸುವ ತುರ್ತು ರಕ್ತ ನಿಧಿ ಯೂನಿಟ್‌ಗಳು',
-      auditTransparency: 'ಆಡಿಟ್ & ಪಾರದರ್ಶಕತೆ',
-      auditSubtext: 'ನೇರ ಕಮಿಷನ್ ಇಲ್ಲದ  ನೇರ ವಿತರಣೆ'
+      auditTransparency: 'ಲೆಕ್ಕ ಮತ್ತು ನಂಬಿಕೆ',
+      auditSubtext: 'ನೇರ ಸಹಾಯ. ಕಮಿಷನ್ ಇಲ್ಲ'
     },
     pillars: {
       housingTitle: 'ವಸತಿ ಯೋಜನೆ',
@@ -984,9 +996,9 @@ export const translations: Record<Language, any> = {
       allProgramsBadge: 'ಎಲ್ಲಾ ಯೋಜನೆಗಳು',
       allProgramsTitle: 'ನಿಧಿಯಿಂದ ಹಿಡಿದು ಕಾರ್ಯಕ್ಷೇತ್ರದವರೆಗೆ ಪಾರದರ್ಶಕವಾಗಿ ದಾಖಲಿಸಲ್ಪಡುವ ಯೋಜನೆಗಳು.',
       viewAll: 'ಎಲ್ಲಾ ಯೋಜನೆಗಳನ್ನು ನೋಡಿ',
-    achievementsTitle: 'ಸಾಧನೆಗಳು',
-    futureGoalsTitle: 'ಭವಿಷ್ಯದ ಗುರಿಗಳು',
-    tiersTitle: 'ಹಂತಗಳು',
+      achievementsTitle: 'ಮುಖ್ಯ ಸಾಧನೆಗಳು',
+      futureGoalsTitle: 'ಮುಂದಿನ ಗುರಿ',
+      tiersTitle: 'ಸಹಾಯದ ಮೊತ್ತ',
       ashiyana: {
         title: 'ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾ',
         subtitle: 'ನಿರಾಶ್ರಿತ ಮತ್ತು ನಿರ್ಗತಿಕ ಕುಟುಂಬಗಳಿಗೆ ಘನತೆಯ ಆಸರೆ',
@@ -1140,6 +1152,7 @@ export const translations: Record<Language, any> = {
         copyDetails: 'ಎಲ್ಲಾ ಬ್ಯಾಂಕ್ ವಿವರ ನಕಲಿಸಿ'
       },
       faqTitle: 'ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು',
+      faqSubtitle: 'ದಾನ, ಲೆಕ್ಕಪರಿಶೋಧನೆ ಮತ್ತು ಯೋಜನೆಗಳ ಬಗ್ಗೆ ಸರಳ ಉತ್ತರಗಳು.',
       faqs: {
         q1: 'HIF India ದೇಣಿಗೆಗಳಿಗೆ 80G ತೆರಿಗೆ ವಿನಾಯಿತಿ ಲಭ್ಯವಿದೆಯೇ?',
         a1: 'ಹೌದು, ಭಾರತೀಯ ಆದಾಯ ತೆರಿಗೆ ಕಾಯ್ದೆಯಡಿ HIF INDIA ಗೆ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ತೆರಿಗೆ ವಿನಾಯಿತಿ ಅನ್ವಯಿಸುತ್ತದೆ. ಅಧಿಕೃತ ರಸೀದಿಗಳನ್ನು ನೀಡಲಾಗುತ್ತದೆ.',
@@ -1212,16 +1225,17 @@ export const translations: Record<Language, any> = {
     },
     footer: {
       aboutText:
-        'ಮಂಗಳೂರಿನಲ್ಲಿ ನೋಂದಾಯಿತ ನೇರ ಎನ್‌ಜಿಒ ಸಂಸ್ಥೆಯಾಗಿದ್ದು, ಶಾಶ್ವತ ವಸತಿ, ಅನಾಥರ ಶಿಕ್ಷಣ, ಮಸೀದಿ ಜೀರ್ಣೋದ್ಧಾರ ಮತ್ತು ಉಚಿತ ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳ ಮೂಲಕ ಜನರನ್ನು ಬಲಪಡಿಸುವುದುಗೊಳಿಸುತ್ತಿದೆ.',
-      zeroCommission: '100% ನೇರ, ಕಮಿಷನ್ ಇಲ್ಲದ  ನೇರ ವಿತರಣೆ',
+        'ಮಂಗಳೂರಿನ ನೋಂದಾಯಿತ ಸಂಸ್ಥೆ. ಮನೆ, ಅನಾಥರ ಶಿಕ್ಷಣ, ಮಸೀದಿ ದುರಸ್ತಿ ಮತ್ತು ಉಚಿತ ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳ ಮೂಲಕ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.',
+      zeroCommission: 'ನೀಡಿದ ಹಣ 100% ನೇರವಾಗಿ ಜನರಿಗೆ. ಕಮಿಷನ್ ಇಲ್ಲ',
       exploreTitle: 'ನೋಡಿ',
       programsTitle: 'ಕಾರ್ಯಕ್ರಮಗಳು',
       supportUs: 'ಬೆಂಬಲಿಸಿ',
       bankAccount: 'HDFC ಬ್ಯಾಂಕ್ ಖಾತೆ',
       donateQr: 'ದೇಣಿಗೆ / UPI QR',
       allRightsReserved: 'ಹೈಲ್ಯಾಂಡ್ ಇಸ್ಲಾಮಿಕ್ ಫೋರಮ್ (HIF INDIA). ಸರ್ವ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.',
-      addressFull: 'ಮಸ್ಜಿದ್ ಎಹ್ಸಾನ್ ಕಾಂಪ್ಲೆಕ್ಸ್, ಕಂಕನಾಡಿ, ಮಂಗಳೂರು – 575002',
-      slogan: 'ಸಹಾನುಭೂತಿ ಮತ್ತು ಘನತೆಯೊಂದಿಗೆ ಸಮುದಾಯಗಳ ಬಲಪಡಿಸುವುದು, ಜೀವನ ಪರಿವರ್ತನೆ'
+      addressFull: 'ಮಸೀದಿ ಎಹ್ಸಾನ್ ಕಾಂಪ್ಲೆಕ್ಸ್, ಕಂಕನಾಡಿ, ಮಂಗಳೂರು – 575002',
+      slogan: 'ಕರುಣೆ ಮತ್ತು ಗೌರವದಿಂದ ಜನರನ್ನು ಬಲಪಡಿಸಿ, ಜೀವನ ಬದಲಿಸಿ',
+      developedBy: 'ಅಭಿವೃದ್ಧಿಪಡಿಸಿದ್ದು'
     }
   },
 
@@ -1246,11 +1260,12 @@ export const translations: Record<Language, any> = {
     org: {
       name: 'HIF INDIA',
       fullName: 'हाइलैंड इस्लामिक फोरम (HIF INDIA)',
-      tagline: 'सहानुभूति और गरिमा के साथ समुदायों का मजबूत बनाना, जीवन में बदलाव',
-      shortTagline: 'समुदायों का मजबूत बनाना, जीवन में बदलाव',
+      tagline: 'दया और इज्जत के साथ लोगों को मजबूत बनाना',
+      shortTagline: 'लोगों को मजबूत बनाना, जिंदगी बदलना',
       established: 'मंगलुरु में पंजीकृत गैर-सरकारी संगठन (NGO)',
       regDetails: 'भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत एनजीओ',
-      slogan: '100% प्रत्यक्ष, बिना कमीशन सीधे लोगों तक वितरण',
+      slogan: 'दिया गया पैसा 100% सीधे लोगों तक। कोई कमीशन नहीं',
+      sloganShort: '100% सीधी जमीनी राहत',
       auditBadge: 'ऑडिटेड व पारदर्शी',
       addressLabel: 'पता',
       hqLocation: 'मस्जिद एहसान कॉम्प्लेक्स, कंकनाडी, मंगलुरु – 575002',
@@ -1270,7 +1285,7 @@ export const translations: Record<Language, any> = {
       joinAsVolunteer: 'स्वयंसेवक बनें',
       backToProjects: 'योजनाओं पर वापस जाएं',
       backToActivities: 'गतिविधियों पर वापस जाएं',
-      backToHome: 'मुख्य पृष्ठ पर वापस जाएं',
+      backToHome: 'होम पर वापस जाएं',
       close: 'बंद करें',
       submit: 'जमा करें',
       submitting: 'जमा हो रहा है...',
@@ -1303,7 +1318,8 @@ export const translations: Record<Language, any> = {
       or: 'या',
       call: 'कॉल',
       dayMode: 'दिन का रंग',
-      nightMode: 'रात का रंग'
+      nightMode: 'रात का रंग',
+      now: 'अब'
     },
     hero: {
       establishedBadge: 'मंगलुरु में पंजीकृत गैर-सरकारी संगठन',
@@ -1311,6 +1327,7 @@ export const translations: Record<Language, any> = {
       subtitle:
         'HIF INDIA बेघरों के लिए पक्के मकान बनाता है, अनाथ बच्चों का पालन-पोषण करता है, ग्रामीण मस्जिदों को पुनर्जीवित करता है और निःशुल्क चिकित्सा राहत प्रदान करता है — 100% प्रत्यक्ष, पारदर्शी जमीनी प्रभाव के साथ।',
       donateCta: 'अभी दान करें',
+      donateBannerTitle: 'आपका सहयोग घर, भविष्य और उम्मीद बनाता है।',
       impactCta: 'हमारा प्रभाव देखें',
       activeVolunteers: 'तटीय कर्नाटक में सक्रिय स्वयंसेवक',
       emergencyFundBanner: 'आपातकालीन राहत सक्रिय: बाढ़, चिकित्सा और भोजन सहायता प्रदान की जा रही है।',
@@ -1326,9 +1343,9 @@ export const translations: Record<Language, any> = {
       whoWeAreBadge: 'हम कौन हैं',
       whoWeAreTitle: 'हाइलैंड इस्लामिक फोरम (HIF INDIA)',
       whoWeAreText1:
-        'सहानुभूति और गरिमा के साथ समुदायों का मजबूत बनाना, जीवन में बदलाव। अपनी स्थापना के बाद से, हमने ठोस और प्रत्यक्ष पहलों पर ध्यान केंद्रित किया है — बेघरों के लिए स्थायी पक्के घर, अनाथ बालकों के लिए प्रेमपूर्ण आवासीय आश्रम, वीरान ग्रामीण मस्जिदों का जीर्णोद्धार, निःशुल्क चिकित्सा उपकरण ऋण और आपातकालीन रक्तदान समन्वय।',
+        'सहानुभूति और गरिमा के साथ समुदायों को मजबूत बनाना, जीवन में बदलाव। अपनी स्थापना के बाद से, हमने ठोस और प्रत्यक्ष पहलों पर ध्यान केंद्रित किया है — बेघरों के लिए स्थायी पक्के घर, अनाथ बालकों के लिए प्रेमपूर्ण आवासीय आश्रम, वीरान ग्रामीण मस्जिदों का जीर्णोद्धार, निःशुल्क चिकित्सा उपकरण ऋण और आपातकालीन रक्तदान समन्वय।',
       whoWeAreText2:
-        'भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत संगठन के रूप में, HIF INDIA बिना कमीशन की सख्त नीति पर काम करता है: किसी विशिष्ट परियोजना के लिए दान किया गया प्रत्येक रुपया सीधे लाभार्थियों के लिए सामग्री, श्रम, भोजन या चिकित्सा राहत में लगाया जाता है।',
+        'भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत संगठन के रूप में, HIF INDIA बिना कमीशन की सख्त नीति पर काम करता है: किसी विशिष्ट योजना के लिए दान किया गया प्रत्येक रुपया सीधे लाभार्थियों के लिए सामग्री, श्रम, भोजन या चिकित्सा राहत में लगाया जाता है।',
       visionTitle: 'हमारा लक्ष्य',
       visionText:
         'एक धर्मपरायण, आत्मनिर्भर और करुणामय समाज का निर्माण करना जहाँ कोई भी परिवार बेघर न रहे, हर अनाथ बच्चे को प्यार और विकास का आश्रय मिले, ग्रामीण इबादतगाह ज्ञान से रोशन हों और सामाजिक-आर्थिक स्थिति की परवाह किए बिना स्वास्थ्य सेवा सभी के लिए सुलभ हो।',
@@ -1358,6 +1375,7 @@ export const translations: Record<Language, any> = {
       boardSubtitle: 'अनुभवी सामाजिक कार्यकर्ताओं, विद्वानों और समुदाय के मार्गदर्शकों का कुशल नेतृत्व।',
       pillarsTitle: 'हमारे चार प्रमुख स्तंभ',
       pillarsSubtitle: 'गरिमामय जीवन के लिए आवश्यक बुनियादी आवश्यकताओं को पूरा करने वाले कार्यक्रम।',
+      pillarsDesc: 'आपका हर रुपया इन चार कामों में से एक में सीधे लगता है।',
       trustTitle: 'पारदर्शिता और विश्वास',
       trustPoint1: 'मंगलुरु, कर्नाटक में पंजीकृत भारतीय ट्रस्ट एनजीओ।',
       trustPoint2: 'जमीनी लाभार्थियों को 100% प्रत्यक्ष, बिना कमीशन वितरण।',
@@ -1393,7 +1411,7 @@ export const translations: Record<Language, any> = {
       subtitle:
         'दक्षिण भारत भर में आवास, अनाथ संरक्षण और आध्यात्मिक बुनियादी ढांचे को मजबूत करने वाली तीन प्रमुख दीर्घकालिक पहल।',
       allProgramsBadge: 'सभी कार्यक्रम',
-      allProgramsTitle: 'दान से लेकर मैदान तक, हर परियोजना का पारदर्शी रिकॉर्ड।',
+      allProgramsTitle: 'दान से लेकर मैदान तक, हर योजना का पारदर्शी रिकॉर्ड।',
       viewAll: 'सभी योजनाएं देखें',
       achievementsTitle: 'मुख्य काम',
       futureGoalsTitle: 'आगे का लक्ष्य',
@@ -1437,7 +1455,7 @@ export const translations: Record<Language, any> = {
       wingsBadge: 'हमारे विंग्स',
       wingsTitle: 'स्वास्थ्य, शिक्षा और युवा मजबूत बनाना में निरंतर सेवाएं।',
       featuresTitle: 'हम क्या करते हैं',
-      impactTitle: 'अब तक की मदद'
+      impactTitle: 'अब तक की मदद',
       medical: {
         title: 'HIF मेडिकल सेल और मेडीबैंक',
         subtitle: 'निःशुल्क चिकित्सा उपकरण ऋण और जीवन रक्षक स्वास्थ्य सहायता',
@@ -1556,7 +1574,7 @@ export const translations: Record<Language, any> = {
         q1: 'क्या HIF India को दिए गए दान पर 80G छूट मिलती है?',
         a1: 'हाँ, भारतीय आयकर अधिनियम के तहत HIF INDIA को दिए गए दान पर 80G कर छूट लागू है। आधिकारिक रसीद प्रदान की जाती है।',
         q2: 'मेरे दान का कितना हिस्सा सीधे लाभार्थियों तक पहुंचता है?',
-        a2: 'परियोजना के लिए दिए गए दान का 100% हिस्सा बिना किसी प्रशासनिक कटौती के सीधे सामग्री, भोजन या दवाओं में उपयोग होता है।',
+        a2: 'योजना के लिए दिए गए दान का 100% हिस्सा बिना किसी प्रशासनिक कटौती के सीधे सामग्री, भोजन या दवाओं में उपयोग होता है।',
         q3: 'क्या मैं पूरा आशियाना घर या किसी अनाथ छात्र को प्रायोजित कर सकता हूँ?',
         a3: 'बिल्कुल! आप एक पूरे घर का निर्माण (₹7.5 लाख) या एक अनाथ छात्र की वार्षिक शिक्षा (₹15,000/वर्ष) प्रायोजित कर सकते हैं।',
         q4: 'यदि मैं मंगलुरु से बाहर रहता हूँ तो क्या मैं ऑनलाइन स्वयंसेवा कर सकता हूँ?',
@@ -1625,8 +1643,8 @@ export const translations: Record<Language, any> = {
     },
     footer: {
       aboutText:
-        'मंगलुरु में पंजीकृत एक जमीनी गैर-सरकारी संगठन जो स्थायी आवास, अनाथ शिक्षा, मस्जिद जीर्णोद्धार और निःशुल्क चिकित्सा उपकरणों के माध्यम से लोगों को सशक्त बना रहा है।',
-      zeroCommission: '100% प्रत्यक्ष, बिना कमीशन सीधे लोगों तक वितरण',
+        'मंगलुरु में पंजीकृत एक जमीनी गैर-सरकारी संगठन जो स्थायी आवास, अनाथ शिक्षा, मस्जिद जीर्णोद्धार और निःशुल्क चिकित्सा उपकरणों के माध्यम से लोगों की मदद करता है।',
+      zeroCommission: 'दिया गया पैसा 100% सीधे लोगों तक। कोई कमीशन नहीं',
       exploreTitle: 'देखें',
       programsTitle: 'कार्यक्रम',
       supportUs: 'सहयोग करें',
@@ -1634,7 +1652,8 @@ export const translations: Record<Language, any> = {
       donateQr: 'दान करें / UPI QR',
       allRightsReserved: 'हाइलैंड इस्लामिक फोरम (HIF INDIA)। सर्वाधिकार सुरक्षित।',
       addressFull: 'मस्जिद एहसान कॉम्प्लेक्स, कंकनाडी, मंगलुरु – 575002',
-      slogan: 'सहानुभूति और गरिमा के साथ समुदायों का मजबूत बनाना, जीवन में बदलाव'
+      slogan: 'सहानुभूति और गरिमा के साथ समुदायों को मजबूत बनाना, जीवन में बदलाव',
+      developedBy: 'द्वारा विकसित'
     }
   }
 }

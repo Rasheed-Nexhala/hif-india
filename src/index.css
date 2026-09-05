@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: var(--color-bg);
   --color-bg-alt: var(--color-bg-alt);
@@ -35,10 +37,10 @@
     --color-accent: #f59e0b;
     --color-accent-light: #fbbf24;
 
-    --color-border: #e7e5e0;
-    --color-border-emerald: rgba(4, 120, 87, 0.18);
+    --color-border: #d6d3cd;
+    --color-border-emerald: rgba(4, 120, 87, 0.22);
     --color-text-main: #1c1917;
-    --color-text-muted: #6b6a66;
+    --color-text-muted: #57534e;
 
     --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -82,6 +84,48 @@
   .font-display {
     font-family: var(--font-serif);
   }
+
+  html[lang="kn"] {
+    --font-sans: 'Noto Sans Kannada', 'Inter', system-ui, sans-serif;
+    --font-serif: 'Noto Serif Kannada', 'Fraunces', Georgia, serif;
+    font-family: var(--font-sans);
+    line-height: 1.75;
+  }
+
+  html[lang="hi"] {
+    --font-sans: 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+    --font-serif: 'Noto Serif Devanagari', 'Fraunces', Georgia, serif;
+    font-family: var(--font-sans);
+    line-height: 1.7;
+  }
+
+  html[lang="kn"] h1,
+  html[lang="kn"] h2,
+  html[lang="kn"] h3,
+  html[lang="kn"] h4,
+  html[lang="kn"] .font-display,
+  html[lang="hi"] h1,
+  html[lang="hi"] h2,
+  html[lang="hi"] h3,
+  html[lang="hi"] h4,
+  html[lang="hi"] .font-display {
+    font-family: var(--font-serif);
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  html[lang="kn"] .badge,
+  html[lang="kn"] .badge-on-dark,
+  html[lang="hi"] .badge,
+  html[lang="hi"] .badge-on-dark {
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.55;
+    padding: 0.4rem 0.9rem;
+    white-space: normal;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Custom Scrollbar — subtle, adaptive to light & dark */
@@ -118,6 +162,7 @@
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 0.9rem;
+  box-shadow: 0 1px 3px rgba(28, 25, 23, 0.06), 0 4px 16px rgba(28, 25, 23, 0.04);
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -141,12 +186,19 @@
 }
 
 .section-dark {
-  background: var(--color-bg-dark);
-  color: #f1f5f2;
+  background: var(--color-bg-alt);
+  color: var(--color-text-main);
 }
 
 .dark .section-dark {
-  background: #020d0a;
+  background: var(--color-bg-dark);
+  color: #f2f7f4;
+}
+
+/* Always-dark surfaces: page heroes, detail headers, footer */
+.surface-dark,
+.page-header {
+  background: var(--color-bg-dark);
   color: #f2f7f4;
 }
 
@@ -256,8 +308,8 @@
 /* Subtle single fixed background wash — dynamically adapts to light/dark */
 .bg-editorial-wash {
   background-image:
-    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(4, 120, 87, 0.05), transparent 70%),
-    radial-gradient(ellipse 50% 35% at 100% 10%, rgba(245, 158, 11, 0.04), transparent 70%);
+    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(4, 120, 87, 0.08), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 100% 10%, rgba(245, 158, 11, 0.06), transparent 70%);
 }
 
 .dark .bg-editorial-wash {
@@ -504,12 +556,12 @@
   gap: 0.7rem;
   padding: 0.9rem;
   border-radius: 1rem;
-  background: rgba(8, 42, 32, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--color-border-emerald);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(28, 25, 23, 0.08), 0 1px 3px rgba(28, 25, 23, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dark .hub-card {
@@ -520,7 +572,8 @@
 
 .hub-card:hover {
   transform: translateZ(14px) scale(1.03);
-  border-color: rgba(52, 211, 153, 0.4);
+  border-color: rgba(4, 120, 87, 0.35);
+  box-shadow: 0 8px 28px rgba(28, 25, 23, 0.12);
 }
 
 .dark .hub-card:hover {

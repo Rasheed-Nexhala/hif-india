@@ -4,21 +4,24 @@ import { CheckCircle2, Heart, Target } from 'lucide-react'
 import { HIF_PROJECTS } from '../data/hifData'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
+import { localizeProject } from '../lib/localizeContent'
 
 export const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>()
-  const project = HIF_PROJECTS.find((p) => p.id === projectId)
+  const rawProject = HIF_PROJECTS.find((p) => p.id === projectId)
   const { openDonate } = useDonate()
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
-  if (!project) return <Navigate to="/projects" replace />
+  if (!rawProject) return <Navigate to="/projects" replace />
+
+  const project = localizeProject(rawProject, t, language)
 
   return (
     <>
-      <section className="relative section-dark overflow-hidden">
+      <section className="relative page-header overflow-hidden">
         <div className="absolute inset-0">
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-22" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06231b]/85 via-[#06231b]/90 to-[#06231b]" />
+          <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark)]/85 via-[var(--color-bg-dark)]/90 to-[var(--color-bg-dark)]" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center animate-fade-up">
           <span className="badge-on-dark">{project.badge}</span>
@@ -35,8 +38,8 @@ export const ProjectDetailPage: React.FC = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 -mt-4">
           {project.stats.map((s) => (
             <div key={s.label} className="card p-6 text-center">
-              <p className="font-display text-2xl font-semibold text-primary-deep dark:text-emerald-300">{s.value}</p>
-              <p className="mt-1 text-sm text-text-muted dark:text-text-muted">{s.label}</p>
+              <p className="font-display text-2xl font-semibold text-primary-deep">{s.value}</p>
+              <p className="mt-1 text-sm text-text-muted">{s.label}</p>
             </div>
           ))}
         </div>
@@ -46,13 +49,13 @@ export const ProjectDetailPage: React.FC = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2 space-y-10">
             <div>
-              <h2 className="font-display text-2xl font-semibold text-text-main dark:text-stone-50">
+              <h2 className="font-display text-2xl font-semibold text-text-main">
                 {t('common.viewDetails', 'Overview')}
               </h2>
-              <p className="mt-3 text-text-muted dark:text-stone-300 leading-relaxed">{project.overview}</p>
+              <p className="mt-3 text-text-muted leading-relaxed">{project.overview}</p>
               <div className="mt-4 space-y-4">
                 {project.fullStory.map((para, i) => (
-                  <p key={i} className="text-text-muted dark:text-stone-300 leading-relaxed text-sm">
+                  <p key={i} className="text-text-muted leading-relaxed text-sm">
                     {para}
                   </p>
                 ))}
@@ -62,7 +65,7 @@ export const ProjectDetailPage: React.FC = () => {
             {project.images.length > 1 && (
               <div className="grid grid-cols-2 gap-4">
                 {project.images.map((img) => (
-                  <div key={img} className="aspect-[4/3] rounded-xl overflow-hidden border border-border dark:border-emerald-800/40">
+                  <div key={img} className="aspect-[4/3] rounded-xl overflow-hidden border border-border">
                     <img src={img} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
@@ -70,13 +73,13 @@ export const ProjectDetailPage: React.FC = () => {
             )}
 
             <div>
-              <h2 className="font-display text-2xl font-semibold text-text-main dark:text-stone-50">
+              <h2 className="font-display text-2xl font-semibold text-text-main">
                 {t('projects.achievementsTitle', 'Key Achievements')}
               </h2>
               <ul className="mt-4 space-y-3">
                 {project.achievements.map((a, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-sm text-text-muted dark:text-stone-300">
-                    <CheckCircle2 className="w-4 h-4 text-primary dark:text-emerald-400 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-text-muted">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                     {a}
                   </li>
                 ))}
@@ -84,13 +87,13 @@ export const ProjectDetailPage: React.FC = () => {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-semibold text-text-main dark:text-stone-50">
+              <h2 className="font-display text-2xl font-semibold text-text-main">
                 {t('projects.futureGoalsTitle', 'Future Goals')}
               </h2>
               <ul className="mt-4 space-y-3">
                 {project.futureGoals.map((g, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-sm text-text-muted dark:text-stone-300">
-                    <Target className="w-4 h-4 text-accent dark:text-amber-400 mt-0.5 shrink-0" />
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-text-muted">
+                    <Target className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     {g}
                   </li>
                 ))}
@@ -100,7 +103,7 @@ export const ProjectDetailPage: React.FC = () => {
 
           <aside className="space-y-4">
             <div className="card p-6">
-              <h3 className="font-display text-lg font-semibold text-text-main dark:text-stone-50 mb-4">
+              <h3 className="font-display text-lg font-semibold text-text-main mb-4">
                 {t('projects.tiersTitle', 'Sponsorship Tiers')}
               </h3>
               <div className="space-y-3">
@@ -110,18 +113,18 @@ export const ProjectDetailPage: React.FC = () => {
                     onClick={() => openDonate(`${project.title} — ${tier.title}`, tier.amount)}
                     className={`w-full text-left p-4 rounded-xl border transition-colors ${
                       tier.isPopular
-                        ? 'border-emerald-300 dark:border-emerald-600/60 bg-emerald-50 dark:bg-emerald-900/20 hover:bg-emerald-100 dark:bg-[#072c22] dark:hover:bg-[#0c392c]'
-                        : 'border-border dark:border-emerald-800/50 bg-bg-alt hover:bg-bg-alt dark:bg-[#051c15] dark:hover:bg-[#082820]'
+                        ? 'border-emerald-300 dark:border-emerald-600/60 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-900/20 dark:hover:bg-emerald-900/30'
+                        : 'border-border bg-bg-alt hover:bg-emerald-50/50 dark:hover:bg-card-tint'
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-sm font-semibold text-text-main dark:text-stone-100">{tier.title}</span>
+                      <span className="text-sm font-semibold text-text-main">{tier.title}</span>
                       {tier.isPopular && <span className="badge shrink-0">{t('common.verified', 'Popular')}</span>}
                     </div>
-                    <p className="mt-1 text-xs text-text-muted dark:text-text-muted">{tier.description}</p>
-                    <p className="mt-2 font-display text-lg font-semibold text-primary-deep dark:text-emerald-300">
+                    <p className="mt-1 text-xs text-text-muted">{tier.description}</p>
+                    <p className="mt-2 font-display text-lg font-semibold text-primary-deep">
                       ₹{tier.amount.toLocaleString()}
-                      <span className="text-xs text-text-muted dark:text-text-muted font-sans font-normal"> {tier.unit}</span>
+                      <span className="text-xs text-text-muted font-sans font-normal"> {tier.unit}</span>
                     </p>
                   </button>
                 ))}
@@ -135,7 +138,7 @@ export const ProjectDetailPage: React.FC = () => {
             </div>
             <Link
               to="/projects"
-              className="block text-center text-sm font-semibold text-primary dark:text-emerald-400 hover:text-primary-deep dark:hover:text-emerald-300"
+              className="block text-center text-sm font-semibold text-primary hover:text-primary-deep"
             >
               ← {t('common.backToProjects', 'Back to all projects')}
             </Link>

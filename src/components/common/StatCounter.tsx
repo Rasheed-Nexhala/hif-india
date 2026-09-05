@@ -35,14 +35,14 @@ export const StatCounter: React.FC<StatCounterProps> = ({ value, suffix = '', la
   }, [isInView, value])
 
   return (
-    <div ref={ref} className="text-center px-4">
-      <div className={`font-display text-4xl sm:text-5xl font-semibold tracking-tight ${dark ? 'text-white' : 'text-primary-deep'}`}>
+    <div ref={ref} className="text-center px-1 sm:px-4 max-w-[11rem] sm:max-w-none mx-auto">
+      <div className={`font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight ${dark ? 'text-white' : 'text-primary-deep'}`}>
         {count.toLocaleString()}
-        <span className={dark ? 'text-amber-300' : 'text-accent dark:text-amber-400'}>{suffix}</span>
+        <span className={dark ? 'text-amber-300' : 'text-accent'}>{suffix}</span>
       </div>
-      <p className={`mt-2 text-sm font-semibold ${dark ? 'text-emerald-100' : 'text-text-muted dark:text-stone-200'}`}>{label}</p>
+      <p className={`mt-1.5 sm:mt-2 text-xs sm:text-sm font-semibold leading-snug sm:leading-relaxed ${dark ? 'text-emerald-100' : 'text-text-muted'}`}>{label}</p>
       {subtext && (
-        <p className={`mt-1 text-xs leading-relaxed ${dark ? 'text-emerald-200/70' : 'text-text-muted dark:text-text-muted'}`}>{subtext}</p>
+        <p className={`mt-1 text-xs leading-relaxed ${dark ? 'text-emerald-200/70' : 'text-text-muted'}`}>{subtext}</p>
       )}
     </div>
   )

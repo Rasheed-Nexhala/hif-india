@@ -22,7 +22,7 @@ export const ActivitiesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <Reveal className="max-w-2xl mb-10">
             <span className="badge">{t('activities.wingsBadge', 'Our Wings')}</span>
-            <h2 className="font-display mt-4 text-2xl sm:text-3xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+            <h2 className="font-display mt-4 text-2xl sm:text-3xl font-semibold text-text-main tracking-tight">
               {t('activities.wingsTitle', 'Consistent, on-ground support every single day.')}
             </h2>
           </Reveal>

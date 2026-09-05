@@ -47,13 +47,13 @@ export const DonateModal: React.FC = () => {
             transition={{ duration: 0.2 }}
             className="relative w-full max-w-md bg-card dark:bg-[#082820] rounded-2xl shadow-2xl border border-border dark:border-emerald-800/50 p-6 sm:p-7 z-10 my-8"
           >
-            <div className="flex items-start justify-between pb-4 border-b border-border dark:border-emerald-800/40">
+            <div className="flex items-start justify-between pb-4 border-b border-border">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-primary dark:text-emerald-300">
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-text-main dark:text-stone-50">
+                  <h3 className="text-base font-bold text-text-main">
                     {t('donateModal.title', 'Donate to HIF INDIA')}
                   </h3>
                   <p className="text-xs text-text-muted">
@@ -64,7 +64,7 @@ export const DonateModal: React.FC = () => {
               <button
                 onClick={closeDonate}
                 aria-label={t('common.close', 'Close')}
-                className="p-1.5 rounded-lg text-text-muted hover:text-text-muted dark:hover:text-stone-100 hover:bg-bg-alt dark:hover:bg-emerald-900/40 transition-colors"
+                className="p-1.5 rounded-lg text-text-muted hover:text-text-main dark:hover:text-stone-100 hover:bg-bg-alt dark:hover:bg-emerald-900/40 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -152,8 +152,8 @@ export const DonateModal: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-5 pt-4 border-t border-border dark:border-emerald-800/40 flex items-start gap-2 text-[11px] text-text-muted">
-              <ShieldCheck className="w-4 h-4 text-primary dark:text-emerald-400 shrink-0 mt-0.5" />
+            <div className="mt-5 pt-4 border-t border-border flex items-start gap-2 text-[11px] text-text-muted">
+              <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
               <span>
                 {t(
                   'donateModal.tax80GNote',
@@ -188,10 +188,10 @@ const Row: React.FC<{ label: string; value: string; mono?: boolean; onCopy: () =
   <div className="p-3 rounded-xl bg-bg-alt dark:bg-[#051c15] border border-border dark:border-emerald-800/50 flex items-center justify-between gap-2">
     <div className="min-w-0">
       <span className="text-[10px] uppercase tracking-wide text-text-muted font-semibold block">{label}</span>
-      <span className={`text-sm font-semibold text-text-main dark:text-stone-100 truncate block ${mono ? 'font-mono' : ''}`}>{value}</span>
+      <span className={`text-sm font-semibold text-text-main truncate block ${mono ? 'font-mono' : ''}`}>{value}</span>
     </div>
     <button onClick={onCopy} className="p-1.5 rounded-lg text-text-muted dark:text-emerald-300 hover:text-primary dark:hover:text-emerald-100 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors shrink-0">
-      {copied ? <Check className="w-4 h-4 text-primary dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
+      {copied ? <Check className="w-4 h-4 text-primary" /> : <Copy className="w-4 h-4" />}
     </button>
   </div>
 )

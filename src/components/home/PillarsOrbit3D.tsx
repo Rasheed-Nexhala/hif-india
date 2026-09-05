@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Home, HeartHandshake, Landmark, HeartPulse } from 'lucide-react'
 import { Reveal } from '../common/Reveal'
 import { useLanguage } from '../../context/LanguageContext'
+import { useTheme } from '../../context/ThemeContext'
 
 /**
  * A real 3D-perspective "hub & spoke" diagram — one glowing core connected
@@ -12,6 +13,7 @@ export const PillarsOrbit3D: React.FC = () => {
   const sceneRef = useRef<HTMLDivElement>(null)
   const groupRef = useRef<HTMLDivElement>(null)
   const { t } = useLanguage()
+  const { isDark } = useTheme()
 
   const pillars = [
     {
@@ -64,11 +66,11 @@ export const PillarsOrbit3D: React.FC = () => {
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden section-dark">
       <div className="relative max-w-6xl mx-auto">
         <Reveal className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <span className="badge-on-dark">{t('about.pillarsTitle', 'Four Pillars')}</span>
-          <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+          <span className={isDark ? 'badge-on-dark' : 'badge'}>{t('about.pillarsTitle', 'Four Pillars')}</span>
+          <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-white tracking-tight">
             {t('about.pillarsSubtitle', 'One mission, four ways we serve.')}
           </h2>
-          <p className="mt-4 text-emerald-100/85 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-text-muted dark:text-emerald-100/85 text-sm sm:text-base leading-relaxed">
             {t(
               'about.pillarsDesc',
               'Every rupee donated flows into one of these four pillars — connected to a single, transparent core commitment to grassroots dignity.'
@@ -103,8 +105,8 @@ export const PillarsOrbit3D: React.FC = () => {
                             <Icon className="w-5 h-5" />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-white">{p.title}</p>
-                            <p className="text-[11px] text-emerald-100/75 leading-snug mt-0.5">{p.desc}</p>
+                            <p className="text-sm font-semibold text-text-main dark:text-white leading-relaxed">{p.title}</p>
+                            <p className="text-[11px] text-text-muted dark:text-emerald-100/75 leading-relaxed mt-1">{p.desc}</p>
                           </div>
                         </div>
                       </div>

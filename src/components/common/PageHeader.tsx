@@ -10,11 +10,11 @@ interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ eyebrow, title, description, image }) => {
   return (
-    <section className="relative section-dark overflow-hidden">
+    <section className="relative page-header overflow-hidden">
       {image && (
         <div className="absolute inset-0">
-          <img src={image} alt="" className="w-full h-full object-cover opacity-20" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06231b]/88 via-[#06231b]/90 to-[#06231b]" />
+          <img src={image} alt="" className="w-full h-full object-cover opacity-30" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark)]/88 via-[var(--color-bg-dark)]/90 to-[var(--color-bg-dark)]" />
         </div>
       )}
       {/* Subtle ambient glow accents so dark sections don't feel flat */}
@@ -28,7 +28,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ eyebrow, title, descript
         className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center"
       >
         <span className="badge-on-dark">{eyebrow}</span>
-        <h1 className="font-display mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white text-shadow-soft">
+        <h1 className="font-display mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white text-shadow-soft leading-snug max-w-3xl mx-auto">
           {title}
         </h1>
         {description && (

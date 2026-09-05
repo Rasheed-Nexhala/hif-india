@@ -63,18 +63,18 @@ export const AboutPage: React.FC = () => {
       {/* About narrative */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border dark:border-emerald-800/40 order-2 lg:order-1">
+          <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border order-2 lg:order-1">
             <img src={HIF_ORGANIZATION.siteImages.aboutAlt} alt="HIF India field work" className="w-full h-full object-cover" loading="lazy" />
           </Reveal>
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <span className="badge">{t('about.whoWeAreBadge', 'Who We Are')}</span>
-            <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main dark:text-stone-50 tracking-tight">
+            <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
               {t('about.whoWeAreTitle', HIF_ORGANIZATION.fullName)}
             </h2>
-            <p className="mt-5 text-text-muted dark:text-stone-300 leading-relaxed">
+            <p className="mt-5 text-text-muted leading-relaxed">
               {t('about.whoWeAreText1', `${HIF_ORGANIZATION.tagline}. Since our founding, we have focused on tangible, measurable interventions — permanent housing for the homeless, a loving residential sanctuary for orphaned boys, restoration of abandoned rural masjids, and free-of-cost medical equipment loans and blood donation coordination for families in crisis.`)}
             </p>
-            <p className="mt-4 text-text-muted dark:text-stone-300 leading-relaxed">
+            <p className="mt-4 text-text-muted leading-relaxed">
               {t('about.whoWeAreText2', `${HIF_ORGANIZATION.regDetails}, HIF INDIA operates on a strict zero-commission policy: every rupee donated toward a specific project is channeled directly into materials, labor, meals, or medical relief for the intended beneficiaries.`)}
             </p>
           </Reveal>
@@ -82,7 +82,7 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#f8faf7] dark:bg-[#07231c] overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt overflow-hidden">
         <img
           src={UNSPLASH.warmArchitecture}
           alt=""
@@ -95,10 +95,10 @@ export const AboutPage: React.FC = () => {
             <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-primary dark:text-emerald-300 mb-4">
               <Eye className="w-5 h-5" />
             </div>
-            <h3 className="font-display text-2xl font-semibold text-text-main dark:text-stone-50">
+            <h3 className="font-display text-2xl font-semibold text-text-main">
               {t('about.visionTitle', 'Our Vision')}
             </h3>
-            <p className="mt-3 text-text-muted dark:text-stone-300 leading-relaxed text-sm">
+            <p className="mt-3 text-text-muted leading-relaxed text-sm">
               {t('about.visionText', HIF_ORGANIZATION.vision)}
             </p>
           </div>
@@ -106,10 +106,10 @@ export const AboutPage: React.FC = () => {
             <div className="w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-700/60 flex items-center justify-center text-accent dark:text-amber-300 mb-4">
               <Target className="w-5 h-5" />
             </div>
-            <h3 className="font-display text-2xl font-semibold text-text-main dark:text-stone-50">
+            <h3 className="font-display text-2xl font-semibold text-text-main">
               {t('about.missionTitle', 'Our Mission')}
             </h3>
-            <p className="mt-3 text-text-muted dark:text-stone-300 leading-relaxed text-sm">
+            <p className="mt-3 text-text-muted leading-relaxed text-sm">
               {t('about.missionText', HIF_ORGANIZATION.mission)}
             </p>
           </div>
@@ -121,7 +121,7 @@ export const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center max-w-2xl mx-auto mb-12">
             <span className="badge">{t('about.coreValuesTitle', 'Our Core Values')}</span>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-text-main dark:text-stone-50">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-text-main">
               {t('about.coreValuesSubtitle', 'Guiding principles that govern every initiative and grassroots intervention.')}
             </h2>
           </Reveal>
@@ -140,8 +140,8 @@ export const AboutPage: React.FC = () => {
                     >
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="font-display text-lg font-semibold text-text-main dark:text-stone-50">{val.title}</h3>
-                    <p className="mt-2 text-xs text-text-muted dark:text-stone-300 leading-relaxed">{val.desc}</p>
+                    <h3 className="font-display text-lg font-semibold text-text-main">{val.title}</h3>
+                    <p className="mt-2 text-xs text-text-muted leading-relaxed">{val.desc}</p>
                   </div>
                 </Reveal>
               )
@@ -151,16 +151,16 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* HQ + Trust */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8faf7] dark:bg-[#07231c]">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Reveal className="card p-8">
             <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-primary dark:text-emerald-300 mb-4">
               <MapPin className="w-5 h-5" />
             </div>
-            <h3 className="font-display text-xl font-semibold text-text-main dark:text-stone-50">
+            <h3 className="font-display text-xl font-semibold text-text-main">
               {t('about.hqTitle', 'Headquarters')}
             </h3>
-            <p className="mt-3 text-text-muted dark:text-stone-300 text-sm leading-relaxed">
+            <p className="mt-3 text-text-muted text-sm leading-relaxed">
               {t('org.hqLocation', HIF_ORGANIZATION.address.full)}
             </p>
             <div className="mt-5 rounded-xl overflow-hidden border border-border dark:border-emerald-800/50 h-48">
@@ -179,24 +179,24 @@ export const AboutPage: React.FC = () => {
             <div className="w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-700/60 flex items-center justify-center text-accent dark:text-amber-300 mb-4">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="font-display text-xl font-semibold text-text-main dark:text-stone-50">
+            <h3 className="font-display text-xl font-semibold text-text-main">
               {t('about.trustTitle', 'Transparency & Trust')}
             </h3>
-            <ul className="mt-4 space-y-3 text-sm text-text-muted dark:text-stone-300">
+            <ul className="mt-4 space-y-3 text-sm text-text-muted">
               <li className="flex items-start gap-2.5">
-                <Building2 className="w-4 h-4 text-primary dark:text-emerald-400 mt-0.5 shrink-0" />
+                <Building2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 {t('about.trustPoint1', `${HIF_ORGANIZATION.regDetails}, based in Mangaluru, Karnataka.`)}
               </li>
               <li className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-primary dark:text-emerald-400 mt-0.5 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 {t('about.trustPoint2', '100% direct, zero-commission disbursement to grassroots beneficiaries.')}
               </li>
               <li className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-primary dark:text-emerald-400 mt-0.5 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 {t('about.trustPoint3', 'Annual financial audits with donor-visible spend breakdowns on request.')}
               </li>
               <li className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-primary dark:text-emerald-400 mt-0.5 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 {t('about.trustPoint4', 'Transfer receipts and 80G tax certificates issued for every contribution.')}
               </li>
             </ul>

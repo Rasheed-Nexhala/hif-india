@@ -1,10 +1,11 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HIF_GALLERY, type GalleryItem } from '../data/hifData'
 import { PageHeader } from '../components/common/PageHeader'
 import { Lightbox } from '../components/common/Lightbox'
 import { Reveal } from '../components/common/Reveal'
 import { useLanguage } from '../context/LanguageContext'
+import { galleryCategoryLabel, localizeGalleryItem } from '../lib/localizeContent'
 
 type GalleryCategory = GalleryItem['category'] | 'All'
 
@@ -19,7 +20,12 @@ const CATEGORY_ORDER: GalleryItem['category'][] = [
 ]
 
 export const GalleryPage: React.FC = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+
+  const localizedGallery = useMemo(
+    () => HIF_GALLERY.map((item) => localizeGalleryItem(item, language)),
+    [language]
+  )
 
   const categories = useMemo((): GalleryCategory[] => {
     const present = new Set(HIF_GALLERY.map((g) => g.category))
@@ -30,32 +36,18 @@ export const GalleryPage: React.FC = () => {
   const [selected, setSelected] = useState<GalleryItem | null>(null)
 
   const filtered = useMemo(
-    () => (activeCategory === 'All' ? HIF_GALLERY : HIF_GALLERY.filter((g) => g.category === activeCategory)),
-    [activeCategory]
+    () =>
+      activeCategory === 'All'
+        ? localizedGallery
+        : localizedGallery.filter((g) => g.category === activeCategory),
+    [activeCategory, localizedGallery]
   )
 
-  const getCategoryLabel = (cat: GalleryCategory): string => {
-    switch (cat) {
-      case 'All':
-        return t('gallery.filters.all', 'All')
-      case 'Housing':
-        return t('gallery.filters.housing', 'Housing')
-      case 'Orphanage':
-        return t('gallery.filters.orphanage', 'Orphanage')
-      case 'Masjid':
-        return t('gallery.filters.masjid', 'Masjid')
-      case 'Healthcare':
-        return t('gallery.filters.healthcare', 'Healthcare')
-      case 'Education':
-        return t('gallery.filters.education', 'Education')
-      case 'Youth':
-        return t('gallery.filters.youth', 'Youth')
-      case 'Community':
-        return t('gallery.filters.community', 'Community')
-      default:
-        return cat
-    }
-  }
+  useEffect(() => {
+    if (!selected) return
+    const next = localizedGallery.find((item) => item.id === selected.id)
+    if (next && next !== selected) setSelected(next)
+  }, [localizedGallery, selected])
 
   return (
     <>
@@ -78,16 +70,16 @@ export const GalleryPage: React.FC = () => {
                 className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-colors ${
                   activeCategory === cat
                     ? 'bg-emerald-700 dark:bg-emerald-600 border-emerald-700 dark:border-emerald-500 text-white shadow-sm'
-                    : 'bg-card dark:bg-[#07231c] border-border dark:border-emerald-800/50 text-text-muted dark:text-stone-300 hover:border-emerald-300 dark:hover:border-emerald-500'
+                    : 'bg-card dark:bg-[#07231c] border-border dark:border-emerald-800/50 text-text-muted hover:border-emerald-300 dark:hover:border-emerald-500'
                 }`}
               >
-                {getCategoryLabel(cat)}
+                {galleryCategoryLabel(cat, t)}
               </button>
             ))}
           </Reveal>
 
           {filtered.length === 0 ? (
-            <p className="text-center text-text-muted dark:text-text-muted py-16 text-sm">
+            <p className="text-center text-text-muted py-16 text-sm">
               {t('gallery.emptyMessage', 'No photos in this category yet.')}
             </p>
           ) : (
@@ -107,7 +99,7 @@ export const GalleryPage: React.FC = () => {
                 >
                   <button
                     onClick={() => setSelected(item)}
-                    className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt dark:bg-[#082820] border border-border/60 dark:border-emerald-800/40 group text-left w-full shadow-sm"
+                    className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt border border-border/60 dark:border-emerald-800/40 group text-left w-full shadow-sm"
                   >
                     <img
                       src={item.imageUrl}

@@ -14,8 +14,8 @@ export const UNSPLASH = {
   volunteerGroup: unsplash('1593113630400-ea4288922497'), // community volunteers
   warmArchitecture: unsplash('1513694203232-719a280e022f'), // warm-toned architecture & shelter
   communityGathering: unsplash('1516726817505-f5ed825624d8'), // community gathering
-  goldenHourTexture: unsplash('DL2lZNMAciY'), // house construction / bricklaying for community shelter
-  shelterConstruction: unsplash('DL2lZNMAciY'), // hands laying bricks for housing the poor
+  goldenHourTexture: unsplash('1643474003587-8bbf4bbc01d9'), // modest Indian village home — Project Ashiyana testimonial
+  shelterConstruction: unsplash('1621905252507-b35492cc74b4'), // bricklaying / housing construction
   handsPlanting: unsplash('1544717297-fa95b6ee9643'), // hands / growth
   medicalCare: unsplash('1584515979956-d9f6e5d09982'), // healthcare & medical relief
   softPattern: unsplash('1517486808906-6ca8b3f04846') // soft ambient pattern

@@ -6,9 +6,11 @@ import {
   SUPPORTED_LANGUAGES,
   translations
 } from '../data/translations'
-
-const STORAGE_KEY = 'hif_language'
-const DEFAULT_LANGUAGE: Language = 'en'
+import {
+  LANGUAGE_STORAGE_KEY,
+  applyDocumentLanguage,
+  getStoredLanguage
+} from '../lib/documentLanguage'
 
 interface LanguageContextValue {
   language: Language
@@ -50,39 +52,21 @@ function interpolate(template: string, params?: Record<string, string | number>)
   })
 }
 
-function getInitialLanguage(): Language {
-  if (typeof window === 'undefined') return DEFAULT_LANGUAGE
-
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === 'en' || stored === 'kn' || stored === 'hi') {
-      return stored
-    }
-  } catch {
-    // Ignore localStorage read errors in restricted contexts
-  }
-
-  return DEFAULT_LANGUAGE
-}
-
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage)
+  const [language, setLanguageState] = useState<Language>(getStoredLanguage)
 
   const setLanguage = useCallback((lang: Language) => {
     if (lang !== 'en' && lang !== 'kn' && lang !== 'hi') return
     setLanguageState(lang)
     try {
-      localStorage.setItem(STORAGE_KEY, lang)
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang)
     } catch {
       // Ignore localStorage write errors
     }
   }, [])
 
-  // Sync html lang attribute whenever language changes
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = language
-    }
+    applyDocumentLanguage(language)
   }, [language])
 
   const dict = useMemo(() => {

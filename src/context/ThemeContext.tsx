@@ -19,12 +19,8 @@ function getInitialTheme(): Theme {
     if (savedTheme === 'light' || savedTheme === 'dark') {
       return savedTheme
     }
-
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
   } catch (e) {
-    console.warn('Error reading theme from localStorage or media query:', e)
+    console.warn('Error reading theme from localStorage:', e)
   }
 
   return 'light'
@@ -49,21 +45,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       console.warn('Error saving theme to localStorage:', e)
     }
   }, [theme])
-
-  // Listen for system preference changes when no explicit stored preference is present
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (e: MediaQueryListEvent) => {
-      const savedTheme = localStorage.getItem(THEME_STORAGE_KEY)
-      if (!savedTheme) {
-        setThemeState(e.matches ? 'dark' : 'light')
-      }
-    }
-
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange)
-  }, [])
 
   const toggleTheme = useCallback(() => {
     setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'))

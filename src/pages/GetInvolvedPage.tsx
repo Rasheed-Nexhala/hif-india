@@ -22,19 +22,19 @@ import confetti from 'canvas-confetti'
 import {
   HIF_ORGANIZATION,
   IMPACT_CALCULATOR_PRESETS,
-  calculateImpactFromAmount
 } from '../data/hifData'
 import { PageHeader } from '../components/common/PageHeader'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
 import { UNSPLASH } from '../data/unsplashImages'
 import { Reveal } from '../components/common/Reveal'
+import { localizeImpact } from '../lib/localizeContent'
 
 export const GetInvolvedPage: React.FC = () => {
   const [amount, setAmount] = useState(5000)
   const { openDonate } = useDonate()
-  const { t } = useLanguage()
-  const impact = useMemo(() => calculateImpactFromAmount(amount), [amount])
+  const { t, language } = useLanguage()
+  const impact = useMemo(() => localizeImpact(amount, language), [amount, language])
 
   return (
     <>
@@ -53,7 +53,7 @@ export const GetInvolvedPage: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <Reveal className="text-center mb-10">
             <span className="badge">{t('getInvolved.calculatorBadge', 'Impact Calculator')}</span>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-text-main dark:text-stone-50">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-text-main">
               {t('getInvolved.calculatorTitle', 'See what your gift can do')}
             </h2>
           </Reveal>
@@ -67,7 +67,7 @@ export const GetInvolvedPage: React.FC = () => {
                   className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
                     amount === preset.amount
                       ? 'bg-emerald-700 dark:bg-emerald-600 border-emerald-700 dark:border-emerald-500 text-white shadow-sm'
-                      : 'bg-card dark:bg-[#07231c] border-border dark:border-emerald-800/50 text-text-muted dark:text-stone-300 hover:border-emerald-300 dark:hover:border-emerald-500'
+                      : 'bg-card dark:bg-[#07231c] border-border dark:border-emerald-800/50 text-text-muted hover:border-emerald-300 dark:hover:border-emerald-500'
                   }`}
                 >
                   {preset.label}
@@ -83,14 +83,14 @@ export const GetInvolvedPage: React.FC = () => {
               className="mt-8 p-6 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/60"
             >
               <p className="text-xs font-semibold text-primary dark:text-emerald-300 uppercase tracking-wide">{impact.suggestedPledge}</p>
-              <h3 className="font-display mt-1 text-2xl font-semibold text-text-main dark:text-stone-50">{impact.headline}</h3>
-              <p className="mt-2 text-sm text-text-muted dark:text-stone-300 leading-relaxed">{impact.primaryImpact}</p>
+              <h3 className="font-display mt-1 text-2xl font-semibold text-text-main">{impact.headline}</h3>
+              <p className="mt-2 text-sm text-text-muted leading-relaxed">{impact.primaryImpact}</p>
 
               <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {impact.tangibles.map((tItem) => (
                   <div key={tItem.label} className="p-3 rounded-lg bg-card dark:bg-[#082820] border border-emerald-100 dark:border-emerald-800/60 text-center">
-                    <p className="text-sm font-bold text-primary-deep dark:text-emerald-300">{tItem.count}</p>
-                    <p className="text-[11px] text-text-muted dark:text-text-muted mt-0.5">{tItem.label}</p>
+                    <p className="text-sm font-bold text-primary-deep">{tItem.count}</p>
+                    <p className="text-[11px] text-text-muted mt-0.5">{tItem.label}</p>
                   </div>
                 ))}
               </div>
@@ -107,7 +107,7 @@ export const GetInvolvedPage: React.FC = () => {
       </section>
 
       {/* Volunteer + Bank details side by side */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f8faf7] dark:bg-[#07231c]">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg-alt">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           <Reveal>
             <VolunteerForm />
@@ -154,14 +154,14 @@ const VolunteerForm: React.FC = () => {
   return (
     <div className="card p-7 sm:p-8">
       <div className="flex items-center gap-3">
-        <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-emerald-700 dark:text-emerald-300 shrink-0">
+        <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-primary shrink-0">
           <Users className="w-5 h-5" />
         </div>
         <div>
-          <h3 className="font-display text-2xl font-semibold text-stone-900 dark:text-stone-50">
+          <h3 className="font-display text-2xl font-semibold text-text-main">
             {t('getInvolved.volunteerTitle', 'Become a HIF Volunteer')}
           </h3>
-          <p className="text-sm text-stone-500 dark:text-stone-400">
+          <p className="text-sm text-text-muted">
             {t('getInvolved.volunteerSubtitle', 'Put your skills and time into action for lasting community transformation.')}
           </p>
         </div>
@@ -172,10 +172,10 @@ const VolunteerForm: React.FC = () => {
           <div className="w-14 h-14 rounded-full bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
             <CheckCircle2 className="w-7 h-7" />
           </div>
-          <h4 className="mt-4 font-display text-xl font-semibold text-stone-900 dark:text-stone-50">
+          <h4 className="mt-4 font-display text-xl font-semibold text-text-main">
             {t('getInvolved.form.successTitle', 'Thank You for Registering!')}
           </h4>
-          <p className="mt-2 text-sm text-stone-500 dark:text-stone-400 max-w-sm mx-auto">
+          <p className="mt-2 text-sm text-text-muted max-w-sm mx-auto">
             {t('getInvolved.form.successMessage', 'Our volunteer coordinator will get in touch with you via WhatsApp or phone shortly.')}
           </p>
           <button
@@ -184,7 +184,7 @@ const VolunteerForm: React.FC = () => {
               setSubmitted(false)
               setForm({ name: '', phone: '', city: 'Mangalore', skills: [] })
             }}
-            className="mt-4 px-4 py-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors"
+            className="mt-4 px-4 py-2 text-xs font-semibold text-primary bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition-colors"
           >
             {t('getInvolved.form.submitAnother', 'Submit Another Application')}
           </button>
@@ -192,7 +192,7 @@ const VolunteerForm: React.FC = () => {
       ) : (
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="text-xs font-semibold text-stone-600 dark:text-stone-300 block mb-1">
+            <label className="text-xs font-semibold text-text-muted block mb-1">
               {t('getInvolved.form.fullName', 'Full Name *')}
             </label>
             <input
@@ -200,12 +200,12 @@ const VolunteerForm: React.FC = () => {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder={t('getInvolved.form.fullNamePlaceholder', 'e.g. Mohammed Farooq')}
-              className="w-full px-4 py-2.5 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50 text-sm text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
+              className="w-full px-4 py-2.5 rounded-lg bg-bg-alt dark:bg-card-tint border border-border text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-xs font-semibold text-stone-600 dark:text-stone-300 block mb-1">
+              <label className="text-xs font-semibold text-text-muted block mb-1">
                 {t('getInvolved.form.phone', 'Phone / WhatsApp *')}
               </label>
               <input
@@ -214,23 +214,23 @@ const VolunteerForm: React.FC = () => {
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 placeholder={t('getInvolved.form.phonePlaceholder', '+91 98765 43210')}
-                className="w-full px-4 py-2.5 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50 text-sm text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
+                className="w-full px-4 py-2.5 rounded-lg bg-bg-alt dark:bg-card-tint border border-border text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
               />
             </div>
             <div>
-              <label className="text-xs font-semibold text-stone-600 dark:text-stone-300 block mb-1">
+              <label className="text-xs font-semibold text-text-muted block mb-1">
                 {t('getInvolved.form.city', 'City / Location *')}
               </label>
               <input
                 value={form.city}
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
                 placeholder={t('getInvolved.form.cityPlaceholder', 'e.g. Mangalore, Udupi')}
-                className="w-full px-4 py-2.5 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50 text-sm text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
+                className="w-full px-4 py-2.5 rounded-lg bg-bg-alt dark:bg-card-tint border border-border text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
               />
             </div>
           </div>
           <div>
-            <label className="text-xs font-semibold text-stone-600 dark:text-stone-300 block mb-2">
+            <label className="text-xs font-semibold text-text-muted block mb-2">
               {t('getInvolved.form.skillsLabel', 'How would you like to contribute? (Select skills)')}
             </label>
             <div className="grid grid-cols-1 gap-2">
@@ -244,10 +244,10 @@ const VolunteerForm: React.FC = () => {
                     className={`flex items-center gap-2.5 text-left px-3 py-2.5 rounded-lg text-xs font-medium border transition-colors ${
                       checked
                         ? 'bg-emerald-50 dark:bg-[#0a3328] border-emerald-300 dark:border-emerald-600 text-emerald-800 dark:text-emerald-200'
-                        : 'bg-stone-50 dark:bg-[#051c15] border-stone-200 dark:border-emerald-800/50 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-[#082820]'
+                        : 'bg-bg-alt dark:bg-card-tint border-border text-text-muted hover:bg-emerald-50/80 dark:hover:bg-card-tint'
                     }`}
                   >
-                    <Icon className={`w-4 h-4 shrink-0 ${checked ? 'text-emerald-600 dark:text-emerald-400' : 'text-stone-400 dark:text-stone-500'}`} />
+                    <Icon className={`w-4 h-4 shrink-0 ${checked ? 'text-primary' : 'text-text-muted'}`} />
                     {label}
                   </button>
                 )
@@ -288,56 +288,56 @@ const BankDetailsCard: React.FC = () => {
           <Building2 className="w-5 h-5" />
         </div>
         <div>
-          <h3 className="font-display text-2xl font-semibold text-stone-900 dark:text-stone-50">
+          <h3 className="font-display text-2xl font-semibold text-text-main">
             {t('getInvolved.bankCard.title', 'Direct Bank Transfer')}
           </h3>
-          <p className="text-sm text-stone-500 dark:text-stone-400">
+          <p className="text-sm text-text-muted">
             {t('getInvolved.bankCard.subtitle', 'Directly fund our accounts with zero processing fees')}
           </p>
         </div>
       </div>
 
       <div className="mt-6 space-y-3 text-sm">
-        <div className="p-3 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50 flex items-center justify-between">
+        <div className="p-3 rounded-lg bg-bg-alt dark:bg-card-tint border border-border flex items-center justify-between">
           <div>
-            <span className="text-[10px] uppercase text-stone-500 dark:text-emerald-400/80 font-semibold block">
+            <span className="text-[10px] uppercase text-text-muted font-semibold block">
               {t('getInvolved.bankCard.accountName', 'Beneficiary Name')}
             </span>
-            <span className="font-semibold text-stone-800 dark:text-stone-100">{bank.accountName}</span>
+            <span className="font-semibold text-text-main">{bank.accountName}</span>
           </div>
         </div>
-        <div className="p-3 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50 flex items-center justify-between">
+        <div className="p-3 rounded-lg bg-bg-alt dark:bg-card-tint border border-border flex items-center justify-between">
           <div>
-            <span className="text-[10px] uppercase text-stone-500 dark:text-emerald-400/80 font-semibold block">
+            <span className="text-[10px] uppercase text-text-muted font-semibold block">
               {t('getInvolved.bankCard.accountNumber', 'Account Number')}
             </span>
-            <span className="font-mono font-semibold text-stone-800 dark:text-stone-100">{bank.accountNumber}</span>
+            <span className="font-mono font-semibold text-text-main">{bank.accountNumber}</span>
           </div>
-          <button onClick={() => copy(bank.accountNumber, 'acc')} className="p-1.5 rounded-lg text-stone-500 dark:text-emerald-300 hover:text-emerald-700 dark:hover:text-emerald-100">
+          <button onClick={() => copy(bank.accountNumber, 'acc')} className="p-1.5 rounded-lg text-text-muted hover:text-primary dark:hover:text-emerald-100">
             {copiedField === 'acc' ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
           </button>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <div className="p-3 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50">
-            <span className="text-[10px] uppercase text-stone-500 dark:text-emerald-400/80 font-semibold block">
+          <div className="p-3 rounded-lg bg-bg-alt dark:bg-card-tint border border-border">
+            <span className="text-[10px] uppercase text-text-muted font-semibold block">
               {t('getInvolved.bankCard.ifsc', 'IFSC Code')}
             </span>
-            <span className="font-mono font-semibold text-stone-800 dark:text-stone-100 text-xs">{bank.ifscCode}</span>
+            <span className="font-mono font-semibold text-text-main text-xs">{bank.ifscCode}</span>
           </div>
-          <div className="p-3 rounded-lg bg-stone-50 dark:bg-[#051c15] border border-stone-200 dark:border-emerald-800/50">
-            <span className="text-[10px] uppercase text-stone-500 dark:text-emerald-400/80 font-semibold block">
+          <div className="p-3 rounded-lg bg-bg-alt dark:bg-card-tint border border-border">
+            <span className="text-[10px] uppercase text-text-muted font-semibold block">
               {t('getInvolved.bankCard.branch', 'Branch')}
             </span>
-            <span className="font-semibold text-stone-800 dark:text-stone-100 text-xs">HDFC Bunder Branch</span>
+            <span className="font-semibold text-text-main text-xs">HDFC Bunder Branch</span>
           </div>
         </div>
         <div className="p-3.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/60">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div>
-              <span className="text-[10px] uppercase text-emerald-700 dark:text-emerald-300 font-semibold block">
+              <span className="text-[10px] uppercase text-primary font-semibold block">
                 {t('getInvolved.bankCard.upiId', 'UPI ID')}
               </span>
-              <span className="font-mono font-semibold text-stone-800 dark:text-emerald-100">{bank.upiId}</span>
+              <span className="font-mono font-semibold text-text-main">{bank.upiId}</span>
             </div>
             <button
               onClick={() => setShowQR(!showQR)}
@@ -354,7 +354,7 @@ const BankDetailsCard: React.FC = () => {
             </div>
           )}
         </div>
-        <p className="text-[11px] text-stone-500 dark:text-stone-400 text-center pt-1">
+        <p className="text-[11px] text-text-muted text-center pt-1">
           {t('getInvolved.bankCard.taxNote', 'All donations are eligible for 80G tax exemption benefits.')}
         </p>
       </div>
@@ -390,7 +390,7 @@ const FAQSection: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <Reveal className="text-center mb-10">
           <span className="badge">{t('getInvolved.faqTitle', 'Frequently Asked Questions')}</span>
-          <h2 className="font-display mt-4 text-3xl font-semibold text-stone-900 dark:text-stone-50">
+          <h2 className="font-display mt-4 text-3xl font-semibold text-text-main">
             {t('getInvolved.faqSubtitle', 'Clear answers on how donations, audits, and projects are managed.')}
           </h2>
         </Reveal>
@@ -403,16 +403,16 @@ const FAQSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-stone-800 dark:text-stone-100 text-sm hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-text-main text-sm hover:text-primary transition-colors"
                 >
                   <span className="flex items-center gap-2.5">
                     <HelpCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     {faq.q}
                   </span>
-                  <ChevronDown className={`w-4 h-4 text-stone-400 dark:text-emerald-400/70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-text-muted transition-transform ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-sm text-stone-600 dark:text-stone-300 leading-relaxed border-t border-stone-100 dark:border-emerald-800/40">
+                  <div className="px-5 pb-5 pt-1 text-sm text-text-muted leading-relaxed border-t border-border">
                     {faq.a}
                   </div>
                 )}

@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
 import { Navbar } from '../components/common/Navbar'
 import { Footer } from '../components/common/Footer'
 import { DonateModal } from '../components/common/DonateModal'
 import { DonateProvider } from '../context/DonateContext'
 
+function scrollWindowToTop() {
+  window.scrollTo(0, 0)
+  document.documentElement.scrollTop = 0
+  document.body.scrollTop = 0
+}
+
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation()
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+
+  useLayoutEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+
+    scrollWindowToTop()
+    requestAnimationFrame(scrollWindowToTop)
   }, [pathname])
+
   return null
 }
 

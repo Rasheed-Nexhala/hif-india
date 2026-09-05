@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, MapPin, Calendar } from 'lucide-react'
 import type { GalleryItem } from '../../data/hifData'
+import { useLanguage } from '../../context/LanguageContext'
+import { galleryCategoryLabel } from '../../lib/localizeContent'
 
 interface LightboxProps {
   item: GalleryItem | null
@@ -11,6 +13,7 @@ interface LightboxProps {
 }
 
 export const Lightbox: React.FC<LightboxProps> = ({ item, items, onClose, onSelect }) => {
+  const { t } = useLanguage()
   const currentIndex = item ? items.findIndex((i) => i.id === item.id) : -1
 
   const handlePrev = () => {
@@ -82,19 +85,19 @@ export const Lightbox: React.FC<LightboxProps> = ({ item, items, onClose, onSele
             <div className="relative flex-1 min-h-[260px] max-h-[62vh] bg-bg-alt dark:bg-[#03130e] flex items-center justify-center">
               <img src={item.imageUrl} alt={item.title} className="w-full h-full object-contain max-h-[62vh]" />
             </div>
-            <div className="p-5 border-t border-border dark:border-emerald-800/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="p-5 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                  <span className="badge">{item.category}</span>
+                  <span className="badge">{galleryCategoryLabel(item.category, t)}</span>
                   <span className="flex items-center gap-1 text-[11px] text-text-muted">
-                    <MapPin className="w-3 h-3 text-primary dark:text-emerald-400" /> {item.location}
+                    <MapPin className="w-3 h-3 text-primary" /> {item.location}
                   </span>
                   <span className="flex items-center gap-1 text-[11px] text-text-muted dark:text-amber-300/80">
-                    <Calendar className="w-3 h-3 text-accent dark:text-amber-400" /> {item.year}
+                    <Calendar className="w-3 h-3 text-accent" /> {item.year}
                   </span>
                 </div>
-                <h3 className="text-base font-semibold text-text-main dark:text-stone-50">{item.title}</h3>
-                <p className="mt-1 text-xs text-text-muted dark:text-stone-300 max-w-xl leading-relaxed">{item.description}</p>
+                <h3 className="text-base font-semibold text-text-main">{item.title}</h3>
+                <p className="mt-1 text-xs text-text-muted max-w-xl leading-relaxed">{item.description}</p>
               </div>
               <span className="text-xs text-text-muted shrink-0">
                 {currentIndex + 1} / {items.length}
