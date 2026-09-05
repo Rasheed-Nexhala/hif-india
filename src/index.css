@@ -1,0 +1,555 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-card: var(--color-card);
+  --color-card-tint: var(--color-card-tint);
+  --color-border: var(--color-border);
+  --color-border-emerald: var(--color-border-emerald);
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+  --color-primary: var(--color-primary);
+  --color-primary-deep: var(--color-primary-deep);
+  --color-primary-light: var(--color-primary-light);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Primary surface palette — light, warm, editorial */
+    --color-bg: #fefdfb; /* warm ivory */
+    --color-bg-alt: #f8faf7; /* soft mint-tinted linen */
+    --color-card: #ffffff;
+    --color-card-tint: #f8faf7;
+    --color-bg-dark: #06231b;
+    --color-bg-dark-alt: #0a2e23;
+
+    /* Brand accents — used deliberately, not everywhere */
+    --color-primary: #047857;
+    --color-primary-deep: #065f46;
+    --color-primary-light: #10b981;
+    --color-accent: #f59e0b;
+    --color-accent-light: #fbbf24;
+
+    --color-border: #e7e5e0;
+    --color-border-emerald: rgba(4, 120, 87, 0.18);
+    --color-text-main: #1c1917;
+    --color-text-muted: #6b6a66;
+
+    --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .dark {
+    /* Dark Mode (.dark) — deep emerald noir & rich forest palette */
+    --color-bg: #041712; /* deep emerald noir */
+    --color-bg-alt: #07231c; /* rich dark forest surface */
+    --color-card: #0b2f26; /* elevated dark emerald card */
+    --color-card-tint: #0e382e; /* subtly tinted dark surface */
+    --color-bg-dark: #020d0a;
+    --color-bg-dark-alt: #051a14;
+
+    --color-border: #184e3f; /* refined emerald borders */
+    --color-border-emerald: rgba(16, 185, 129, 0.25);
+    --color-text-main: #f2f7f4; /* crisp readable ivory */
+    --color-text-muted: #b0c4b9; /* soft mint gray, brightened for better contrast */
+
+    --color-primary: #10b981; /* vibrant emerald for dark surfaces */
+    --color-primary-deep: #059669;
+    --color-primary-light: #34d399;
+    --color-accent: #fbbf24; /* golden amber */
+    --color-accent-light: #fde68a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+    min-height: 100vh;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  h1, h2, h3, h4,
+  .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Scrollbar — subtle, adaptive to light & dark */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfd9d0;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #184e3f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ---------------------------------------------------------
+   Clean card & surface utilities with dark mode adaptability
+   --------------------------------------------------------- */
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .card {
+  background: var(--color-card);
+  border-color: var(--color-border);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.card-tint {
+  background: var(--color-card-tint);
+  border: 1px solid var(--color-border-emerald);
+  border-radius: 0.9rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .card-tint {
+  background: var(--color-card-tint);
+  border-color: var(--color-border-emerald);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(52, 211, 153, 0.08);
+}
+
+.section-dark {
+  background: var(--color-bg-dark);
+  color: #f1f5f2;
+}
+
+.dark .section-dark {
+  background: #020d0a;
+  color: #f2f7f4;
+}
+
+/* Component layer so Tailwind utilities can override backgrounds */
+@layer components {
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: #d1fae5;
+    color: #064e3b;
+    border: 1px solid #059669;
+    box-shadow: 0 1px 2px rgba(6, 35, 27, 0.06);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .dark .badge {
+    background: rgba(16, 185, 129, 0.16);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .badge-amber {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+  }
+
+  .dark .badge-amber {
+    background: rgba(245, 158, 11, 0.16);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+  }
+
+  /* Solid chip for badges sitting on photographs */
+  .badge-on-photo {
+    position: relative;
+    z-index: 2;
+    background: #047857;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .dark .badge-on-photo {
+    background: #059669;
+    border-color: rgba(52, 211, 153, 0.4);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+  }
+
+  .badge-on-photo.badge-amber {
+    background: #b45309;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .dark .badge-on-photo.badge-amber {
+    background: #d97706;
+    border-color: rgba(251, 191, 36, 0.45);
+  }
+
+  /* Eyebrow badge for dark / photographic backgrounds (hero, page headers). */
+  .badge-on-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .badge-on-dark {
+    background: rgba(7, 35, 28, 0.6);
+    border-color: rgba(52, 211, 153, 0.35);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.15);
+  }
+
+  .badge-on-dark::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fbbf24;
+    box-shadow: 0 0 6px rgba(251, 191, 36, 0.9);
+    flex-shrink: 0;
+  }
+}
+
+/* Subtle single fixed background wash — dynamically adapts to light/dark */
+.bg-editorial-wash {
+  background-image:
+    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(4, 120, 87, 0.05), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 100% 10%, rgba(245, 158, 11, 0.04), transparent 70%);
+}
+
+.dark .bg-editorial-wash {
+  background-image:
+    radial-gradient(ellipse 65% 45% at 15% 0%, rgba(16, 185, 129, 0.12), transparent 70%),
+    radial-gradient(ellipse 55% 40% at 100% 10%, rgba(251, 191, 36, 0.08), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(6, 95, 70, 0.15), transparent 75%);
+}
+
+/* Glow and accent helpers for dark mode luxury aesthetic */
+.glow-emerald {
+  box-shadow: 0 0 25px -3px rgba(16, 185, 129, 0.35);
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px -3px rgba(251, 191, 36, 0.35);
+}
+
+.dark .glow-emerald {
+  box-shadow: 0 0 35px -2px rgba(16, 185, 129, 0.45);
+}
+
+.dark .glow-amber {
+  box-shadow: 0 0 35px -2px rgba(251, 191, 36, 0.45);
+}
+
+/* Simple, low-key entrance animation for first paint only */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* ---------------------------------------------------------
+   Indian flag tricolor brand mark for "INDIA"
+   ---------------------------------------------------------
+   Per-letter saffron / chakra blue / green — tuned to sit inline with the
+   emerald HIF wordmark on light navbar and dark footer surfaces. Soft
+   drop-shadows aid legibility without a badge container. */
+.text-flag-saffron {
+  color: #c2410c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-flag-saffron {
+  color: #fbbf24;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.text-flag-chakra {
+  color: #1d4ed8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-flag-chakra {
+  color: #93c5fd;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.text-flag-green {
+  color: #15803d;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-flag-green {
+  color: #4ade80;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* Legibility helpers for text sitting on photographic backgrounds */
+.text-shadow-soft {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-strong {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------------------------------------------
+   3D perspective helpers for tilt cards
+   --------------------------------------------------------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card-content {
+  transform: translateZ(20px);
+}
+
+/* ---------------------------------------------------------
+   Hub & spoke 3D diagram (Four Pillars section)
+   --------------------------------------------------------- */
+.hub-scene {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  height: 560px;
+  perspective: 1400px;
+}
+
+.hub-group {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.hub-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 84px;
+  height: 84px;
+  transform: translate(-50%, -50%) translateZ(30px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #34d399, #047857 70%);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .hub-core {
+  background: radial-gradient(circle at 35% 30%, #34d399, #065f46 70%);
+  box-shadow: 0 0 28px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(52, 211, 153, 0.3);
+}
+
+.hub-core-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fbbf24;
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.9);
+}
+
+.hub-core-pulse {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(52, 211, 153, 0.4);
+  animation: hub-pulse 2.6s ease-out infinite;
+}
+
+@keyframes hub-pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+.hub-spoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.55), rgba(251, 191, 36, 0));
+  transform-style: preserve-3d;
+}
+
+.hub-spoke-top {
+  width: 2px;
+  height: 118px;
+  transform: translate(-50%, -100%) translateZ(10px);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0), rgba(251, 191, 36, 0.55));
+}
+.hub-spoke-bottom {
+  width: 2px;
+  height: 118px;
+  transform: translate(-50%, 0%) translateZ(10px);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.55), rgba(251, 191, 36, 0));
+}
+.hub-spoke-left {
+  width: 150px;
+  height: 2px;
+  transform: translate(-100%, -50%) translateZ(10px);
+}
+.hub-spoke-right {
+  width: 150px;
+  height: 2px;
+  transform: translate(0%, -50%) translateZ(10px);
+  background: linear-gradient(270deg, rgba(251, 191, 36, 0.55), rgba(251, 191, 36, 0));
+}
+
+.hub-item {
+  position: absolute;
+  z-index: 2;
+  width: 230px;
+  transform-style: preserve-3d;
+}
+
+/* The floating animation lives on a nested element so it composes with static positional transform */
+.hub-item-float {
+  animation: hub-float 5s ease-in-out infinite;
+}
+
+.hub-item-top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateZ(50px);
+}
+.hub-item-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateZ(50px);
+}
+.hub-item-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateZ(50px);
+}
+.hub-item-right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateZ(50px);
+}
+
+@keyframes hub-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hub-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  background: rgba(8, 42, 32, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .hub-card {
+  background: rgba(11, 47, 38, 0.88);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.hub-card:hover {
+  transform: translateZ(14px) scale(1.03);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.dark .hub-card:hover {
+  border-color: rgba(52, 211, 153, 0.7);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+@media (max-width: 900px) {
+  .hub-scene {
+    height: auto;
+    perspective: none;
+  }
+  .hub-group {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    transform: none !important;
+  }
+  .hub-core,
+  .hub-spoke {
+    display: none;
+  }
+  .hub-item {
+    position: static;
+    width: 100%;
+    transform: none !important;
+  }
+  .hub-item-float {
+    animation: none;
+  }
+}
