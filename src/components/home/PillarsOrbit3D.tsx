@@ -26,7 +26,7 @@ export const PillarsOrbit3D: React.FC = () => {
     {
       icon: HeartHandshake,
       title: t('pillars.orphanCareTitle', 'Orphan Care'),
-      desc: t('pillars.orphanCareDesc', 'Chittor sanctuary nurturing 125+ boys'),
+      desc: t('pillars.orphanCareDesc', 'Chittor sanctuary nurturing 225 boys'),
       tint: 'from-amber-500 to-amber-600',
       pos: 'right'
     },
