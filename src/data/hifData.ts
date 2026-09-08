@@ -136,7 +136,14 @@ export const HIF_PROJECTS: ProjectData[] = [
     category: 'Housing',
     icon: 'Home',
     image: '/images/projects/ashiyana3.jpg',
-    images: ['/images/projects/ashiyana3.jpg', '/images/projects/ashiyana4.jpg'],
+    images: [
+      '/images/projects/ashiyana3.jpg',
+      '/images/projects/ashiyana4.jpg',
+      '/images/projects/ashiyana5.jpg',
+      '/images/projects/ashiyana6.jpg',
+      '/images/projects/ashiyana7.jpg',
+      '/images/projects/ashiyana8.jpg'
+    ],
     color: 'emerald',
     stats: [
       { label: 'Homes Built', value: '29' },
@@ -196,7 +203,13 @@ export const HIF_PROJECTS: ProjectData[] = [
     category: 'Orphanage',
     icon: 'HeartHandshake',
     image: '/images/projects/chitttor.jpg',
-    images: ['/images/projects/chitttor.jpg', '/images/projects/chittor2.jpg'],
+    images: [
+      '/images/projects/chitttor.jpg',
+      '/images/projects/chittor2.jpg',
+      '/images/projects/chittor3.jpg',
+      '/images/projects/chittor4.jpg',
+      '/images/projects/chittor5.jpg'
+    ],
     color: 'amber',
     stats: [
       { label: 'Students Enrolled', value: '125 Boys' },
@@ -256,7 +269,14 @@ export const HIF_PROJECTS: ProjectData[] = [
     category: 'Masjid',
     icon: 'Landmark',
     image: '/images/projects/masjid.jpg',
-    images: ['/images/projects/masjid.jpg', '/images/projects/masjid6.jpg'],
+    images: [
+      '/images/projects/masjid.jpg',
+      '/images/projects/masjid6.jpg',
+      '/images/projects/masjid7.jpg',
+      '/images/projects/masjid8.jpg',
+      '/images/projects/masjid9.jpg',
+      '/images/projects/masjid10.jpg'
+    ],
     color: 'emerald',
     stats: [
       { label: 'Masjids Reopened', value: '150+' },
@@ -319,7 +339,15 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Healthcare',
     icon: 'Stethoscope',
     image: '/images/projects/hif1.jpg',
-    images: ['/images/projects/hif1.jpg', '/images/projects/hif2.jpg', '/images/projects/hif5.jpg'],
+    images: [
+      '/images/projects/hif1.jpg',
+      '/images/projects/hif2.jpg',
+      '/images/projects/hif5.jpg',
+      '/images/projects/hif6.jpg',
+      '/images/projects/hif7.jpg',
+      '/images/projects/hif8.jpg',
+      '/images/projects/hif9.jpg'
+    ],
     color: 'emerald',
     stats: [
       { label: 'Blood Units Donated', value: '1,500+' },
@@ -353,7 +381,7 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Education',
     icon: 'BookOpen',
     image: '/images/projects/youth2.jpg',
-    images: ['/images/projects/youth2.jpg', '/images/projects/youth10.jpg'],
+    images: ['/images/projects/youth2.jpg', '/images/projects/youth10.jpg', '/images/projects/youth14.jpg'],
     color: 'amber',
     stats: [
       { label: 'Students Assisted', value: '2,500+' },
@@ -387,7 +415,7 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Youth',
     icon: 'Users',
     image: '/images/projects/youth1.jpg',
-    images: ['/images/projects/youth1.jpg', '/images/projects/youth4.jpg', '/images/projects/youth5.jpg', '/images/projects/youth11.jpg'],
+    images: ['/images/projects/youth1.jpg', '/images/projects/youth4.jpg', '/images/projects/youth5.jpg', '/images/projects/youth11.jpg', '/images/projects/youth15.jpg'],
     color: 'emerald',
     stats: [
       { label: 'Active Youth Volunteers', value: '300+' },
@@ -576,6 +604,24 @@ export const HIF_GALLERY: GalleryItem[] = [
     imageUrl: '/images/gallery/18.jpg',
     location: 'Netravati River Basin',
     description: 'HIF Youth Wing rescue team delivering emergency drinking water, dry rations, and blankets.',
+    year: '2023'
+  },
+  {
+    id: 'gal-19',
+    title: 'HIF Kapda Bank Clothing Drive',
+    category: 'Community',
+    imageUrl: '/images/gallery/19.jpg',
+    location: 'Rural Dakshina Kannada',
+    description: 'Sorted clothing bundles distributed free of cost to flood-affected and low-income families through the HIF Kapda Bank.',
+    year: '2023'
+  },
+  {
+    id: 'gal-20',
+    title: 'HIF Milk Drive',
+    category: 'Community',
+    imageUrl: '/images/gallery/20.jpg',
+    location: 'Coastal Karnataka',
+    description: 'Fresh milk packets delivered door-to-door to children in underserved settlements as part of the HIF Milk Drive.',
     year: '2023'
   }
 ]
