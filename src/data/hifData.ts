@@ -11,7 +11,7 @@ export interface ProjectData {
   title: string
   subtitle: string
   badge: string
-  category: 'Housing' | 'Orphanage' | 'Masjid'
+  category: 'Housing' | 'Orphanage' | 'Masjid' | 'Education' | 'Water' | 'Celebration'
   icon: string
   stats: {
     label: string
@@ -105,9 +105,9 @@ export const HIF_ORGANIZATION = {
     twitter: 'https://twitter.com/hifindia'
   },
   statsSummary: [
-    { label: 'Houses Delivered', count: 29, suffix: '', subtext: 'Goal: 150 by 2030 in Project Ashiyana', icon: 'Home' },
+    { label: 'Houses Delivered', count: 36, suffix: '', subtext: 'Goal: 150 by 2030 in Project Ashiyana', icon: 'Home' },
     { label: 'Masjids Revived & Maintained', count: 150, suffix: '+', subtext: 'Across Karnataka & Andhra Pradesh', icon: 'Landmark' },
-    { label: 'Orphan Students Nurtured', count: 125, suffix: '+', subtext: 'Comprehensive living, Hifz & modern schooling', icon: 'GraduationCap' },
+    { label: 'Orphan Students Nurtured', count: 225, suffix: '+', subtext: 'Comprehensive living, Hifz & modern schooling', icon: 'GraduationCap' },
     { label: 'Blood Units Mobilized', count: 1500, suffix: '+', subtext: 'Life-saving emergency blood cell units', icon: 'HeartPulse' },
     { label: 'Audit & Transparency', count: 100, suffix: '%', subtext: 'Direct zero-commission grassroots disbursement', icon: 'ShieldCheck' }
   ],
@@ -142,11 +142,15 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/projects/ashiyana5.jpg',
       '/images/projects/ashiyana6.jpg',
       '/images/projects/ashiyana7.jpg',
-      '/images/projects/ashiyana8.jpg'
+      '/images/projects/ashiyana8.jpg',
+      '/images/projects/ashiyana9.jpg',
+      '/images/projects/ashiyana10.jpg',
+      '/images/projects/ashiyana11.jpg',
+      '/images/projects/ashiyana12.jpg'
     ],
     color: 'emerald',
     stats: [
-      { label: 'Homes Built', value: '29' },
+      { label: 'Homes Built', value: '36' },
       { label: 'Target by 2030', value: '150 Homes' },
       { label: 'Avg Cost per Home', value: '₹6.5 - ₹8 Lakh' }
     ],
@@ -157,7 +161,7 @@ export const HIF_PROJECTS: ProjectData[] = [
       'Beyond brick and mortar, HIF works with each family on a comprehensive rehabilitation path—ensuring children return to school and family members gain vocational livelihood training.'
     ],
     achievements: [
-      '29 fully furnished, permanent homes successfully constructed and handed over to destitute families',
+      '36 fully furnished, permanent homes successfully constructed and handed over to destitute families, including homes for families affected by the Wayanad landslides',
       'Zero administrative cut: 100% of designated construction funds channeled straight to materials and local labor',
       'Engineered for coastal cyclone and monsoon durability with reinforced concrete foundations',
       'Sanitation facilities and solar electricity provisions integrated in modern batches'
@@ -212,19 +216,19 @@ export const HIF_PROJECTS: ProjectData[] = [
     ],
     color: 'amber',
     stats: [
-      { label: 'Students Enrolled', value: '125 Boys' },
+      { label: 'Students Enrolled', value: '225 Boys' },
       { label: 'Campus Area', value: '2.0 Acres' },
       { label: 'Curriculum', value: 'Schooling + Hifz + Aleem' }
     ],
     overview: 'A historic 100-year-old educational sanctuary revitalized into a modern campus providing world-class English medium schooling, memorization of Quran, and character building.',
     fullStory: [
-      'Set across 2 sprawling green acres in Chittor, Andhra Pradesh, the Chittor Dream Project is an oasis of hope for 125+ orphaned and underprivileged young boys.',
+      'Set across 2 sprawling green acres in Chittor, Andhra Pradesh, the Chittor Dream Project is an oasis of hope for 225 orphaned (yatheem) and destitute (miskeen) young boys.',
       'Rather than institutionalizing children, HIF creates a warm, homely family atmosphere where every boy receives tailored mentorship, nutritious hygienic meals, modern digital schooling, and religious scholarship (Hifz & Aleem courses).',
       'Children participate in martial arts, science clubs, computer programming classes, and public speaking workshops, preparing them to enter premier universities and professions.'
     ],
     achievements: [
       'Complete modernization of 100-year-old campus infrastructure including smart classrooms and clean dormitories',
-      '125 resident students receiving 100% free education, clothing, medical care, and 4 daily nutritious meals',
+      '225 resident students receiving 100% free education, clothing, medical care, and 4 daily nutritious meals',
       '100% pass rates in state board examinations with multiple student distinctions',
       'On-campus sports facilities, library with 3,000+ books, and high-speed computer laboratory'
     ],
@@ -244,14 +248,14 @@ export const HIF_PROJECTS: ProjectData[] = [
       {
         title: 'Special Campus Feast Day',
         amount: 8000,
-        unit: 'per day (125 boys)',
-        description: 'Sponsor a festive, special nutritious meal (Biryani, fruits, sweets) for all 125 boys on your special family occasion.'
+        unit: 'per day (225 boys)',
+        description: 'Sponsor a festive, special nutritious meal (Biryani, fruits, sweets) for all 225 boys on your special family occasion.'
       },
       {
         title: 'One Day Regular Food Sponsor',
         amount: 5000,
         unit: 'per day (all meals)',
-        description: 'Provides breakfast, lunch, evening snack, and dinner for the entire 125-student campus.'
+        description: 'Provides breakfast, lunch, evening snack, and dinner for the entire 225-student campus.'
       },
       {
         title: 'Annual Clothing & Uniform Kit',
@@ -280,7 +284,7 @@ export const HIF_PROJECTS: ProjectData[] = [
     color: 'emerald',
     stats: [
       { label: 'Masjids Reopened', value: '150+' },
-      { label: 'New Masjids Built', value: '6 Complete' },
+      { label: 'Masjids Constructed/Renovated', value: '8 Complete' },
       { label: 'Geographic Reach', value: 'KA & AP' }
     ],
     overview: 'Restoring life, prayers, and community education to abandoned rural masjids while constructing new centers of worship in underserved settlements.',
@@ -291,7 +295,7 @@ export const HIF_PROJECTS: ProjectData[] = [
     ],
     achievements: [
       'Over 150 closed and neglected rural masjids successfully reopened, refurbished, and kept active',
-      '6 brand new full-scale community masjids constructed in rural areas with zero prior prayer facilities',
+      '8 masjids newly constructed or fully renovated under the Masjid Development Project (MDP), restoring them as active, functional places of worship',
       'Regular monthly salary disbursement to 100+ rural Imams and Muazzins',
       'Installation of solar electrical setups and clean water filtration units in 40+ remote villages'
     ],
@@ -327,6 +331,177 @@ export const HIF_PROJECTS: ProjectData[] = [
         description: 'Supplies Arabic primers, Qurans, whiteboards, and stationery for 30 village children.'
       }
     ]
+  },
+  {
+    id: 'hif-education-city',
+    title: 'HIF Education City',
+    subtitle: 'A 3.82-Acre Arabic Academy Rising in Assaigoli, Mangaluru',
+    badge: 'Islamic Education Infrastructure',
+    category: 'Education',
+    icon: 'GraduationCap',
+    image: '/images/projects/about-us.jpg',
+    images: ['/images/projects/about-us.jpg'],
+    color: 'amber',
+    stats: [
+      { label: 'Campus Area', value: '3.82 Acres' },
+      { label: 'Location', value: 'Assaigoli, Mangaluru' },
+      { label: 'Status', value: 'Land Acquired' }
+    ],
+    overview: 'A state-of-the-art Arabic Academy coming up on a 3.82-acre campus in Assaigoli, Mangaluru, envisioned to transform Islamic learning for generations of students.',
+    fullStory: [
+      'HIF Education City is HIF INDIA\'s most ambitious infrastructure undertaking to date — a dedicated Arabic Academy campus that will bring together modern Islamic scholarship, Arabic language mastery, and contemporary academic education under one roof.',
+      'The 3.82-acre site in Assaigoli, Mangaluru has been fully purchased, clearing the way for construction to begin. The campus is envisioned as a long-term center of learning that will serve students from across the region for decades to come.',
+      'As with every HIF project, the Education City will be built and funded transparently, with donors able to track the campus from land, to foundation, to finished classrooms.'
+    ],
+    achievements: [
+      '3.82 acres of land in Assaigoli, Mangaluru fully purchased and secured for the campus',
+      'Construction planned to begin this year, In Sha Allah',
+      'Positioned as a flagship, long-term investment in Islamic and academic education for the coastal Karnataka region'
+    ],
+    futureGoals: [
+      'Break ground on Phase 1 construction of the Arabic Academy campus',
+      'Develop academic blocks, hostel facilities, and a library for resident students',
+      'Establish HIF Education City as a leading center for Arabic and Islamic scholarship in South India'
+    ],
+    supportTiers: [
+      {
+        title: 'Founding Campus Patron',
+        amount: 500000,
+        unit: 'per pledge',
+        description: 'Become a founding donor of HIF Education City, supporting core construction of the Arabic Academy campus.',
+        isPopular: true
+      },
+      {
+        title: 'Classroom Construction Share',
+        amount: 100000,
+        unit: 'per share',
+        description: 'Contribute a share towards the construction of a classroom block on the new campus.'
+      },
+      {
+        title: 'Campus Building Fund',
+        amount: 25000,
+        unit: 'per share',
+        description: 'Support ongoing construction costs as the campus rises from foundation to finished structure.'
+      },
+      {
+        title: 'Brick & Cement Contribution',
+        amount: 5000,
+        unit: 'per share',
+        description: 'A fractional contribution towards materials for the Education City campus.'
+      }
+    ]
+  },
+  {
+    id: 'project-boondh',
+    title: 'Project Boondh',
+    subtitle: 'Safe Drinking Water for Underserved Communities',
+    badge: 'Water Security',
+    category: 'Water',
+    icon: 'Droplet',
+    image: '/images/projects/water1.jpg',
+    images: [
+      '/images/projects/water1.jpg',
+      '/images/projects/water2.jpg',
+      '/images/projects/water3.jpg',
+      '/images/projects/water4.jpg',
+      '/images/gallery/22.jpg'
+    ],
+    color: 'emerald',
+    stats: [
+      { label: 'Water Projects Completed', value: '18' },
+      { label: 'Focus Area', value: 'Underserved Villages' },
+      { label: 'Access Provided', value: 'Safe Drinking Water' }
+    ],
+    overview: 'Project Boondh ensures access to clean and safe drinking water for underserved communities through borewells, water tankers, and filtration infrastructure.',
+    fullStory: [
+      'In many rural and low-income settlements across coastal Karnataka, access to clean drinking water remains a daily struggle, especially during summer months when wells and open sources run dry.',
+      'Project Boondh addresses this directly — funding borewells, water storage and filtration setups, and emergency tanker deliveries so that no family is forced to drink unsafe water.',
+      'Since inception, 18 water projects have been successfully completed, with more in the pipeline as HIF continues to identify water-stressed pockets across the region.'
+    ],
+    achievements: [
+      '18 water projects successfully completed for underserved communities',
+      'Emergency free water tanker deliveries to households facing acute summer scarcity',
+      'Borewell and filtration infrastructure built to provide lasting, not one-time, access to safe water'
+    ],
+    futureGoals: [
+      'Expand Project Boondh to additional water-stressed villages across Karnataka',
+      'Introduce solar-powered water pumping for greater sustainability',
+      'Partner with local communities on maintenance so every water project remains functional long-term'
+    ],
+    supportTiers: [
+      {
+        title: 'Full Water Project Sponsorship',
+        amount: 150000,
+        unit: 'per project',
+        description: 'Fund a complete borewell, storage, and filtration setup for an underserved community.',
+        isPopular: true
+      },
+      {
+        title: 'Water Tanker Emergency Relief',
+        amount: 15000,
+        unit: 'per tanker deployment',
+        description: 'Deliver free drinking water by tanker to households facing acute water scarcity.'
+      },
+      {
+        title: 'Filtration Unit Contribution',
+        amount: 5000,
+        unit: 'per share',
+        description: 'Contribute towards clean water filtration equipment for a village water point.'
+      }
+    ]
+  },
+  {
+    id: 'project-libaas',
+    title: 'Project Libaas',
+    subtitle: 'Dignity in Celebration for Underprivileged Brides & Grooms',
+    badge: 'Dignity & Celebration',
+    category: 'Celebration',
+    icon: 'Shirt',
+    image: '/images/projects/mission.jpg',
+    images: ['/images/projects/mission.jpg'],
+    color: 'amber',
+    stats: [
+      { label: 'Wedding Dresses Provided', value: '100+' },
+      { label: 'Beneficiaries', value: 'Brides & Grooms' },
+      { label: 'Focus', value: 'Dignity in Celebration' }
+    ],
+    overview: 'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity.',
+    fullStory: [
+      'For many underprivileged families, even a wedding — a day meant for joy — can become a source of financial strain and quiet shame when a proper wedding outfit is out of reach.',
+      'Project Libaas was created to remove that burden, providing dignified wedding attire to brides and grooms from low-income families so their special day is marked with celebration, not compromise.',
+      'To date, Project Libaas has provided over 100 wedding dresses, letting couples begin their married life with dignity rather than debt.'
+    ],
+    achievements: [
+      '100+ wedding dresses provided to brides and grooms from underprivileged families',
+      'Helped couples celebrate their wedding day with dignity, free of financial strain',
+      'Delivered as part of HIF\'s broader commitment to dignity in every stage of life'
+    ],
+    futureGoals: [
+      'Expand Project Libaas to reach more underprivileged couples each wedding season',
+      'Partner with local tailors and boutiques for sustainable, ongoing dress sponsorship',
+      'Pair wedding attire support with essential household starter kits for new couples'
+    ],
+    supportTiers: [
+      {
+        title: 'Full Wedding Attire Sponsorship',
+        amount: 15000,
+        unit: 'per couple',
+        description: 'Sponsor a complete wedding outfit for a bride and groom from an underprivileged family.',
+        isPopular: true
+      },
+      {
+        title: 'Bridal Dress Contribution',
+        amount: 8000,
+        unit: 'per bride',
+        description: 'Provide a dignified wedding dress for a bride from a low-income family.'
+      },
+      {
+        title: 'Groom\'s Attire Contribution',
+        amount: 5000,
+        unit: 'per groom',
+        description: 'Provide wedding attire for a groom from an underprivileged family.'
+      }
+    ]
   }
 ]
 
@@ -346,7 +521,9 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       '/images/projects/hif6.jpg',
       '/images/projects/hif7.jpg',
       '/images/projects/hif8.jpg',
-      '/images/projects/hif9.jpg'
+      '/images/projects/hif9.jpg',
+      '/images/projects/hif10.jpg',
+      '/images/projects/hif11.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -365,6 +542,9 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       'Rapid Blood Donor Network with 1,500+ registered voluntary donors across Mangaluru & coastal Karnataka',
       'Dialysis Financial Subsidy: Assisting end-stage kidney failure patients with recurring treatment expenses',
       '24/7 Free Emergency Ambulance Coordination and oxygen cylinder refill support',
+      'Home Oxygen Therapy Support Bank: Free rotation of oxygen cylinders & concentrators for home-care patients',
+      'Regular Vaccination Camps for children and adults in underserved settlements',
+      'Hajj Camps with Free Hajj Kits for pilgrims from the community',
       'COVID-19 Frontline Legacy: Free community oxygen bank and food kit distribution during lock-downs'
     ],
     impactPoints: [
@@ -381,7 +561,7 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Education',
     icon: 'BookOpen',
     image: '/images/projects/youth2.jpg',
-    images: ['/images/projects/youth2.jpg', '/images/projects/youth10.jpg', '/images/projects/youth14.jpg'],
+    images: ['/images/projects/youth2.jpg', '/images/projects/youth10.jpg', '/images/projects/youth14.jpg', '/images/projects/youth19.jpg'],
     color: 'amber',
     stats: [
       { label: 'Students Assisted', value: '2,500+' },
@@ -415,7 +595,7 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Youth',
     icon: 'Users',
     image: '/images/projects/youth1.jpg',
-    images: ['/images/projects/youth1.jpg', '/images/projects/youth4.jpg', '/images/projects/youth5.jpg', '/images/projects/youth11.jpg', '/images/projects/youth15.jpg'],
+    images: ['/images/projects/youth1.jpg', '/images/projects/youth4.jpg', '/images/projects/youth5.jpg', '/images/projects/youth11.jpg', '/images/projects/youth15.jpg', '/images/projects/youth16.jpg', '/images/projects/youth17.jpg', '/images/projects/youth18.jpg'],
     color: 'emerald',
     stats: [
       { label: 'Active Youth Volunteers', value: '300+' },
@@ -459,7 +639,7 @@ export const HIF_GALLERY: GalleryItem[] = [
     category: 'Orphanage',
     imageUrl: '/images/gallery/2.jpeg',
     location: 'Chittor, Andhra Pradesh',
-    description: 'Morning prayer and value assembly for 125 resident orphan students at the 2-acre green sanctuary.',
+    description: 'Morning prayer and value assembly for 225 resident orphan students at the 2-acre green sanctuary.',
     year: '2024'
   },
   {
@@ -567,7 +747,7 @@ export const HIF_GALLERY: GalleryItem[] = [
     category: 'Orphanage',
     imageUrl: '/images/gallery/14.jpg',
     location: 'Chittor Dining Hall',
-    description: 'Festive lunch provided by a donor family celebrating a milestone with all 125 boys.',
+    description: 'Festive lunch provided by a donor family celebrating a milestone with all 225 boys.',
     year: '2024'
   },
   {
@@ -623,6 +803,69 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Coastal Karnataka',
     description: 'Fresh milk packets delivered door-to-door to children in underserved settlements as part of the HIF Milk Drive.',
     year: '2023'
+  },
+  {
+    id: 'gal-21',
+    title: 'A Day With Orphan - Free Medical Checkup',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/21.jpg',
+    location: 'Highland Educational & Cultural Centre, Mangaluru',
+    description: 'A visiting doctor examines an orphan child at the annual "A Day With Orphan" event, offering free health screenings, gifts, and a shared meal.',
+    year: '2018'
+  },
+  {
+    id: 'gal-22',
+    title: 'HIF Free Water Tanker Supply',
+    category: 'Community',
+    imageUrl: '/images/gallery/22.jpg',
+    location: 'Mangaluru City',
+    description: 'HIF volunteers deliver free drinking water by tanker to households facing acute summer water scarcity.',
+    year: '2016'
+  },
+  {
+    id: 'gal-23',
+    title: 'HIF Rural Electrification Drive',
+    category: 'Community',
+    imageUrl: '/images/gallery/23.jpg',
+    location: 'Rural Dakshina Kannada',
+    description: 'A free electricity connection installed for a family that had been living without power, bringing light to their home for the first time.',
+    year: '2013'
+  },
+  {
+    id: 'gal-24',
+    title: 'HIF Ramadan Kit Distribution',
+    category: 'Community',
+    imageUrl: '/images/gallery/24.jpg',
+    location: 'Mangaluru & Rural Karnataka',
+    description: 'Ration kits with rice, oil, and daily essentials delivered door-to-door to needy families during the holy month of Ramadan.',
+    year: '2014'
+  },
+  {
+    id: 'gal-25',
+    title: 'Kerala Flood Relief',
+    category: 'Community',
+    imageUrl: '/images/gallery/25.jpg',
+    location: 'Wayanad, Kerala',
+    description: 'HIF volunteers delivered relief kits and surveyed damaged homes for families affected by severe Kerala flooding.',
+    year: '2018'
+  },
+  {
+    id: 'gal-26',
+    title: 'United Mangaluru Interfaith Harmony Programme',
+    category: 'Community',
+    imageUrl: '/images/gallery/26.jpg',
+    location: 'Town Hall, Mangaluru',
+    description: 'Religious leaders of different faiths shared one stage to promote communal harmony and mutual respect across Mangaluru.',
+    year: '2018'
+  },
+  {
+    id: 'gal-27',
+    title: 'A Day With Orphan - Sports & Games Day',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/27.jpg',
+    location: 'Highland Educational & Cultural Centre, Mangaluru',
+    description: 'Orphan children enjoy outdoor games as part of the annual "A Day With Orphan" celebration, alongside free medical checkups and gifts.',
+    year: '2016'
   }
 ]
 
@@ -671,9 +914,9 @@ export function calculateImpactFromAmount(amount: number): {
   } else if (amount < 8000) {
     return {
       headline: 'Full Campus Daily Food Feast',
-      primaryImpact: 'Sponsors breakfast, lunch, tea, and dinner for the entire 125-student orphan campus at Chittor for a full day.',
+      primaryImpact: 'Sponsors breakfast, lunch, tea, and dinner for the entire 225-student orphan campus at Chittor for a full day.',
       tangibles: [
-        { label: 'Orphans Fed (All Day)', count: '125 Boys', icon: 'Utensils' },
+        { label: 'Orphans Fed (All Day)', count: '225 Boys', icon: 'Utensils' },
         { label: 'Dialysis Aid', count: '2 Sessions', icon: 'Activity' },
         { label: 'Emergency Blood Support', count: '5 Units', icon: 'Heart' }
       ],
@@ -683,9 +926,9 @@ export function calculateImpactFromAmount(amount: number): {
   } else if (amount < 15000) {
     return {
       headline: 'Special Grand Festive Feast & Health Fund',
-      primaryImpact: 'Provides a special celebratory feast (Biryani, dessert, fruit) for all 125 boys in Chittor plus critical medicines for rural elderly.',
+      primaryImpact: 'Provides a special celebratory feast (Biryani, dessert, fruit) for all 225 boys in Chittor plus critical medicines for rural elderly.',
       tangibles: [
-        { label: 'Grand Special Meal', count: '125 Students', icon: 'Sparkles' },
+        { label: 'Grand Special Meal', count: '225 Students', icon: 'Sparkles' },
         { label: 'Imam Monthly Honorarium', count: '1 Rural Masjid', icon: 'Landmark' },
         { label: 'Oxygen Concentrator Support', count: '1 Month Loan', icon: 'HeartPulse' }
       ],

@@ -565,7 +565,7 @@ export const translations: Record<Language, any> = {
       housingTitle: 'Housing',
       housingDesc: 'Permanent Ashiyana homes for destitute families',
       orphanCareTitle: 'Orphan Care',
-      orphanCareDesc: 'Chittor sanctuary nurturing 125+ boys',
+      orphanCareDesc: 'Chittor sanctuary nurturing 225 boys',
       masjidRevivalTitle: 'Masjid Revival',
       masjidRevivalDesc: '150+ rural masjids restored & maintained',
       healthcareTitle: 'Healthcare',
@@ -588,7 +588,7 @@ export const translations: Record<Language, any> = {
         badge: 'Housing Mission',
         overview:
           'Project Ashiyana provides solid, dignified homes for widowed mothers, impoverished rural families, and disabled breadwinners living in dilapidated shacks.',
-        statHomesBuilt: '29 Homes Built',
+        statHomesBuilt: '36 Homes Built',
         statTarget: 'Target: 150 Homes by 2030',
         statAvgCost: '₹6.5 – ₹8 Lakh Avg Cost'
       },
@@ -598,7 +598,7 @@ export const translations: Record<Language, any> = {
         badge: 'Orphan Sanctuary',
         overview:
           'A historic 100-year-old educational sanctuary revitalized into a modern campus providing world-class English medium schooling, memorization of Quran, and character building.',
-        statBoys: '125 Boys Enrolled',
+        statBoys: '225 Boys Enrolled',
         statCampus: '2.0 Acres Campus',
         statCurriculum: 'Schooling + Hifz + Aleem'
       },
@@ -609,7 +609,7 @@ export const translations: Record<Language, any> = {
         overview:
           'Restoring life, prayers, and community education to abandoned rural masjids while constructing new centers of worship in underserved settlements.',
         statReopened: '150+ Masjids Reopened',
-        statNewBuilt: '6 New Masjids Built',
+        statNewBuilt: '8 Masjids Constructed/Renovated',
         statReach: 'Karnataka & Andhra Pradesh'
       }
     },
@@ -982,7 +982,7 @@ export const translations: Record<Language, any> = {
       housingTitle: 'ವಸತಿ ಯೋಜನೆ',
       housingDesc: 'ನಿರ್ಗತಿಕ ಕುಟುಂಬಗಳಿಗೆ ಶಾಶ್ವತ ಆಶಿಯಾನಾ ಮನೆಗಳು',
       orphanCareTitle: 'ಅನಾಥರ ಪೋಷಣೆ',
-      orphanCareDesc: '125+ ಬಾಲಕರನ್ನು ಪೋಷಿಸುವ ಚಿತ್ತೂರು ಆಶ್ರಯಧಾಮ',
+      orphanCareDesc: '225 ಬಾಲಕರನ್ನು ಪೋಷಿಸುವ ಚಿತ್ತೂರು ಆಶ್ರಯಧಾಮ',
       masjidRevivalTitle: 'ಮಸೀದಿ ಜೀರ್ಣೋದ್ಧಾರ',
       masjidRevivalDesc: '150+ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳ ಪುನರುಜ್ಜೀವನ ಮತ್ತು ನಿರ್ವಹಣೆ',
       healthcareTitle: 'ಆರೋಗ್ಯ ಸೇವೆ',
@@ -1005,7 +1005,7 @@ export const translations: Record<Language, any> = {
         badge: 'ವಸತಿ ಮಿಷನ್',
         overview:
           'ಶಿಥಿಲಾವಸ್ಥೆಯ ಗುಡಿಸಲುಗಳಲ್ಲಿ ವಾಸಿಸುತ್ತಿರುವ ವಿಧವಾ ತಾಯಂದಿರು, ಬಡ ಗ್ರಾಮೀಣ ಕುಟುಂಬಗಳು ಮತ್ತು ವಿಕಲಚೇತನರಿಗೆ ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾ ಗಟ್ಟಿಮುಟ್ಟಾದ ಶಾಶ್ವತ ಮನೆಗಳನ್ನು ನಿರ್ಮಿಸಿಕೊಡುತ್ತದೆ.',
-        statHomesBuilt: '29 ನಿರ್ಮಿಸಿದ ಮನೆಗಳು',
+        statHomesBuilt: '36 ನಿರ್ಮಿಸಿದ ಮನೆಗಳು',
         statTarget: 'ಗುರಿ: 2030 ರ ವೇಳೆಗೆ 150 ಮನೆಗಳು',
         statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹6.5 – ₹8 ಲಕ್ಷ'
       },
@@ -1015,7 +1015,7 @@ export const translations: Record<Language, any> = {
         badge: 'ಅನಾಥರ ಆಶ್ರಯಧಾಮ',
         overview:
           '100 ವರ್ಷಗಳ ಐತಿಹಾಸಿಕ ಶಿಕ್ಷಣ ಸಂಕೀರ್ಣವನ್ನು ವಿಶ್ವದರ್ಜೆಯ ಇಂಗ್ಲಿಷ್ ಮಾಧ್ಯಮ ಶಿಕ್ಷಣ, ಕುರಾನ್ ಕಂಠಪಾಠ (ಹಿಫ್ಜ್) ಮತ್ತು ನೈತಿಕ ಸಂಸ್ಕಾರ ನೀಡುವ ಆಧುನಿಕ ಆವರಣವಾಗಿ ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾಗಿದೆ.',
-        statBoys: '125 ಬಾಲಕರು ದಾಖಲು',
+        statBoys: '225 ಬಾಲಕರು ದಾಖಲು',
         statCampus: '2.0 ಎಕರೆ ಆವರಣ',
         statCurriculum: 'ಸ್ಕೂಲಿಂಗ್ + ಹಿಫ್ಜ್ + ಆಲೀಮ್'
       },
@@ -1026,7 +1026,7 @@ export const translations: Record<Language, any> = {
         overview:
           'ಕೈಬಿಡಲಾದ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳಿಗೆ ಪ್ರಾರ್ಥನೆ ಮತ್ತು ಸಮುದಾಯ ಶಿಕ್ಷಣದ ಜೀವಕಳೆ ತುಂಬುವುದು ಮತ್ತು ಸೌಲಭ್ಯವಂಚಿತ ಪ್ರದೇಶಗಳಲ್ಲಿ ಹೊಸ ಆರಾಧನಾ ಕೇಂದ್ರಗಳನ್ನು ನಿರ್ಮಿಸುವುದು.',
         statReopened: '150+ ಮಸೀದಿಗಳು ಪುನರಾರಂಭ',
-        statNewBuilt: '6 ಹೊಸ ಮಸೀದಿಗಳ ನಿರ್ಮಾಣ',
+        statNewBuilt: '8 ಮಸೀದಿಗಳ ನಿರ್ಮಾಣ/ಜೀರ್ಣೋದ್ಧಾರ',
         statReach: 'ಕರ್ನಾಟಕ ಮತ್ತು ಆಂಧ್ರಪ್ರದೇಶ'
       }
     },
@@ -1399,7 +1399,7 @@ export const translations: Record<Language, any> = {
       housingTitle: 'आवास मिशन',
       housingDesc: 'जरूरतमंद परिवारों के लिए स्थायी आशियाना घर',
       orphanCareTitle: 'अनाथ संरक्षण',
-      orphanCareDesc: 'चित्तूर आश्रम में 125+ बालकों का लालन-पालन',
+      orphanCareDesc: 'चित्तूर आश्रम में 225 बालकों का लालन-पालन',
       masjidRevivalTitle: 'मस्जिद जीर्णोद्धार',
       masjidRevivalDesc: '150+ ग्रामीण मस्जिदों का पुनरुद्धार और रख-रखाव',
       healthcareTitle: 'स्वास्थ्य सेवा',
@@ -1422,7 +1422,7 @@ export const translations: Record<Language, any> = {
         badge: 'आवास मिशन',
         overview:
           'कच्ची झोपड़ियों में रहने वाली विधवा माताओं, निर्धन ग्रामीण परिवारों और दिव्यांगजनों के लिए प्रोजेक्ट आशियाना मजबूत, स्थायी पक्के मकान बनाता है।',
-        statHomesBuilt: '29 निर्मित मकान',
+        statHomesBuilt: '36 निर्मित मकान',
         statTarget: 'लक्ष्य: 2030 तक 150 मकान',
         statAvgCost: 'औसत लागत ₹6.5 – ₹8 लाख'
       },
@@ -1432,7 +1432,7 @@ export const translations: Record<Language, any> = {
         badge: 'अनाथ आश्रम',
         overview:
           '100 वर्ष पुराने ऐतिहासिक परिसर को आधुनिक रूप देकर अनाथ बालकों को विश्वस्तरीय अंग्रेजी माध्यम शिक्षा, कुरआन हिफ़्ज़ और नैतिक संस्कार प्रदान किए जाते हैं।',
-        statBoys: '125 बालक नामांकित',
+        statBoys: '225 बालक नामांकित',
         statCampus: '2.0 एकड़ परिसर',
         statCurriculum: 'स्कूली शिक्षा + हिफ्ज़ + आलिम'
       },
@@ -1443,7 +1443,7 @@ export const translations: Record<Language, any> = {
         overview:
           'वीराने में पड़ी ग्रामीण मस्जिदों में नमाज और सामुदायिक शिक्षा को पुनर्जीवित करना तथा वंचित क्षेत्रों में नए इबादतगाहों का निर्माण करना।',
         statReopened: '150+ मस्जिदें पुनर्जीवित',
-        statNewBuilt: '6 नई मस्जिदों का निर्माण',
+        statNewBuilt: '8 मस्जिदों का निर्माण/जीर्णोद्धार',
         statReach: 'कर्नाटक और आंध्र प्रदेश'
       }
     },
