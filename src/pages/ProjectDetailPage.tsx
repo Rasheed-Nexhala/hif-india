@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { CheckCircle2, Heart, Target } from 'lucide-react'
 import { HIF_PROJECTS } from '../data/hifData'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
 import { localizeProject } from '../lib/localizeContent'
+import { ImageLightbox } from '../components/common/ImageLightbox'
 
 export const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>()
   const rawProject = HIF_PROJECTS.find((p) => p.id === projectId)
   const { openDonate } = useDonate()
   const { t, language } = useLanguage()
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   if (!rawProject) return <Navigate to="/projects" replace />
 
@@ -64,10 +66,19 @@ export const ProjectDetailPage: React.FC = () => {
 
             {project.images.length > 1 && (
               <div className="grid grid-cols-2 gap-4">
-                {project.images.map((img) => (
-                  <div key={img} className="aspect-[4/3] rounded-xl overflow-hidden border border-border">
-                    <img src={img} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
+                {project.images.map((img, i) => (
+                  <button
+                    key={img}
+                    onClick={() => setLightboxIndex(i)}
+                    className="aspect-[4/3] rounded-xl overflow-hidden border border-border group"
+                  >
+                    <img
+                      src={img}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </button>
                 ))}
               </div>
             )}
@@ -145,6 +156,14 @@ export const ProjectDetailPage: React.FC = () => {
           </aside>
         </div>
       </section>
+
+      <ImageLightbox
+        images={project.images}
+        index={lightboxIndex}
+        alt={project.title}
+        onClose={() => setLightboxIndex(null)}
+        onSelect={setLightboxIndex}
+      />
     </>
   )
 }
