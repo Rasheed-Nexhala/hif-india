@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { CheckCircle2, Sparkles, Heart } from 'lucide-react'
 import { HIF_ACTIVITIES } from '../data/hifData'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
 import { localizeActivity } from '../lib/localizeContent'
+import { ImageLightbox } from '../components/common/ImageLightbox'
 
 const idBySlug: Record<string, string> = {
   'medical-cell': 'hif-medical-cell',
@@ -18,6 +19,7 @@ export const ActivityDetailPage: React.FC = () => {
   const rawActivity = HIF_ACTIVITIES.find((a) => a.id === resolvedId)
   const { openDonate } = useDonate()
   const { t, language } = useLanguage()
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   if (!rawActivity) return <Navigate to="/activities" replace />
 
@@ -71,10 +73,19 @@ export const ActivityDetailPage: React.FC = () => {
 
             {activity.images.length > 1 && (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {activity.images.map((img) => (
-                  <div key={img} className="aspect-[4/3] rounded-xl overflow-hidden border border-border">
-                    <img src={img} alt={activity.title} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
+                {activity.images.map((img, i) => (
+                  <button
+                    key={img}
+                    onClick={() => setLightboxIndex(i)}
+                    className="aspect-[4/3] rounded-xl overflow-hidden border border-border group"
+                  >
+                    <img
+                      src={img}
+                      alt={activity.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </button>
                 ))}
               </div>
             )}
@@ -122,6 +133,14 @@ export const ActivityDetailPage: React.FC = () => {
           </aside>
         </div>
       </section>
+
+      <ImageLightbox
+        images={activity.images}
+        index={lightboxIndex}
+        alt={activity.title}
+        onClose={() => setLightboxIndex(null)}
+        onSelect={setLightboxIndex}
+      />
     </>
   )
 }
