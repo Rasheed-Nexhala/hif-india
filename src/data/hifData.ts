@@ -357,9 +357,7 @@ export const HIF_PROJECTS: ProjectData[] = [
     icon: 'GraduationCap',
     image: '/images/projects/about-us.jpg',
     images: [
-      '/images/projects/about-us.jpg',
-      '/images/gallery/sslc-awards-celebrating-excellence-2025.jpg',
-      '/images/gallery/ssr-awards-celebrating-excellence-2023.jpg'
+      '/images/projects/about-us.jpg'
     ],
     color: 'amber',
     stats: [
