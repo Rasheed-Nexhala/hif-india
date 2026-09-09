@@ -206,6 +206,24 @@ export interface TranslationDictionary {
       statNewBuilt: string
       statReach: string
     }
+    educationCity: {
+      title: string
+      subtitle: string
+      badge: string
+      overview: string
+    }
+    boondh: {
+      title: string
+      subtitle: string
+      badge: string
+      overview: string
+    }
+    libaas: {
+      title: string
+      subtitle: string
+      badge: string
+      overview: string
+    }
   }
   activities: {
     eyebrow: string
@@ -641,6 +659,27 @@ export const translations: Record<Language, any> = {
         statReopened: '150+ Masjids Reopened',
         statNewBuilt: '8 Masjids Constructed/Renovated',
         statReach: 'Karnataka & Andhra Pradesh'
+      },
+      educationCity: {
+        title: 'HIF Education City',
+        subtitle: 'A 3.82-Acre Arabic Academy Rising in Assaigoli, Mangaluru',
+        badge: 'Islamic Education Infrastructure',
+        overview:
+          'A state-of-the-art Arabic Academy coming up on a 3.82-acre campus in Assaigoli, Mangaluru, envisioned to transform Islamic learning for generations of students.'
+      },
+      boondh: {
+        title: 'Project Boondh',
+        subtitle: 'Safe Drinking Water for Underserved Communities',
+        badge: 'Water Security',
+        overview:
+          'Project Boondh ensures access to clean and safe drinking water for underserved communities through borewells, water tankers, and filtration infrastructure.'
+      },
+      libaas: {
+        title: 'Project Libaas',
+        subtitle: 'Dignity in Celebration for Underprivileged Brides & Grooms',
+        badge: 'Dignity & Celebration',
+        overview:
+          'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity.'
       }
     },
     activities: {
@@ -1087,6 +1126,27 @@ export const translations: Record<Language, any> = {
         statReopened: '150+ ಮಸೀದಿಗಳು ಪುನರಾರಂಭ',
         statNewBuilt: '8 ಮಸೀದಿಗಳ ನಿರ್ಮಾಣ/ಜೀರ್ಣೋದ್ಧಾರ',
         statReach: 'ಕರ್ನಾಟಕ ಮತ್ತು ಆಂಧ್ರಪ್ರದೇಶ'
+      },
+      educationCity: {
+        title: 'HIF ಎಜುಕೇಶನ್ ಸಿಟಿ',
+        subtitle: 'ಮಂಗಳೂರಿನ ಅಸೈಗೋಳಿಯಲ್ಲಿ ತಲೆಯೆತ್ತುತ್ತಿರುವ 3.82 ಎಕರೆಯ ಅರೇಬಿಕ್ ಅಕಾಡೆಮಿ',
+        badge: 'ಇಸ್ಲಾಮಿಕ್ ಶಿಕ್ಷಣ ಮೂಲಸೌಕರ್ಯ',
+        overview:
+          'ಮಂಗಳೂರಿನ ಅಸೈಗೋಳಿಯಲ್ಲಿ 3.82 ಎಕರೆ ಆವರಣದಲ್ಲಿ ತಲೆಯೆತ್ತುತ್ತಿರುವ ಅತ್ಯಾಧುನಿಕ ಅರೇಬಿಕ್ ಅಕಾಡೆಮಿ, ಮುಂದಿನ ಪೀಳಿಗೆಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇಸ್ಲಾಮಿಕ್ ಶಿಕ್ಷಣವನ್ನು ಪರಿವರ್ತಿಸುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ.'
+      },
+      boondh: {
+        title: 'ಪ್ರಾಜೆಕ್ಟ್ ಬೂಂದ್',
+        subtitle: 'ಸೌಲಭ್ಯವಂಚಿತ ಸಮುದಾಯಗಳಿಗೆ ಸುರಕ್ಷಿತ ಕುಡಿಯುವ ನೀರು',
+        badge: 'ನೀರಿನ ಭದ್ರತೆ',
+        overview:
+          'ಪ್ರಾಜೆಕ್ಟ್ ಬೂಂದ್ ಬೋರ್‌ವೆಲ್, ನೀರಿನ ಟ್ಯಾಂಕರ್ ಮತ್ತು ಶುದ್ಧೀಕರಣ ಮೂಲಸೌಕರ್ಯದ ಮೂಲಕ ಸೌಲಭ್ಯವಂಚಿತ ಸಮುದಾಯಗಳಿಗೆ ಶುದ್ಧ ಮತ್ತು ಸುರಕ್ಷಿತ ಕುಡಿಯುವ ನೀರನ್ನು ಒದಗಿಸುತ್ತದೆ.'
+      },
+      libaas: {
+        title: 'ಪ್ರಾಜೆಕ್ಟ್ ಲಿಬಾಸ್',
+        subtitle: 'ಸೌಲಭ್ಯವಂಚಿತ ವಧು-ವರರಿಗೆ ಘನತೆಯ ಆಚರಣೆ',
+        badge: 'ಘನತೆ ಮತ್ತು ಆಚರಣೆ',
+        overview:
+          'ಪ್ರಾಜೆಕ್ಟ್ ಲಿಬಾಸ್ ಸೌಲಭ್ಯವಂಚಿತ ಕುಟುಂಬಗಳ ವಧು-ವರರಿಗೆ ಮದುವೆ ಉಡುಪುಗಳನ್ನು ಒದಗಿಸಿ, ಅವರ ವಿಶೇಷ ದಿನವನ್ನು ಘನತೆಯಿಂದ ಆಚರಿಸಲು ನೆರವಾಗುತ್ತದೆ.'
       }
     },
     activities: {
@@ -1533,6 +1593,27 @@ export const translations: Record<Language, any> = {
         statReopened: '150+ मस्जिदें पुनर्जीवित',
         statNewBuilt: '8 मस्जिदों का निर्माण/जीर्णोद्धार',
         statReach: 'कर्नाटक और आंध्र प्रदेश'
+      },
+      educationCity: {
+        title: 'HIF एजुकेशन सिटी',
+        subtitle: 'मंगलुरु के असैगोली में तैयार हो रहा 3.82 एकड़ का अरबी अकादमी परिसर',
+        badge: 'इस्लामिक शिक्षा बुनियादी ढांचा',
+        overview:
+          'मंगलुरु के असैगोली में 3.82 एकड़ परिसर पर तैयार हो रही अत्याधुनिक अरबी अकादमी, जो आने वाली पीढ़ियों के विद्यार्थियों के लिए इस्लामिक शिक्षा को नया रूप देगी।'
+      },
+      boondh: {
+        title: 'प्रोजेक्ट बूंद',
+        subtitle: 'वंचित समुदायों के लिए सुरक्षित पेयजल',
+        badge: 'जल सुरक्षा',
+        overview:
+          'प्रोजेक्ट बूंद बोरवेल, पानी के टैंकर और फिल्ट्रेशन बुनियादी ढांचे के माध्यम से वंचित समुदायों को स्वच्छ और सुरक्षित पेयजल उपलब्ध कराता है।'
+      },
+      libaas: {
+        title: 'प्रोजेक्ट लिबास',
+        subtitle: 'वंचित दूल्हा-दुल्हन के लिए गरिमामय उत्सव',
+        badge: 'गरिमा और उत्सव',
+        overview:
+          'प्रोजेक्ट लिबास वंचित परिवारों के दूल्हा-दुल्हन के लिए शादी के कपड़े उपलब्ध कराकर उन्हें अपने खास दिन को गरिमा के साथ मनाने में मदद करता है।'
       }
     },
     activities: {

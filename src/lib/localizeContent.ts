@@ -13,7 +13,10 @@ export function tx(language: Language, key: string, fallback: string): string {
 const PROJECT_KEYS: Record<string, string> = {
   'project-ashiyana': 'ashiyana',
   'chittor-dream-project': 'chittor',
-  'masjid-development': 'masjid'
+  'masjid-development': 'masjid',
+  'hif-education-city': 'educationCity',
+  'project-boondh': 'boondh',
+  'project-libaas': 'libaas'
 }
 
 const ACTIVITY_KEYS: Record<string, string> = {
