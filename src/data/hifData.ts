@@ -459,8 +459,8 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Dignity & Celebration',
     category: 'Celebration',
     icon: 'Shirt',
-    image: '/images/projects/mission.jpg',
-    images: ['/images/projects/mission.jpg'],
+    image: '/images/projects/libaas-cover.png',
+    images: ['/images/projects/libaas-cover.png'],
     color: 'amber',
     stats: [
       { label: 'Wedding Dresses Provided', value: '100+' },
