@@ -113,6 +113,10 @@ export interface TranslationDictionary {
     whoWeAreTitle: string
     whoWeAreText1: string
     whoWeAreText2: string
+    teamBadge: string
+    teamTitle: string
+    teamDesc: string
+    teamPhotoAlt: string
     visionTitle: string
     visionText: string
     missionTitle: string
@@ -376,6 +380,7 @@ export interface TranslationDictionary {
     sendingMessage: string
     submitError: string
     whatsAppButton: string
+    whatsAppHint: string
     messageSentTitle: string
     messageSentText: string
     sendAnother: string
@@ -531,6 +536,11 @@ export const translations: Record<Language, any> = {
         'Empowering Communities, Transforming Lives with Compassion & Dignity. Since our founding, we have focused on tangible, measurable interventions — permanent housing for the homeless, a loving residential sanctuary for orphaned boys, restoration of abandoned rural masjids, and free-of-cost medical equipment loans and blood donation coordination for families in crisis.',
       whoWeAreText2:
         'Registered NGO under Indian Trusts Act, HIF INDIA operates on a strict zero-commission policy: every rupee donated toward a specific project is channeled directly into materials, labor, meals, or medical relief for the intended beneficiaries.',
+      teamBadge: 'Our Community',
+      teamTitle: 'The people behind the mission',
+      teamDesc:
+        'HIF India is powered by hundreds of volunteers, youth leaders, and community members who show up with compassion at every event, programme, and relief drive.',
+      teamPhotoAlt: 'HIF India team and community',
       visionTitle: 'Our Vision',
       visionText:
         'To build a righteous, self-reliant, and compassionate society where no family is left shelterless, every orphan finds a loving sanctuary of growth, rural places of worship flourish with knowledge, and healthcare is accessible to all regardless of socio-economic standing.',
@@ -816,6 +826,7 @@ export const translations: Record<Language, any> = {
       sendingMessage: 'Sending...',
       submitError: 'Unable to send your message. Please try again or message us on WhatsApp.',
       whatsAppButton: 'Message us on WhatsApp',
+      whatsAppHint: 'Fastest way to reach us — tap to open WhatsApp.',
       messageSentTitle: 'Message sent!',
       messageSentText: 'Thank you for reaching out to HIF INDIA. We will reply shortly.',
       sendAnother: 'Send another message'
@@ -962,6 +973,7 @@ export const translations: Record<Language, any> = {
       liveCounters: 'ನೈಜ ಸಮಯದ ಪ್ರಭಾವದ ಅಂಕಿಅಂಶಗಳು'
     },
     about: {
+      eyebrow: 'HIF INDIA ಬಗ್ಗೆ',
       title: 'ಸಮುದಾಯದ ನಂಬಿಕೆಯ ಮೇಲೆ ಕಟ್ಟಲಾದ ನೇರ ಟ್ರಸ್ಟ್.',
       description:
         'ಹೈಲ್ಯಾಂಡ್ ಇಸ್ಲಾಮಿಕ್ ಫೋರಮ್ (HIF INDIA) ಮಂಗಳೂರಿನಲ್ಲಿ ಪ್ರಧಾನ ಕಚೇರಿ ಹೊಂದಿರುವ, ಕರ್ನಾಟಕ ಮತ್ತು ಆಂಧ್ರಪ್ರದೇಶದಾದ್ಯಂತ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿರುವ ನೋಂದಾಯಿತ ಎನ್‌ಜಿಒ ಆಗಿದೆ.',
@@ -971,6 +983,11 @@ export const translations: Record<Language, any> = {
         'ಸಹಾನುಭೂತಿ ಮತ್ತು ಘನತೆಯೊಂದಿಗೆ ಸಮುದಾಯಗಳ ಬಲಪಡಿಸುವುದು, ಜೀವನ ಪರಿವರ್ತನೆ. ಸಂಸ್ಥೆಯ ಸ್ಥಾಪನೆಯಿಂದಲೂ, ನಾವು ನೇರ ಮತ್ತು ಅಳೆಯಬಹುದಾದ ಕಾರ್ಯಕ್ರಮಗಳ ಮೇಲೆ ಗಮನಹರಿಸಿದ್ದೇವೆ — ನಿರಾಶ್ರಿತರಿಗೆ ಶಾಶ್ವತ ಮನೆಗಳು, ಅನಾಥ ಬಾಲಕರಿಗೆ ಪ್ರೀತಿಯ ವಸತಿ ಆಶ್ರಯ, ಪಾಳುಬಿದ್ದ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳ ಜೀರ್ಣೋದ್ಧಾರ, ಉಚಿತ ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳ ಸಾಲ ಮತ್ತು ತುರ್ತು ರಕ್ತದಾನ ಸಮನ್ವಯ.',
       whoWeAreText2:
         'ಭಾರತೀಯ ಟ್ರಸ್ಟ್ ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಸಂಸ್ಥೆಯಾಗಿರುವ HIF INDIA ಕಮಿಷನ್ ಇಲ್ಲದ ನೀತಿಯಡಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ: ನಿರ್ದಿಷ್ಟ ಯೋಜನೆಗಾಗಿ ನೀಡಲಾದ ಪ್ರತಿಯೊಂದು ರೂಪಾಯಿಯೂ ನೇರವಾಗಿ ವಸ್ತುಗಳು, ಕಾರ್ಮಿಕ ವೆಚ್ಚ, ಆಹಾರ ಅಥವಾ ವೈದ್ಯಕೀಯ ಪರಿಹಾರಕ್ಕಾಗಿ ಫಲಾನುಭವಿಗಳಿಗೆ ತಲುಪುತ್ತದೆ.',
+      teamBadge: 'ನಮ್ಮ ಸಮುದಾಯ',
+      teamTitle: 'ಈ ಕಾರ್ಯದ ಹಿಂದಿನ ಜನರು',
+      teamDesc:
+        'HIF India ಅನ್ನು ನೂರಾರು ಸ್ವಯಂಸೇವಕರು, ಯುವ ನಾಯಕರು ಮತ್ತು ಸಮುದಾಯ ಸದಸ್ಯರು ಪ್ರತಿ ಕಾರ್ಯಕ್ರಮ, ಸಭೆ ಮತ್ತು ನೆರವು ಕಾರ್ಯದಲ್ಲಿ ಸಹಾನುಭೂತಿಯಿಂದ ಕೆಲಸ ಮಾಡುವ ಮೂಲಕ ನಡೆಸುತ್ತಾರೆ.',
+      teamPhotoAlt: 'HIF India ತಂಡ ಮತ್ತು ಸಮುದಾಯ',
       visionTitle: 'ನಮ್ಮ ಗುರಿ',
       visionText:
         'ಯಾವುದೇ ಕುಟುಂಬವು ಆಸರೆರಹಿತವಾಗಿ ಉಳಿಯದ, ಪ್ರತಿಯೊಬ್ಬ ಅನಾಥ ಮಗುವೂ ಪ್ರೀತಿ ಮತ್ತು ಬೆಳವಣಿಗೆಯ ಆಶ್ರಯ ಪಡೆಯುವ, ಗ್ರಾಮೀಣ ಆರಾಧನಾ ಸ್ಥಳಗಳು ಜ್ಞಾನದಿಂದ ಕಂಗೊಳಿಸುವ ಮತ್ತು ಸಾಮಾಜಿಕ-ಆರ್ಥಿಕ ಸ್ಥಿತಿಯನ್ನು ಲೆಕ್ಕಿಸದೆ ಎಲ್ಲರಿಗೂ ಆರೋಗ್ಯ ರಕ್ಷಣೆ ಸಿಗುವ ಧಾರ್ಮಿಕ, ಸ್ವಾವಲಂಬಿ ಮತ್ತು ಸಹಾನುಭೂತಿಯ ಸಮಾಜವನ್ನು ನಿರ್ಮಿಸುವುದು.',
@@ -1227,6 +1244,7 @@ export const translations: Record<Language, any> = {
         'ದೇಣಿಗೆಗಳು, ಪ್ರಾಯೋಜಕತ್ವಗಳು, ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳ ವಿನಂತಿ ಅಥವಾ ಸ್ವಯಂಸೇವಕರಾಗಲು ನಮ್ಮ ಮಂಗಳೂರು ಕೇಂದ್ರ ಕಚೇರಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ.',
       centralSecretariat: 'ಕೇಂದ್ರ ಕಾರ್ಯಾಲಯ',
       hours: 'ಕೆಲಸದ ಸಮಯ',
+      hoursValue: 'ಬೆಳಗ್ಗೆ 9:00 – ಸಂಜೆ 7:00 (ಸೋಮ–ಶನಿ)',
       primaryPhoneLabel: 'ಮುಖ್ಯ ಕಚೇರಿ & ವೈದ್ಯಕೀಯ ವಿಭಾಗ',
       altPhoneLabel: 'ಪರ್ಯಾಯ ಸಹಾಯವಾಣಿ',
       emailLabel: 'ಅಧಿಕೃತ ಇಮೇಲ್',
@@ -1254,6 +1272,7 @@ export const translations: Record<Language, any> = {
       sendingMessage: 'ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ...',
       submitError: 'ಸಂದೇಶ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ.',
       whatsAppButton: 'WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ',
+      whatsAppHint: 'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಲು ಅತಿ ವೇಗದ ಮಾರ್ಗ — WhatsApp ತೆರೆಯಲು ಟ್ಯಾಪ್ ಮಾಡಿ.',
       messageSentTitle: 'ಸಂದೇಶ ಕಳುಹಿಸಲಾಗಿದೆ!',
       messageSentText: 'HIF INDIA ಅನ್ನು ಸಂಪರ್ಕಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ಉತ್ತರಿಸುತ್ತೇವೆ.',
       sendAnother: 'ಇನ್ನೊಂದು ಸಂದೇಶ ಕಳುಹಿಸಿ'
@@ -1410,6 +1429,11 @@ export const translations: Record<Language, any> = {
         'सहानुभूति और गरिमा के साथ समुदायों को मजबूत बनाना, जीवन में बदलाव। अपनी स्थापना के बाद से, हमने ठोस और प्रत्यक्ष पहलों पर ध्यान केंद्रित किया है — बेघरों के लिए स्थायी पक्के घर, अनाथ बालकों के लिए प्रेमपूर्ण आवासीय आश्रम, वीरान ग्रामीण मस्जिदों का जीर्णोद्धार, निःशुल्क चिकित्सा उपकरण ऋण और आपातकालीन रक्तदान समन्वय।',
       whoWeAreText2:
         'भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत संगठन के रूप में, HIF INDIA बिना कमीशन की सख्त नीति पर काम करता है: किसी विशिष्ट योजना के लिए दान किया गया प्रत्येक रुपया सीधे लाभार्थियों के लिए सामग्री, श्रम, भोजन या चिकित्सा राहत में लगाया जाता है।',
+      teamBadge: 'हमारा समुदाय',
+      teamTitle: 'इस मिशन के पीछे के लोग',
+      teamDesc:
+        'HIF India सैकड़ों स्वयंसेवकों, युवा नेताओं और समुदाय के सदस्यों द्वारा संचालित है, जो हर कार्यक्रम, सत्र और राहत अभियान में सहानुभूति के साथ मैदान में उतरते हैं।',
+      teamPhotoAlt: 'HIF India टीम और समुदाय',
       visionTitle: 'हमारा लक्ष्य',
       visionText:
         'एक धर्मपरायण, आत्मनिर्भर और करुणामय समाज का निर्माण करना जहाँ कोई भी परिवार बेघर न रहे, हर अनाथ बच्चे को प्यार और विकास का आश्रय मिले, ग्रामीण इबादतगाह ज्ञान से रोशन हों और सामाजिक-आर्थिक स्थिति की परवाह किए बिना स्वास्थ्य सेवा सभी के लिए सुलभ हो।',
@@ -1694,6 +1718,7 @@ export const translations: Record<Language, any> = {
       sendingMessage: 'भेजा जा रहा है...',
       submitError: 'संदेश नहीं भेजा जा सका। कृपया पुनः प्रयास करें या WhatsApp पर संदेश भेजें।',
       whatsAppButton: 'WhatsApp पर संदेश भेजें',
+      whatsAppHint: 'हमसे संपर्क करने का सबसे तेज़ तरीका — WhatsApp खोलने के लिए टैप करें।',
       messageSentTitle: 'संदेश भेजा गया!',
       messageSentText: 'HIF INDIA से संपर्क करने के लिए धन्यवाद। हम जल्द ही आपसे संपर्क करेंगे।',
       sendAnother: 'एक और संदेश भेजें'
