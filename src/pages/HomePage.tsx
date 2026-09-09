@@ -50,9 +50,6 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Four pillars — real 3D hub & spoke diagram */}
-      <PillarsOrbit3D />
-
       {/* Featured projects */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -74,6 +71,9 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Four pillars — real 3D hub & spoke diagram */}
+      <PillarsOrbit3D />
 
       {/* Activities teaser */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt">
