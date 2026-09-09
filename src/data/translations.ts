@@ -304,6 +304,8 @@ export interface TranslationDictionary {
       notesPlaceholder: string
       submitButton: string
       submittingButton: string
+      submitError: string
+      whatsAppButton: string
       successTitle: string
       successMessage: string
       submitAnother: string
@@ -372,6 +374,8 @@ export interface TranslationDictionary {
     messagePlaceholder: string
     sendMessage: string
     sendingMessage: string
+    submitError: string
+    whatsAppButton: string
     messageSentTitle: string
     messageSentText: string
     sendAnother: string
@@ -739,6 +743,8 @@ export const translations: Record<Language, any> = {
         notesPlaceholder: 'Tell us a little about your background, hobbies, or why you want to volunteer...',
         submitButton: 'Register as Volunteer',
         submittingButton: 'Submitting...',
+        submitError: 'Unable to submit your application. Please try again or message us on WhatsApp.',
+        whatsAppButton: 'Message us on WhatsApp',
         successTitle: 'Thank You for Registering!',
         successMessage: 'Our volunteer coordinator will get in touch with you via WhatsApp or phone shortly.',
         submitAnother: 'Submit Another Application'
@@ -808,6 +814,8 @@ export const translations: Record<Language, any> = {
       messagePlaceholder: 'How can we assist you today?',
       sendMessage: 'Send Message',
       sendingMessage: 'Sending...',
+      submitError: 'Unable to send your message. Please try again or message us on WhatsApp.',
+      whatsAppButton: 'Message us on WhatsApp',
       messageSentTitle: 'Message sent!',
       messageSentText: 'Thank you for reaching out to HIF INDIA. We will reply shortly.',
       sendAnother: 'Send another message'
@@ -1174,6 +1182,8 @@ export const translations: Record<Language, any> = {
         notesPlaceholder: 'ನಿಮ್ಮ ಹಿನ್ನೆಲೆ, ಆಸಕ್ತಿಗಳು ಅಥವಾ ಸ್ವಯಂಸೇವಕರಾಗಲು ಕಾರಣಗಳನ್ನು ತಿಳಿಸಿ...',
         submitButton: 'ಸ್ವಯಂಸೇವಕರಾಗಿ ನೋಂದಾಯಿಸಿ',
         submittingButton: 'ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ...',
+        submitError: 'ಅರ್ಜಿ ಸಲ್ಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ.',
+        whatsAppButton: 'WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ',
         successTitle: 'ನೋಂದಣಿಗೆ ಧನ್ಯವಾದಗಳು!',
         successMessage: 'ನಮ್ಮ ಸ್ವಯಂಸೇವಕ ಸಂಯೋಜಕರು ಶೀಘ್ರದಲ್ಲೇ WhatsApp ಅಥವಾ ಫೋನ್ ಮೂಲಕ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತಾರೆ.',
         submitAnother: 'ಇನ್ನೊಂದು ಅರ್ಜಿ ಸಲ್ಲಿಸಿ'
@@ -1242,6 +1252,8 @@ export const translations: Record<Language, any> = {
       messagePlaceholder: 'ನಾವು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?',
       sendMessage: 'ಸಂದೇಶ ಕಳುಹಿಸಿ',
       sendingMessage: 'ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ...',
+      submitError: 'ಸಂದೇಶ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ.',
+      whatsAppButton: 'WhatsApp ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ',
       messageSentTitle: 'ಸಂದೇಶ ಕಳುಹಿಸಲಾಗಿದೆ!',
       messageSentText: 'HIF INDIA ಅನ್ನು ಸಂಪರ್ಕಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ಉತ್ತರಿಸುತ್ತೇವೆ.',
       sendAnother: 'ಇನ್ನೊಂದು ಸಂದೇಶ ಕಳುಹಿಸಿ'
@@ -1609,6 +1621,8 @@ export const translations: Record<Language, any> = {
         notesPlaceholder: 'अपनी पृष्ठभूमि, रुचियां या स्वयंसेवक बनने की प्रेरणा साझा करें...',
         submitButton: 'स्वयंसेवक के रूप में पंजीकरण करें',
         submittingButton: 'जमा हो रहा है...',
+        submitError: 'आवेदन जमा नहीं हो सका। कृपया पुनः प्रयास करें या WhatsApp पर संदेश भेजें।',
+        whatsAppButton: 'WhatsApp पर संदेश भेजें',
         successTitle: 'पंजीकरण के लिए धन्यवाद!',
         successMessage: 'हमारे स्वयंसेवक समन्वयक जल्द ही WhatsApp या फ़ोन के माध्यम से आपसे संपर्क करेंगे।',
         submitAnother: 'एक और आवेदन जमा करें'
@@ -1678,6 +1692,8 @@ export const translations: Record<Language, any> = {
       messagePlaceholder: 'हम आपकी किस प्रकार सहायता कर सकते हैं?',
       sendMessage: 'संदेश भेजें',
       sendingMessage: 'भेजा जा रहा है...',
+      submitError: 'संदेश नहीं भेजा जा सका। कृपया पुनः प्रयास करें या WhatsApp पर संदेश भेजें।',
+      whatsAppButton: 'WhatsApp पर संदेश भेजें',
       messageSentTitle: 'संदेश भेजा गया!',
       messageSentText: 'HIF INDIA से संपर्क करने के लिए धन्यवाद। हम जल्द ही आपसे संपर्क करेंगे।',
       sendAnother: 'एक और संदेश भेजें'

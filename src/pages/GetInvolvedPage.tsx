@@ -5,7 +5,6 @@ import {
   Copy,
   Check,
   QrCode,
-  Send,
   CheckCircle2,
   Droplet,
   BookOpenText,
@@ -16,7 +15,8 @@ import {
   Users,
   Building2,
   HelpCircle,
-  ChevronDown
+  ChevronDown,
+  MessageCircle
 } from 'lucide-react'
 import confetti from 'canvas-confetti'
 import {
@@ -29,6 +29,7 @@ import { useLanguage } from '../context/LanguageContext'
 import { UNSPLASH } from '../data/unsplashImages'
 import { Reveal } from '../components/common/Reveal'
 import { localizeImpact } from '../lib/localizeContent'
+import { buildWhatsAppUrl } from '../lib/submitForm'
 
 export const GetInvolvedPage: React.FC = () => {
   const [amount, setAmount] = useState(5000)
@@ -145,8 +146,23 @@ const VolunteerForm: React.FC = () => {
     }))
   }
 
+  const whatsAppHref = buildWhatsAppUrl(
+    HIF_ORGANIZATION.contact.whatsapp,
+    [
+      'Assalamu Alaikum, HIF INDIA.',
+      form.name ? `My name is ${form.name}.` : '',
+      'I would like to volunteer.',
+      form.city ? `I am based in ${form.city}.` : '',
+      form.skills.length ? `Skills: ${form.skills.join(', ')}.` : '',
+      form.phone ? `My WhatsApp/phone: ${form.phone}.` : ''
+    ]
+      .filter(Boolean)
+      .join(' ')
+  )
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    window.open(whatsAppHref, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
     confetti({ particleCount: 70, spread: 65, origin: { y: 0.6 } })
   }
@@ -222,6 +238,7 @@ const VolunteerForm: React.FC = () => {
                 {t('getInvolved.form.city', 'City / Location *')}
               </label>
               <input
+                required
                 value={form.city}
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
                 placeholder={t('getInvolved.form.cityPlaceholder', 'e.g. Mangalore, Udupi')}
@@ -254,11 +271,13 @@ const VolunteerForm: React.FC = () => {
               })}
             </div>
           </div>
+
           <button
             type="submit"
             className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-sm font-semibold transition-colors"
           >
-            <Send className="w-4 h-4" /> {t('getInvolved.form.submitButton', 'Register as Volunteer')}
+            <MessageCircle className="w-4 h-4" />
+            {t('getInvolved.form.whatsAppButton', 'Send via WhatsApp')}
           </button>
         </form>
       )}
