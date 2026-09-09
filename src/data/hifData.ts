@@ -146,7 +146,9 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/projects/ashiyana9.jpg',
       '/images/projects/ashiyana10.jpg',
       '/images/projects/ashiyana11.jpg',
-      '/images/projects/ashiyana12.jpg'
+      '/images/projects/ashiyana12.jpg',
+      '/images/projects/ashiyana13.jpg',
+      '/images/projects/ashiyana14.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -624,6 +626,24 @@ export const HIF_ACTIVITIES: ActivityData[] = [
 ]
 
 export const HIF_GALLERY: GalleryItem[] = [
+  {
+    id: 'gal-28',
+    title: 'Ashiyana Home Handover #36',
+    category: 'Housing',
+    imageUrl: '/images/gallery/28.jpg',
+    location: 'Meenadi, Kadaba',
+    description: 'HIF India and HIF Qatar mark the 36th home handover under Project Ashiyana, with community leaders and the elderly beneficiary at the new house.',
+    year: '2026'
+  },
+  {
+    id: 'gal-29',
+    title: 'Ashiyana Beneficiary Family Meeting',
+    category: 'Housing',
+    imageUrl: '/images/gallery/29.jpg',
+    location: 'Meenadi, Kadaba',
+    description: 'HIF India leadership meets with the beneficiary family inside their newly handed-over home during the 36th Project Ashiyana ceremony.',
+    year: '2026'
+  },
   {
     id: 'gal-1',
     title: 'Ashiyana Home Handover #29',
