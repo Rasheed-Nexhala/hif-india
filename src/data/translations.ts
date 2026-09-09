@@ -267,6 +267,17 @@ export interface TranslationDictionary {
     }
     emptyMessage: string
   }
+  reels: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    previous: string
+    next: string
+    viewReel: string
+    followUs: string
+    mute: string
+    unmute: string
+  }
   getInvolved: {
     eyebrow: string
     title: string
@@ -373,6 +384,9 @@ export interface TranslationDictionary {
     presetAmounts: string
     customAmount: string
     customAmountPlaceholder: string
+    tabScanQr: string
+    tabBankTransfer: string
+    fastestBadge: string
     beneficiaryName: string
     accountNumber: string
     ifscCode: string
@@ -383,6 +397,8 @@ export interface TranslationDictionary {
     showQr: string
     hideQr: string
     qrHelp: string
+    qrSecurityTitle: string
+    qrSecurityNote: string
     tax80GNote: string
     notifyWhatsapp: string
     close: string
@@ -684,6 +700,18 @@ export const translations: Record<Language, any> = {
       },
       emptyMessage: 'No photos found for this category.'
     },
+    reels: {
+      eyebrow: 'Our Reels',
+      title: 'Stories worth watching, straight from the field',
+      subtitle:
+        'A closer look at the moments behind our work — home handovers, classroom days, and relief drives, told through short reels.',
+      previous: 'Previous reel',
+      next: 'Next reel',
+      viewReel: 'View reel',
+      followUs: 'Follow @hif_india for more',
+      mute: 'Mute',
+      unmute: 'Unmute'
+    },
     getInvolved: {
       eyebrow: 'Get Involved',
       title: 'Everyone has a role to play.',
@@ -792,6 +820,9 @@ export const translations: Record<Language, any> = {
       presetAmounts: 'Quick Amounts',
       customAmount: 'Custom Amount',
       customAmountPlaceholder: 'Enter custom amount (₹)',
+      tabScanQr: 'Scan & Pay',
+      tabBankTransfer: 'Bank Transfer',
+      fastestBadge: 'Fastest',
       beneficiaryName: 'Beneficiary Name',
       accountNumber: 'Account Number (Current Account)',
       ifscCode: 'IFSC Code',
@@ -802,6 +833,9 @@ export const translations: Record<Language, any> = {
       showQr: 'Show QR Code',
       hideQr: 'Hide QR Code',
       qrHelp: 'Scan with GPay, PhonePe, Paytm, or BHIM',
+      qrSecurityTitle: 'Verify before you pay',
+      qrSecurityNote:
+        'After scanning, your UPI app must show the payee name as "HIF INDIA". If any other name appears, do not proceed — stop and contact us on WhatsApp immediately.',
       tax80GNote: '80G Tax Exemption applies. Please share payment receipt on WhatsApp for your certificate.',
       notifyWhatsapp: 'Notify on WhatsApp after payment',
       close: 'Close',
@@ -1101,6 +1135,18 @@ export const translations: Record<Language, any> = {
       },
       emptyMessage: 'ಈ ವರ್ಗದಲ್ಲಿ ಯಾವುದೇ ಫೋಟೋಗಳು ಕಂಡುಬಂದಿಲ್ಲ.'
     },
+    reels: {
+      eyebrow: 'ನಮ್ಮ ರೀಲ್‌ಗಳು',
+      title: 'ಕಾರ್ಯಕ್ಷೇತ್ರದಿಂದ ನೇರವಾಗಿ, ನೋಡಲೇಬೇಕಾದ ಕಥೆಗಳು',
+      subtitle:
+        'ಮನೆ ಹಸ್ತಾಂತರ, ತರಗತಿಯ ದಿನಗಳು ಮತ್ತು ಪರಿಹಾರ ಕಾರ್ಯಗಳ ಹಿಂದಿನ ಕ್ಷಣಗಳನ್ನು ಕಿರು ರೀಲ್‌ಗಳ ಮೂಲಕ ಹತ್ತಿರದಿಂದ ನೋಡಿ.',
+      previous: 'ಹಿಂದಿನ ರೀಲ್',
+      next: 'ಮುಂದಿನ ರೀಲ್',
+      viewReel: 'ರೀಲ್ ನೋಡಿ',
+      followUs: 'ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ @hif_india ಅನ್ನು ಫಾಲೋ ಮಾಡಿ',
+      mute: 'ಮ್ಯೂಟ್',
+      unmute: 'ಅನ್‌ಮ್ಯೂಟ್'
+    },
     getInvolved: {
       eyebrow: 'ಭಾಗವಹಿಸಿ',
       title: 'ಸಮಾಜ ಬದಲಾವಣೆಯಲ್ಲಿ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಪಾತ್ರವಿದೆ.',
@@ -1208,6 +1254,9 @@ export const translations: Record<Language, any> = {
       presetAmounts: 'ತ್ವರಿತ ಮೊತ್ತಗಳು',
       customAmount: 'ಇತರ ಮೊತ್ತ',
       customAmountPlaceholder: 'ಮೊತ್ತ ನಮೂದಿಸಿ (₹)',
+      tabScanQr: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಪಾವತಿಸಿ',
+      tabBankTransfer: 'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',
+      fastestBadge: 'ವೇಗದ',
       beneficiaryName: 'ಫಲಾನುಭವಿಯ ಹೆಸರು (ಖಾತೆ)',
       accountNumber: 'ಖಾತೆ ಸಂಖ್ಯೆ (ಚಾಲ್ತಿ ಖಾತೆ)',
       ifscCode: 'IFSC ಕೋಡ್',
@@ -1218,6 +1267,9 @@ export const translations: Record<Language, any> = {
       showQr: 'QR ಕೋಡ್ ತೋರಿಸಿ',
       hideQr: 'QR ಕೋಡ್ ಮರೆಮಾಡಿ',
       qrHelp: 'GPay, PhonePe, Paytm, ಅಥವಾ BHIM ಮೂಲಕ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ',
+      qrSecurityTitle: 'ಪಾವತಿಸುವ ಮೊದಲು ಪರಿಶೀಲಿಸಿ',
+      qrSecurityNote:
+        'ಸ್ಕ್ಯಾನ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ UPI ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಪಡೆಯುವವರ ಹೆಸರು "HIF INDIA" ಎಂದು ತೋರಿಸಬೇಕು. ಬೇರೆ ಯಾವುದೇ ಹೆಸರು ಕಂಡುಬಂದರೆ, ಪಾವತಿ ಮುಂದುವರಿಸಬೇಡಿ — ಕೂಡಲೇ WhatsApp ನಲ್ಲಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.',
       tax80GNote: '80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಅನ್ವಯಿಸುತ್ತದೆ. ರಸೀದಿಗಾಗಿ ಪಾವತಿಯ ವಿವರವನ್ನು WhatsApp ನಲ್ಲಿ ಕಳುಹಿಸಿ.',
       notifyWhatsapp: 'ಪಾವತಿಯ ನಂತರ WhatsApp ನಲ್ಲಿ ತಿಳಿಸಿ',
       close: 'ಮುಚ್ಚಿ',
@@ -1518,6 +1570,18 @@ export const translations: Record<Language, any> = {
       },
       emptyMessage: 'इस श्रेणी में कोई तस्वीर नहीं मिली।'
     },
+    reels: {
+      eyebrow: 'हमारी रील्स',
+      title: 'मैदान से सीधे, देखने लायक कहानियाँ',
+      subtitle:
+        'घर सौंपने, कक्षा के दिन और राहत अभियानों के पीछे के पलों को छोटी रील्स के ज़रिए करीब से देखें।',
+      previous: 'पिछली रील',
+      next: 'अगली रील',
+      viewReel: 'रील देखें',
+      followUs: 'अधिक के लिए @hif_india को फॉलो करें',
+      mute: 'म्यूट',
+      unmute: 'अनम्यूट'
+    },
     getInvolved: {
       eyebrow: 'हमसे जुड़ें',
       title: 'समाज सेवा में हर किसी की भूमिका है।',
@@ -1626,6 +1690,9 @@ export const translations: Record<Language, any> = {
       presetAmounts: 'सुझाई गई राशि',
       customAmount: 'अन्य राशि',
       customAmountPlaceholder: 'राशि दर्ज करें (₹)',
+      tabScanQr: 'स्कैन करें और भुगतान करें',
+      tabBankTransfer: 'बैंक ट्रांसफर',
+      fastestBadge: 'सबसे तेज़',
       beneficiaryName: 'लाभार्थी का नाम (खाताधारक)',
       accountNumber: 'खाता संख्या (चालू खाता)',
       ifscCode: 'IFSC कोड',
@@ -1636,6 +1703,9 @@ export const translations: Record<Language, any> = {
       showQr: 'QR कोड देखें',
       hideQr: 'QR कोड छुपाएं',
       qrHelp: 'GPay, PhonePe, Paytm या BHIM ऐप से स्कैन करें',
+      qrSecurityTitle: 'भुगतान से पहले जांच लें',
+      qrSecurityNote:
+        'स्कैन करने के बाद, आपके UPI ऐप में प्राप्तकर्ता का नाम "HIF INDIA" दिखना चाहिए। यदि कोई अन्य नाम दिखे, तो भुगतान न करें — तुरंत WhatsApp पर हमसे संपर्क करें।',
       tax80GNote: '80G आयकर छूट लागू। दान प्रमाण पत्र के लिए रसीद WhatsApp पर साझा करें।',
       notifyWhatsapp: 'भुगतान के बाद WhatsApp पर सूचित करें',
       close: 'बंद करें',

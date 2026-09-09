@@ -249,7 +249,11 @@ const en: Record<string, string> = {
   'gal.gal-17.loc': 'HIF Center, Mangalore',
   'gal.gal-18.title': 'Monsoon flood relief',
   'gal.gal-18.desc': 'Youth team taking drinking water, dry food, and blankets.',
-  'gal.gal-18.loc': 'Netravati river basin'
+  'gal.gal-18.loc': 'Netravati river basin',
+  'reel.reel-1.caption': 'Project Boondh, 11th edition — community football at Nehru Maidan.',
+  'reel.reel-2.caption': 'Inside a home visit with HIF Qatar — seeing the need on the ground together.',
+  'reel.reel-3.caption': "A children's activity day — games, balloons, and community outdoors.",
+  'reel.reel-4.caption': 'HIF Youth Wing — a reflection exercise from a mentoring session.'
 }
 
 const kn: Record<string, string> = {
@@ -474,7 +478,11 @@ const kn: Record<string, string> = {
   "masjid.tier3Desc": "ಸೌರಬ್ಯಾಕಪ್, ಸ್ಪೀಕರ್ ಮತ್ತು ನೀರಿನ ಫಿಲ್ಟರ್.",
   "masjid.tier4Title": "ಮದ್ರಸಾ ಕಿಟ್ ಮತ್ತು ಕುರಾನ್",
   "masjid.tier4Unit": "ಒಂದು ಬ್ಯಾಚ್",
-  "masjid.tier4Desc": "30 ಮಕ್ಕಳಿಗೆ ಪುಸ್ತಕ, ಕುರಾನ್ ಮತ್ತು ಬರವಣಿಗೆ ಸಾಮಗ್ರಿ."
+  "masjid.tier4Desc": "30 ಮಕ್ಕಳಿಗೆ ಪುಸ್ತಕ, ಕುರಾನ್ ಮತ್ತು ಬರವಣಿಗೆ ಸಾಮಗ್ರಿ.",
+  "reel.reel-1.caption": "ಪ್ರಾಜೆಕ್ಟ್ ಬೂಂದ್, 11ನೇ ಆವೃತ್ತಿ — ನೆಹರು ಮೈದಾನದಲ್ಲಿ ಸಮುದಾಯ ಫುಟ್‌ಬಾಲ್.",
+  "reel.reel-2.caption": "HIF ಖತರ್ ಜೊತೆ ಮನೆ ಭೇಟಿ — ನೆಲದ ಅಗತ್ಯವನ್ನು ಒಟ್ಟಿಗೆ ಕಂಡುಕೊಳ್ಳುವುದು.",
+  "reel.reel-3.caption": "ಮಕ್ಕಳ ಚಟುವಟಿಕೆ ದಿನ — ಆಟಗಳು, ಬಲೂನ್‌ಗಳು ಮತ್ತು ಸಮುದಾಯ ಹೊರಾಂಗಣದಲ್ಲಿ.",
+  "reel.reel-4.caption": "HIF ಯುವ ವಿಭಾಗ — ಮಾರ್ಗದರ್ಶನ ಅಧಿವೇಶನದ ಆತ್ಮಾವಲೋಕನ ಚಟುವಟಿಕೆ."
 }
 
 const hi: Record<string, string> = {
@@ -721,7 +729,11 @@ const hi: Record<string, string> = {
   'gal.gal-17.loc': 'HIF केंद्र, मंगलुरु',
   'gal.gal-18.title': 'मानसून बाढ़ राहत',
   'gal.gal-18.desc': 'पीने का पानी, सूखा राशन और कंबल पहुँचाती युवा टीम।',
-  'gal.gal-18.loc': 'नेत्रावती नदी क्षेत्र'
+  'gal.gal-18.loc': 'नेत्रावती नदी क्षेत्र',
+  'reel.reel-1.caption': 'प्रोजेक्ट बूंद, 11वां संस्करण — नेहरू मैदान में सामुदायिक फुटबॉल।',
+  'reel.reel-2.caption': 'HIF कतर के साथ घर का दौरा — ज़मीनी ज़रूरत को साथ मिलकर समझना।',
+  'reel.reel-3.caption': 'बच्चों का गतिविधि दिवस — खेल, गुब्बारे और बाहर सामुदायिक मेल-मिलाप।',
+  'reel.reel-4.caption': 'HIF युवा विंग — मेंटरिंग सत्र से एक आत्म-चिंतन अभ्यास।'
 }
 
 export const extraStrings: Record<Language, Record<string, string>> = { en, kn, hi }

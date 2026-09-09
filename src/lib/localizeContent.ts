@@ -1,4 +1,5 @@
 import type { ActivityData, GalleryItem, ProjectData } from '../data/hifData'
+import type { HifReel } from '../data/hifReels'
 import { calculateImpactFromAmount } from '../data/hifData'
 import type { Language } from '../data/translations'
 import { extraStrings } from '../data/entityTranslations'
@@ -75,6 +76,13 @@ export function localizeGalleryItem(item: GalleryItem, language: Language): Gall
     title: tx(language, `gal.${item.id}.title`, item.title),
     description: tx(language, `gal.${item.id}.desc`, item.description),
     location: tx(language, `gal.${item.id}.loc`, item.location)
+  }
+}
+
+export function localizeReel(reel: HifReel, language: Language): HifReel {
+  return {
+    ...reel,
+    caption: tx(language, `reel.${reel.id}.caption`, reel.caption)
   }
 }
 

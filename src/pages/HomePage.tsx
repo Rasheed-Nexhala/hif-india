@@ -5,6 +5,8 @@ import { HIF_PROJECTS, HIF_ACTIVITIES, HIF_GALLERY, HIF_ORGANIZATION } from '../
 import { Hero } from '../components/home/Hero'
 import { ImpactStatsBand } from '../components/home/ImpactStatsBand'
 import { PillarsOrbit3D } from '../components/home/PillarsOrbit3D'
+import { ReelsShowcase } from '../components/home/ReelsShowcase'
+import MissionAccentCanvas from '../components/canvas/MissionAccentCanvas'
 import { ProjectCard } from '../components/cards/ProjectCard'
 import { ActivityCard } from '../components/cards/ActivityCard'
 import { useDonate } from '../context/DonateContext'
@@ -23,9 +25,13 @@ export const HomePage: React.FC = () => {
       <Hero />
       <ImpactStatsBand />
 
+      {/* Reels showcase */}
+      <ReelsShowcase />
+
       {/* Mission teaser */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-editorial-wash">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-editorial-wash overflow-hidden">
+        <MissionAccentCanvas className="absolute inset-0" />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
           <Reveal>
             <span className="badge">{t('about.missionTitle', 'Our Mission')}</span>
             <h2 className="font-display mt-4 text-3xl sm:text-4xl font-semibold text-text-main tracking-tight">
@@ -36,18 +42,10 @@ export const HomePage: React.FC = () => {
             </p>
             <Link
               to="/about"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep justify-center"
             >
               {t('common.learnMore', 'More about our story')} <ArrowRight className="w-4 h-4" />
             </Link>
-          </Reveal>
-          <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border">
-            <img
-              src={HIF_ORGANIZATION.siteImages.mission}
-              alt="HIF India mission in the field"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
           </Reveal>
         </div>
       </section>

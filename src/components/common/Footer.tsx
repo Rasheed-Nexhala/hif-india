@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Heart, ShieldCheck } from 'lucide-react'
-import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter } from 'react-icons/fa6'
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6'
 import { HIF_ORGANIZATION } from '../../data/hifData'
 import { useDonate } from '../../context/DonateContext'
 import { useLanguage } from '../../context/LanguageContext'
@@ -10,8 +10,7 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 const socialLinks = [
   { href: HIF_ORGANIZATION.socials.facebook, label: 'Facebook', Icon: FaFacebookF },
   { href: HIF_ORGANIZATION.socials.instagram, label: 'Instagram', Icon: FaInstagram },
-  { href: HIF_ORGANIZATION.socials.youtube, label: 'YouTube', Icon: FaYoutube },
-  { href: HIF_ORGANIZATION.socials.twitter, label: 'Twitter / X', Icon: FaXTwitter }
+  { href: HIF_ORGANIZATION.socials.youtube, label: 'YouTube', Icon: FaYoutube }
 ]
 
 export const Footer: React.FC = () => {
@@ -26,12 +25,7 @@ export const Footer: React.FC = () => {
             <Link to="/" className="flex items-center gap-2.5">
               <img src={HIF_ORGANIZATION.siteImages.logo} alt="HIF INDIA logo" className="h-8 w-auto object-contain" />
               <span className="font-display text-lg font-semibold text-white">
-                HIF{' '}
-                <span className="font-bold">
-                  <span className="text-flag-saffron">IN</span>
-                  <span className="text-flag-chakra">D</span>
-                  <span className="text-flag-green">IA</span>
-                </span>
+                HIF INDIA
               </span>
             </Link>
             <p className="text-sm text-emerald-100/70 leading-relaxed max-w-sm">

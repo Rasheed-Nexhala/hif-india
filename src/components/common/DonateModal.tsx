@@ -1,15 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { X, Copy, Check, Building2, QrCode, ShieldCheck, MessageCircle } from 'lucide-react'
+import {
+  X,
+  Copy,
+  Check,
+  Building2,
+  QrCode,
+  ShieldCheck,
+  MessageCircle,
+  AlertTriangle,
+  Sparkles
+} from 'lucide-react'
 import { HIF_ORGANIZATION } from '../../data/hifData'
 import { useDonate } from '../../context/DonateContext'
 import { useLanguage } from '../../context/LanguageContext'
+
+type Tab = 'qr' | 'bank'
 
 export const DonateModal: React.FC = () => {
   const { isOpen, cause, amount, closeDonate } = useDonate()
   const { t } = useLanguage()
   const [copiedField, setCopiedField] = useState<string | null>(null)
-  const [showQR, setShowQR] = useState(false)
+  const [tab, setTab] = useState<Tab>('qr')
 
   const bank = HIF_ORGANIZATION.bankDetails
 
@@ -19,13 +31,19 @@ export const DonateModal: React.FC = () => {
     setTimeout(() => setCopiedField(null), 2000)
   }
 
-  const upiPayUrl = `upi://pay?pa=${bank.upiId}&pn=${encodeURIComponent(bank.accountName)}&cu=INR${
-    amount ? `&am=${amount}` : ''
-  }&tn=${encodeURIComponent(cause || 'HIF India Donation')}`
-
-  const qrCodeImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(
-    upiPayUrl
-  )}&bgcolor=ffffff&color=065f46&margin=8`
+  useEffect(() => {
+    if (!isOpen) return
+    setTab('qr')
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeDonate()
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [isOpen, closeDonate])
 
   return (
     <AnimatePresence>
@@ -45,6 +63,8 @@ export const DonateModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 12 }}
             transition={{ duration: 0.2 }}
+            role="dialog"
+            aria-modal="true"
             className="relative w-full max-w-md bg-card dark:bg-[#082820] rounded-2xl shadow-2xl border border-border dark:border-emerald-800/50 p-6 sm:p-7 z-10 my-8"
           >
             <div className="flex items-start justify-between pb-4 border-b border-border">
@@ -84,72 +104,132 @@ export const DonateModal: React.FC = () => {
               </div>
             )}
 
-            <div className="mt-5 space-y-3 text-sm">
-              <Row
-                label={t('donateModal.beneficiaryName', 'Beneficiary Name')}
-                value={bank.accountName}
-                onCopy={() => copy(bank.accountName, 'name')}
-                copied={copiedField === 'name'}
-              />
-              <Row
-                label={t('donateModal.accountNumber', `Account Number (${bank.accountType})`)}
-                value={bank.accountNumber}
-                mono
-                onCopy={() => copy(bank.accountNumber, 'acc')}
-                copied={copiedField === 'acc'}
-              />
-              <div className="grid grid-cols-2 gap-3">
-                <Row
-                  label={t('donateModal.ifscCode', 'IFSC Code')}
-                  value={bank.ifscCode}
-                  mono
-                  onCopy={() => copy(bank.ifscCode, 'ifsc')}
-                  copied={copiedField === 'ifsc'}
-                />
-                <Row
-                  label={t('donateModal.branch', 'Branch')}
-                  value={t('donateModal.branchValue', 'HDFC Bunder Branch, Mangalore')}
-                  onCopy={() => copy(bank.branch, 'branch')}
-                  copied={copiedField === 'branch'}
-                />
-              </div>
+            {/* Payment method tabs */}
+            <div className="mt-5 grid grid-cols-2 gap-2 p-1 rounded-xl bg-bg-alt dark:bg-[#051c15] border border-border dark:border-emerald-800/50">
+              <button
+                type="button"
+                onClick={() => setTab('qr')}
+                className={`relative flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold transition-colors ${
+                  tab === 'qr'
+                    ? 'bg-emerald-700 dark:bg-emerald-600 text-white shadow-sm'
+                    : 'text-text-muted hover:text-text-main'
+                }`}
+              >
+                <QrCode className="w-3.5 h-3.5" />
+                {t('donateModal.tabScanQr', 'Scan & Pay')}
+                {tab !== 'qr' && (
+                  <span className="absolute -top-2 -right-1.5 px-1.5 py-0.5 rounded-full bg-amber-500 text-emerald-950 text-[9px] font-bold flex items-center gap-0.5 shadow">
+                    <Sparkles className="w-2.5 h-2.5" /> {t('donateModal.fastestBadge', 'Fastest')}
+                  </span>
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={() => setTab('bank')}
+                className={`flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold transition-colors ${
+                  tab === 'bank'
+                    ? 'bg-emerald-700 dark:bg-emerald-600 text-white shadow-sm'
+                    : 'text-text-muted hover:text-text-main'
+                }`}
+              >
+                <Building2 className="w-3.5 h-3.5" />
+                {t('donateModal.tabBankTransfer', 'Bank Transfer')}
+              </button>
+            </div>
 
-              <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/60">
-                <div className="flex items-center justify-between flex-wrap gap-2">
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wide text-primary dark:text-emerald-300 font-semibold block">
-                      {t('donateModal.upiId', 'UPI ID')}
-                    </span>
-                    <span className="font-mono font-semibold text-text-main">{bank.upiId}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => copy(bank.upiId, 'upi')}
-                      className="px-2.5 py-1.5 rounded-lg bg-card dark:bg-[#082820] border border-emerald-200 dark:border-emerald-700/60 text-primary dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 text-xs font-semibold flex items-center gap-1 transition-colors"
-                    >
-                      {copiedField === 'upi' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                    </button>
-                    <button
-                      onClick={() => setShowQR(!showQR)}
-                      className="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
-                    >
-                      <QrCode className="w-3.5 h-3.5" />
-                      {showQR ? t('donateModal.hideQr', 'Hide QR') : t('donateModal.showQr', 'Show QR')}
-                    </button>
-                  </div>
-                </div>
-
-                {showQR && (
-                  <div className="mt-4 pt-4 border-t border-emerald-200 dark:border-emerald-700/60/70 dark:border-emerald-700/60 flex flex-col items-center text-center">
+            <div className="mt-4 text-sm overflow-hidden">
+              <AnimatePresence mode="wait" initial={false}>
+                {tab === 'qr' ? (
+                  <motion.div
+                    key="qr"
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 8 }}
+                    transition={{ duration: 0.18 }}
+                    className="flex flex-col items-center text-center"
+                  >
                     <div className="p-2 bg-card rounded-xl shadow-sm">
-                      <img src={qrCodeImgUrl} alt="UPI QR Code" className="w-40 h-40 rounded-lg" loading="lazy" />
+                      <img
+                        src="/images/donate/hif-qr.jpg"
+                        alt="HIF INDIA official UPI QR Code"
+                        className="w-48 h-auto rounded-lg"
+                        loading="lazy"
+                      />
                     </div>
                     <p className="text-[11px] text-text-muted mt-2">
                       {t('donateModal.qrHelp', 'Scan with GPay, PhonePe, Paytm, or BHIM')}
                     </p>
-                  </div>
+
+                    <div className="mt-3 w-full p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/60 flex items-start gap-2 text-left">
+                      <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
+                      <p className="text-[11px] text-red-700 dark:text-red-300 leading-relaxed">
+                        <span className="font-semibold block">
+                          {t('donateModal.qrSecurityTitle', 'Verify before you pay')}
+                        </span>
+                        {t(
+                          'donateModal.qrSecurityNote',
+                          'After scanning, your UPI app must show the payee name as "HIF INDIA". If any other name appears, do not proceed — stop and contact us on WhatsApp immediately.'
+                        )}
+                      </p>
+                    </div>
+
+                    <div className="mt-3 w-full p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-between gap-2">
+                      <div className="min-w-0 text-left">
+                        <span className="text-[10px] uppercase tracking-wide text-primary dark:text-emerald-300 font-semibold block">
+                          {t('donateModal.upiId', 'UPI ID')}
+                        </span>
+                        <span className="font-mono font-semibold text-text-main text-xs truncate block">
+                          {bank.upiId}
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => copy(bank.upiId, 'upi')}
+                        className="px-2.5 py-1.5 rounded-lg bg-card dark:bg-[#082820] border border-emerald-200 dark:border-emerald-700/60 text-primary dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 text-xs font-semibold flex items-center gap-1 transition-colors shrink-0"
+                      >
+                        {copiedField === 'upi' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      </button>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="bank"
+                    initial={{ opacity: 0, x: 8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -8 }}
+                    transition={{ duration: 0.18 }}
+                    className="space-y-3"
+                  >
+                    <Row
+                      label={t('donateModal.beneficiaryName', 'Beneficiary Name')}
+                      value={bank.accountName}
+                      onCopy={() => copy(bank.accountName, 'name')}
+                      copied={copiedField === 'name'}
+                    />
+                    <Row
+                      label={t('donateModal.accountNumber', `Account Number (${bank.accountType})`)}
+                      value={bank.accountNumber}
+                      mono
+                      onCopy={() => copy(bank.accountNumber, 'acc')}
+                      copied={copiedField === 'acc'}
+                    />
+                    <div className="grid grid-cols-2 gap-3">
+                      <Row
+                        label={t('donateModal.ifscCode', 'IFSC Code')}
+                        value={bank.ifscCode}
+                        mono
+                        onCopy={() => copy(bank.ifscCode, 'ifsc')}
+                        copied={copiedField === 'ifsc'}
+                      />
+                      <Row
+                        label={t('donateModal.branch', 'Branch')}
+                        value={t('donateModal.branchValue', 'HDFC Bunder Branch, Mangalore')}
+                        onCopy={() => copy(bank.branch, 'branch')}
+                        copied={copiedField === 'branch'}
+                      />
+                    </div>
+                  </motion.div>
                 )}
-              </div>
+              </AnimatePresence>
             </div>
 
             <div className="mt-5 pt-4 border-t border-border flex items-start gap-2 text-[11px] text-text-muted">

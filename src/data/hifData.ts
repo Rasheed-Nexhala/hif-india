@@ -99,10 +99,9 @@ export const HIF_ORGANIZATION = {
     upiId: '50200064753851@hdfcbank'
   },
   socials: {
-    facebook: 'https://facebook.com/hifindia',
+    facebook: 'https://www.facebook.com/HighlandIslamicForum/',
     instagram: 'https://instagram.com/hif_india',
-    youtube: 'https://youtube.com/@hifindia',
-    twitter: 'https://twitter.com/hifindia'
+    youtube: 'https://youtube.com/@hif_india2012'
   },
   statsSummary: [
     { label: 'Houses Delivered', count: 36, suffix: '', subtext: 'Goal: 150 by 2030 in Project Ashiyana', icon: 'Home' },
@@ -122,7 +121,7 @@ export const HIF_ORGANIZATION = {
       '/images/projects/slider-4.jpg'
     ],
     about: '/images/projects/about-us.jpg',
-    aboutAlt: '/images/projects/abt1.jpg',
+    aboutAlt: '/images/projects/about-group.png',
     mission: '/images/projects/mission.jpg'
   }
 }
@@ -405,7 +404,10 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/projects/water1.jpg',
       '/images/projects/water2.jpg',
       '/images/projects/water3.jpg',
-      '/images/projects/water4.jpg',
+      '/images/projects/water7.jpg',
+      '/images/projects/water5.jpg',
+      '/images/projects/water6.jpg',
+      '/images/projects/water8.jpg',
       '/images/gallery/22.jpg'
     ],
     color: 'emerald',
@@ -563,7 +565,14 @@ export const HIF_ACTIVITIES: ActivityData[] = [
     category: 'Education',
     icon: 'BookOpen',
     image: '/images/projects/youth2.jpg',
-    images: ['/images/projects/youth2.jpg', '/images/projects/youth10.jpg', '/images/projects/youth14.jpg', '/images/projects/youth19.jpg'],
+    images: [
+      '/images/projects/youth2.jpg',
+      '/images/projects/youth10.jpg',
+      '/images/projects/youth14.jpg',
+      '/images/projects/youth19.jpg',
+      '/images/projects/edu-wali-rehmani.png',
+      '/images/projects/edu-munawar-zama.png'
+    ],
     color: 'amber',
     stats: [
       { label: 'Students Assisted', value: '2,500+' },
