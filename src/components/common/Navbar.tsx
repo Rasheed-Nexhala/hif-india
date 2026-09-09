@@ -14,10 +14,10 @@ import {
   Image,
   HeartHandshake,
   Mail,
-  MessageCircle,
   Sun,
   Moon
 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa6'
 import { HIF_ORGANIZATION } from '../../data/hifData'
 import { useDonate } from '../../context/DonateContext'
 import { useTheme } from '../../context/ThemeContext'
@@ -368,7 +368,7 @@ export const Navbar: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 text-primary-deep font-medium transition-colors"
                     >
-                      <MessageCircle className="w-4 h-4 text-primary" />
+                      <FaWhatsapp className="w-4 h-4 text-[#25D366]" aria-hidden />
                       <span>WhatsApp</span>
                     </a>
                   </div>

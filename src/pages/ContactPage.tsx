@@ -1,5 +1,6 @@
 import React from 'react'
-import { Mail, Phone, Clock, Building2, MessageCircle } from 'lucide-react'
+import { Mail, Phone, Clock, Building2 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa6'
 import { HIF_ORGANIZATION } from '../data/hifData'
 import { PageHeader } from '../components/common/PageHeader'
 import { UNSPLASH } from '../data/unsplashImages'
@@ -77,7 +78,7 @@ export const ContactPage: React.FC = () => {
               className="card p-6 flex items-center gap-4 hover:border-emerald-300 dark:hover:border-emerald-500 transition-colors group"
             >
               <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-700/60 flex items-center justify-center text-primary shrink-0 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/60 transition-colors">
-                <MessageCircle className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5 text-[#25D366]" aria-hidden />
               </div>
               <div>
                 <h3 className="font-semibold text-text-main group-hover:text-primary transition-colors">

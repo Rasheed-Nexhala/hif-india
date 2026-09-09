@@ -7,10 +7,10 @@ import {
   Building2,
   QrCode,
   ShieldCheck,
-  MessageCircle,
   AlertTriangle,
   Sparkles
 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa6'
 import { HIF_ORGANIZATION } from '../../data/hifData'
 import { useDonate } from '../../context/DonateContext'
 import { useLanguage } from '../../context/LanguageContext'
@@ -248,7 +248,7 @@ export const DonateModal: React.FC = () => {
               rel="noopener noreferrer"
               className="mt-4 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-sm font-semibold transition-colors"
             >
-              <MessageCircle className="w-4 h-4" />
+              <FaWhatsapp className="w-4 h-4" aria-hidden />
               {t('donateModal.notifyWhatsapp', "I've Transferred — Notify HIF on WhatsApp")}
             </a>
           </motion.div>
