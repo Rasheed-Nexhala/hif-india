@@ -220,7 +220,7 @@ export const DonateModal: React.FC = () => {
                           onCopy={() => copy(bank.accountNumber, 'acc')}
                           copied={copiedField === 'acc'}
                         />
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <Row
                             label={t('donateModal.ifscCode', 'IFSC Code')}
                             value={bank.ifscCode}
@@ -275,10 +275,10 @@ const Row: React.FC<{ label: string; value: string; mono?: boolean; onCopy: () =
   onCopy,
   copied
 }) => (
-  <div className="p-3 rounded-xl bg-bg-alt dark:bg-[#051c15] border border-border dark:border-emerald-800/50 flex items-center justify-between gap-2">
-    <div className="min-w-0">
+  <div className="p-3 rounded-xl bg-bg-alt dark:bg-[#051c15] border border-border dark:border-emerald-800/50 flex items-start justify-between gap-2">
+    <div className="min-w-0 flex-1">
       <span className="text-[10px] uppercase tracking-wide text-text-muted font-semibold block">{label}</span>
-      <span className={`text-sm font-semibold text-text-main truncate block ${mono ? 'font-mono' : ''}`}>{value}</span>
+      <span className={`text-sm font-semibold text-text-main block ${mono ? 'font-mono break-all' : 'break-words'}`}>{value}</span>
     </div>
     <button onClick={onCopy} className="p-1.5 rounded-lg text-text-muted dark:text-emerald-300 hover:text-primary dark:hover:text-emerald-100 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors shrink-0">
       {copied ? <Check className="w-4 h-4 text-primary" /> : <Copy className="w-4 h-4" />}
