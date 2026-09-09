@@ -219,7 +219,7 @@ const VolunteerForm: React.FC = () => {
               className="w-full px-4 py-2.5 rounded-lg bg-bg-alt dark:bg-card-tint border border-border text-sm text-text-main placeholder:text-text-muted focus:outline-none focus:border-emerald-400 dark:focus:border-emerald-400"
             />
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="text-xs font-semibold text-text-muted block mb-1">
                 {t('getInvolved.form.phone', 'Phone / WhatsApp *')}
