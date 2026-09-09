@@ -81,6 +81,36 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Team & Community */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="text-center max-w-2xl mx-auto mb-12">
+            <span className="badge">{t('about.teamBadge', 'Our Community')}</span>
+            <h2 className="font-display mt-4 text-3xl font-semibold text-text-main">
+              {t('about.teamTitle', 'The people behind the mission')}
+            </h2>
+            <p className="mt-3 text-text-muted text-sm leading-relaxed">
+              {t(
+                'about.teamDesc',
+                'HIF India is powered by hundreds of volunteers, youth leaders, and community members who show up with compassion at every event, programme, and relief drive.'
+              )}
+            </p>
+          </Reveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+            {HIF_ORGANIZATION.teamPhotos.map((photo, idx) => (
+              <Reveal key={photo} delay={idx * 0.05} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border/60 shadow-sm">
+                <img
+                  src={photo}
+                  alt={t('about.teamPhotoAlt', 'HIF India team and community')}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Mission */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt overflow-hidden">
         <img

@@ -28,6 +28,34 @@ export const HomePage: React.FC = () => {
       {/* Reels showcase */}
       <ReelsShowcase />
 
+      {/* Community & team strip */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg-alt">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="text-center max-w-2xl mx-auto mb-8">
+            <span className="badge">{t('about.teamBadge', 'Our Community')}</span>
+            <h2 className="font-display mt-4 text-2xl sm:text-3xl font-semibold text-text-main tracking-tight">
+              {t('about.teamTitle', 'The people behind the mission')}
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3">
+            {HIF_ORGANIZATION.teamPhotos.slice(0, 6).map((photo) => (
+              <Link
+                key={photo}
+                to="/about"
+                className="relative aspect-square rounded-xl overflow-hidden border border-border/60 group"
+              >
+                <img
+                  src={photo}
+                  alt={t('about.teamPhotoAlt', 'HIF India team and community')}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission teaser */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-editorial-wash overflow-hidden">
         <MissionAccentCanvas className="absolute inset-0" />
