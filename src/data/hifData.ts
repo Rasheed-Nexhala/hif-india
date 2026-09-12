@@ -105,7 +105,7 @@ export const HIF_ORGANIZATION = {
   },
   statsSummary: [
     { label: 'Houses Delivered', count: 36, suffix: '', subtext: 'Goal: 150 by 2030 in Project Ashiyana', icon: 'Home' },
-    { label: 'Masjids Revived & Maintained', count: 150, suffix: '+', subtext: 'Across Karnataka & Andhra Pradesh', icon: 'Landmark' },
+    { label: 'Masjids Revived & Maintained', count: 176, suffix: '', subtext: 'Across Karnataka & Andhra Pradesh', icon: 'Landmark' },
     { label: 'Orphan Students Nurtured', count: 225, suffix: '+', subtext: 'Comprehensive living, Hifz & modern schooling', icon: 'GraduationCap' },
     { label: 'Blood Units Mobilized', count: 1500, suffix: '+', subtext: 'Life-saving emergency blood cell units', icon: 'HeartPulse' },
     { label: 'Audit & Transparency', count: 100, suffix: '%', subtext: 'Direct zero-commission grassroots disbursement', icon: 'ShieldCheck' }
@@ -216,9 +216,9 @@ export const HIF_PROJECTS: ProjectData[] = [
   },
   {
     id: 'chittor-dream-project',
-    title: 'Chittor Dream Project',
-    subtitle: 'HIF Yateemkana – A 2-Acre Loving Sanctuary for Orphaned Boys',
-    badge: 'Orphan Sanctuary',
+    title: 'HIF CHITOOR – D.U.R.J',
+    subtitle: 'Shelter for Underprivileged',
+    badge: 'Shelter for Underprivileged',
     category: 'Orphanage',
     icon: 'HeartHandshake',
     image: '/images/projects/chitttor.jpg',
@@ -231,26 +231,25 @@ export const HIF_PROJECTS: ProjectData[] = [
     ],
     color: 'amber',
     stats: [
-      { label: 'Students Enrolled', value: '225 Boys' },
-      { label: 'Campus Area', value: '2.0 Acres' },
-      { label: 'Curriculum', value: 'Schooling + Hifz + Aleem' }
+      { label: 'Campus Area', value: '2.5 Acres' },
+      { label: 'Building', value: '20,000 sq. ft.' },
+      { label: 'Location', value: 'Chinnapalli, AP' }
     ],
-    overview: 'A historic 100-year-old educational sanctuary revitalized into a modern campus providing world-class English medium schooling, memorization of Quran, and character building.',
+    overview:
+      'From an old building to a thriving campus — a 2.5-acre Shelter for Underprivileged in Chinnapalli, Chittoor District, Andhra Pradesh.',
     fullStory: [
-      'Set across 2 sprawling green acres in Chittor, Andhra Pradesh, the Chittor Dream Project is an oasis of hope for 225 orphaned (yatheem) and destitute (miskeen) young boys.',
-      'Rather than institutionalizing children, HIF creates a warm, homely family atmosphere where every boy receives tailored mentorship, nutritious hygienic meals, modern digital schooling, and religious scholarship (Hifz & Aleem courses).',
-      'Children participate in martial arts, science clubs, computer programming classes, and public speaking workshops, preparing them to enter premier universities and professions.'
+      '2014 — The Beginning: 30 children were living in a 100-year-old building without basic facilities such as proper toilets, dining space, and adequate rooms.',
+      '2016 — A New Campus: HIF India built a new campus with the essential facilities needed to provide children with a safe and supportive environment for education and residential life.',
+      '2026 — Where We Are Today: The campus now includes a 20,000 sq. ft. building, a beautiful Masjid, a dedicated play area, and parking facilities — transforming hardship into a thriving home for learning and growth.'
     ],
     achievements: [
-      'Complete modernization of 100-year-old campus infrastructure including smart classrooms and clean dormitories',
-      '225 resident students receiving 100% free education, clothing, medical care, and 4 daily nutritious meals',
-      '100% pass rates in state board examinations with multiple student distinctions',
-      'On-campus sports facilities, library with 3,000+ books, and high-speed computer laboratory'
+      '60 students have completed their Hifz.',
+      '25 students have completed their Aalim course.',
+      'All resident children are pursuing their education in an English-medium school.'
     ],
     futureGoals: [
-      'Expand capacity to house and educate 250 orphan boys by 2028 with additional hostel wings',
-      'Establish a STEM innovation lab and vocational robotics training center',
-      'Create a higher education endowment fund supporting alumni through engineering, medical, and civil service studies'
+      'Expanding the Campus: acquire an additional 2 acres of land to expand the campus and its facilities. Estimated cost: ₹40 lakh per acre — total land acquisition target: ₹80 lakh.',
+      'Our Goal: Creating 100 Aalim who can lead the Masjid and serve society.'
     ],
     supportTiers: [
       {
@@ -282,8 +281,8 @@ export const HIF_PROJECTS: ProjectData[] = [
   },
   {
     id: 'masjid-development',
-    title: 'Masjid Development Programme',
-    subtitle: 'Reopening Closed Masjids & Empowering Rural Spiritual Centers',
+    title: 'Masjid Development Project',
+    subtitle: 'Community + Support + Sustainability',
     badge: 'Spiritual Community',
     category: 'Masjid',
     icon: 'Landmark',
@@ -299,26 +298,28 @@ export const HIF_PROJECTS: ProjectData[] = [
     ],
     color: 'emerald',
     stats: [
-      { label: 'Masjids Reopened', value: '150+' },
-      { label: 'Masjids Constructed/Renovated', value: '8 Complete' },
+      { label: 'Masjids Supported', value: '176' },
+      { label: 'Started With', value: '1 Masjid' },
       { label: 'Geographic Reach', value: 'KA & AP' }
     ],
-    overview: 'Restoring life, prayers, and community education to abandoned rural masjids while constructing new centers of worship in underserved settlements.',
+    overview:
+      'What began with one closed Masjid near Chintamani, Karnataka, has grown into a movement that has helped reopen and support 176 Masjids, Alhamdulillah.',
     fullStory: [
-      'In remote rural belts across Karnataka and Andhra Pradesh, hundreds of historical masjids were left locked and decaying due to poverty and migration of local caretakers.',
-      'HIF initiated a systematic revival campaign: restoring physical structures, installing solar inverters and sound systems, digging borewells for wudhu, and appointing qualified Imams with guaranteed monthly honorariums.',
-      'Today, over 150 masjids buzz with five daily prayers and evening Quranic and moral classes for village children, transforming them into thriving centers of social harmony and guidance.'
+      'How It Started: We received a WhatsApp message about a Masjid near Chintamani, Karnataka, that had been closed due to lack of maintenance and the inability to pay the Imam’s salary. Our team visited the Masjid, conducted a survey, and met with the local community. With the support of local people, we were able to reopen the Masjid — and this became the beginning of our Masjid Development Project (MDP).',
+      'From One Masjid to 176: What started with a single Masjid gradually became a wider mission. Since then, our team has successfully helped reopen and support 176 Masjids, Alhamdulillah.',
+      'The MDP Model — Community + Support + Sustainability: Our goal is not simply to reopen a Masjid. We want to help communities take responsibility for their Masjid so that it can remain active and sustainable for years to come. 1 Masjid → 176 Masjids → a growing movement to revive and strengthen local Masjids.'
     ],
     achievements: [
-      'Over 150 closed and neglected rural masjids successfully reopened, refurbished, and kept active',
-      '8 masjids newly constructed or fully renovated under the Masjid Development Project (MDP), restoring them as active, functional places of worship',
-      'Regular monthly salary disbursement to 100+ rural Imams and Muazzins',
-      'Installation of solar electrical setups and clean water filtration units in 40+ remote villages'
+      'Motivate and involve the local community in maintaining the Masjid and establishing regular Salah.',
+      'Encourage local people to contribute according to their capacity, even through small, regular contributions.',
+      'Provide financial support from our NGO where necessary.',
+      'Meet donors and raise funds to help cover Imam salaries and essential Masjid expenses.',
+      'Assist eligible Masjids with Karnataka Waqf Board registration and related support.'
     ],
     futureGoals: [
-      'Reach 250 revitalized rural masjids with self-sustaining community library setups',
-      'Construct 10 new eco-friendly masjids with rainwater harvesting and community medical clinics',
-      'Launch an Imam welfare and healthcare insurance scheme'
+      'Help communities take lasting responsibility so each Masjid remains active and sustainable for years to come.',
+      'Continue growing the movement to revive and strengthen local Masjids beyond the 176 already supported.',
+      'Expand donor partnership to cover Imam salaries and essential Masjid expenses wherever communities need support.'
     ],
     supportTiers: [
       {
@@ -1274,14 +1275,14 @@ export function calculateImpactFromAmount(amount: number): {
   } else if (amount < 5000) {
     return {
       headline: 'Student Clothing & Medical Care',
-      primaryImpact: 'Provides complete annual clothing, uniforms, winter wear, and medical checkups for 1 orphan student at Chittor Dream Project.',
+      primaryImpact: 'Provides complete annual clothing, uniforms, winter wear, and medical checkups for 1 orphan student at HIF CHITOOR – D.U.R.J.',
       tangibles: [
         { label: 'Full Year Clothing', count: '1 Orphan Boy', icon: 'Shirt' },
         { label: 'Free Equipment Loan', count: '1 Family', icon: 'HeartPulse' },
         { label: 'Madrasa Books', count: '15 Primers', icon: 'GraduationCap' }
       ],
       suggestedPledge: 'Orphan Care Supporter',
-      recommendedProgram: 'Chittor Dream Project'
+      recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
   } else if (amount < 8000) {
     return {
@@ -1293,7 +1294,7 @@ export function calculateImpactFromAmount(amount: number): {
         { label: 'Emergency Blood Support', count: '5 Units', icon: 'Heart' }
       ],
       suggestedPledge: 'One Day Food Patron',
-      recommendedProgram: 'Chittor Dream Project'
+      recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
   } else if (amount < 15000) {
     return {
@@ -1305,7 +1306,7 @@ export function calculateImpactFromAmount(amount: number): {
         { label: 'Oxygen Concentrator Support', count: '1 Month Loan', icon: 'HeartPulse' }
       ],
       suggestedPledge: 'Special Occasion Sponsor',
-      recommendedProgram: 'Chittor Dream Project & Masjid Cell'
+      recommendedProgram: 'HIF CHITOOR – D.U.R.J & Masjid Cell'
     }
   } else if (amount < 35000) {
     return {
@@ -1317,7 +1318,7 @@ export function calculateImpactFromAmount(amount: number): {
         { label: 'Ashiyana Construction Share', count: '3 Cement Batches', icon: 'Home' }
       ],
       suggestedPledge: 'Annual Yateem Guardian',
-      recommendedProgram: 'Chittor Dream Project'
+      recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
   } else if (amount < 75000) {
     return {
@@ -1341,7 +1342,7 @@ export function calculateImpactFromAmount(amount: number): {
         { label: 'Annual Orphan Scholarships', count: '6+ Students', icon: 'GraduationCap' }
       ],
       suggestedPledge: 'Major Legacy Sadaqah Jariyah',
-      recommendedProgram: 'Project Ashiyana & Chittor'
+      recommendedProgram: 'Project Ashiyana & HIF CHITOOR – D.U.R.J'
     }
   }
 }

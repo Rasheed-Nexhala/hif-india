@@ -73,8 +73,8 @@ export const Footer: React.FC = () => {
             title={t('footer.programsTitle', 'Programs')}
             links={[
               { label: t('projects.ashiyana.title', 'Project Ashiyana'), to: '/projects/project-ashiyana' },
-              { label: t('projects.chittor.title', 'Chittor Dream Project'), to: '/projects/chittor-dream-project' },
-              { label: t('projects.masjid.title', 'Masjid Development'), to: '/projects/masjid-development' },
+              { label: t('projects.chittor.title', 'HIF CHITOOR – D.U.R.J'), to: '/projects/chittor-dream-project' },
+              { label: t('projects.masjid.title', 'Masjid Development Project'), to: '/projects/masjid-development' },
               { label: t('activities.medical.title', 'HIF Medical Cell'), to: '/activities/hif-medical-cell' }
             ]}
           />

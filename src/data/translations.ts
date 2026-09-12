@@ -613,9 +613,9 @@ export const translations: Record<Language, any> = {
       housingTitle: 'Housing',
       housingDesc: 'Permanent Ashiyana homes for destitute families',
       orphanCareTitle: 'Orphan Care',
-      orphanCareDesc: 'Chittor sanctuary nurturing 225 boys',
+      orphanCareDesc: 'Shelter for Underprivileged in Chinnapalli, Chittoor',
       masjidRevivalTitle: 'Masjid Revival',
-      masjidRevivalDesc: '150+ rural masjids restored & maintained',
+      masjidRevivalDesc: '176 rural masjids reopened & supported',
       healthcareTitle: 'Healthcare',
       healthcareDesc: 'Free MEDIBANK equipment & blood donor network'
     },
@@ -641,23 +641,23 @@ export const translations: Record<Language, any> = {
         statAvgCost: '₹6.5 – ₹8 Lakh Avg Cost'
       },
       chittor: {
-        title: 'Chittor Dream Project',
-        subtitle: 'HIF Yateemkana – A 2-Acre Loving Sanctuary for Orphaned Boys',
-        badge: 'Orphan Sanctuary',
+        title: 'HIF CHITOOR – D.U.R.J',
+        subtitle: 'Shelter for Underprivileged',
+        badge: 'Shelter for Underprivileged',
         overview:
-          'A historic 100-year-old educational sanctuary revitalized into a modern campus providing world-class English medium schooling, memorization of Quran, and character building.',
-        statBoys: '225 Boys Enrolled',
-        statCampus: '2.0 Acres Campus',
-        statCurriculum: 'Schooling + Hifz + Aleem'
+          'From an old building to a thriving campus — a 2.5-acre Shelter for Underprivileged in Chinnapalli, Chittoor District, Andhra Pradesh.',
+        statBoys: '2.5 Acres Campus',
+        statCampus: '20,000 sq. ft. Building',
+        statCurriculum: 'Chinnapalli, Chittoor District'
       },
       masjid: {
-        title: 'Masjid Development Programme',
-        subtitle: 'Reopening Closed Masjids & Empowering Rural Spiritual Centers',
+        title: 'Masjid Development Project',
+        subtitle: 'Community + Support + Sustainability',
         badge: 'Spiritual Community',
         overview:
-          'Restoring life, prayers, and community education to abandoned rural masjids while constructing new centers of worship in underserved settlements.',
-        statReopened: '150+ Masjids Reopened',
-        statNewBuilt: '8 Masjids Constructed/Renovated',
+          'What began with one closed Masjid near Chintamani, Karnataka, has grown into a movement that has helped reopen and support 176 Masjids, Alhamdulillah.',
+        statReopened: '176 Masjids Supported',
+        statNewBuilt: 'Started with 1 Masjid',
         statReach: 'Karnataka & Andhra Pradesh'
       },
       educationCity: {
@@ -1080,9 +1080,9 @@ export const translations: Record<Language, any> = {
       housingTitle: 'ವಸತಿ ಯೋಜನೆ',
       housingDesc: 'ನಿರ್ಗತಿಕ ಕುಟುಂಬಗಳಿಗೆ ಶಾಶ್ವತ ಆಶಿಯಾನಾ ಮನೆಗಳು',
       orphanCareTitle: 'ಅನಾಥರ ಪೋಷಣೆ',
-      orphanCareDesc: '225 ಬಾಲಕರನ್ನು ಪೋಷಿಸುವ ಚಿತ್ತೂರು ಆಶ್ರಯಧಾಮ',
+      orphanCareDesc: 'ಚಿನ್ನಪಲ್ಲಿ, ಚಿತ್ತೂರಿನಲ್ಲಿ ಅನುಕೂಲವಂಚಿತರ ಆಶ್ರಯ',
       masjidRevivalTitle: 'ಮಸೀದಿ ಜೀರ್ಣೋದ್ಧಾರ',
-      masjidRevivalDesc: '150+ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳ ಪುನರುಜ್ಜೀವನ ಮತ್ತು ನಿರ್ವಹಣೆ',
+      masjidRevivalDesc: '176 ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳ ಪುನರಾರಂಭ ಮತ್ತು ಬೆಂಬಲ',
       healthcareTitle: 'ಆರೋಗ್ಯ ಸೇವೆ',
       healthcareDesc: 'ಉಚಿತ ಮೆಡಿಬ್ಯಾಂಕ್ ಉಪಕರಣಗಳು ಮತ್ತು ರಕ್ತದಾನಿಗಳ ಜಾಲ'
     },
@@ -1108,23 +1108,23 @@ export const translations: Record<Language, any> = {
         statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹6.5 – ₹8 ಲಕ್ಷ'
       },
       chittor: {
-        title: 'ಚಿತ್ತೂರು ಡ್ರೀಮ್ ಪ್ರಾಜೆಕ್ಟ್',
-        subtitle: 'HIF ಯತೀಮ್‌ಖಾನಾ – ಅನಾಥ ಬಾಲಕರಿಗಾಗಿ 2 ಎಕರೆ ಪ್ರೀತಿಯ ಆಶ್ರಯಧಾಮ',
-        badge: 'ಅನಾಥರ ಆಶ್ರಯಧಾಮ',
+        title: 'HIF CHITOOR – D.U.R.J',
+        subtitle: 'ಅನುಕೂಲವಂಚಿತರಿಗೆ ಆಶ್ರಯ',
+        badge: 'ಅನುಕೂಲವಂಚಿತರಿಗೆ ಆಶ್ರಯ',
         overview:
-          '100 ವರ್ಷಗಳ ಐತಿಹಾಸಿಕ ಶಿಕ್ಷಣ ಸಂಕೀರ್ಣವನ್ನು ವಿಶ್ವದರ್ಜೆಯ ಇಂಗ್ಲಿಷ್ ಮಾಧ್ಯಮ ಶಿಕ್ಷಣ, ಕುರಾನ್ ಕಂಠಪಾಠ (ಹಿಫ್ಜ್) ಮತ್ತು ನೈತಿಕ ಸಂಸ್ಕಾರ ನೀಡುವ ಆಧುನಿಕ ಆವರಣವಾಗಿ ಪುನಶ್ಚೇತನಗೊಳಿಸಲಾಗಿದೆ.',
-        statBoys: '225 ಬಾಲಕರು ದಾಖಲು',
-        statCampus: '2.0 ಎಕರೆ ಆವರಣ',
-        statCurriculum: 'ಸ್ಕೂಲಿಂಗ್ + ಹಿಫ್ಜ್ + ಆಲೀಮ್'
+          'ಹಳೆಯ ಕಟ್ಟಡದಿಂದ ಅಭಿವೃದ್ಧಿ ಹೊಂದಿದ ಆವರಣ — ಚಿನ್ನಪಲ್ಲಿ, ಚಿತ್ತೂರು ಜಿಲ್ಲೆ, ಆಂಧ್ರಪ್ರದೇಶದಲ್ಲಿ 2.5 ಎಕರೆಯ ಅನುಕೂಲವಂಚಿತರ ಆಶ್ರಯ.',
+        statBoys: '2.5 ಎಕರೆ ಆವರಣ',
+        statCampus: '20,000 ಚ.ಅಡಿ ಕಟ್ಟಡ',
+        statCurriculum: 'ಚಿನ್ನಪಲ್ಲಿ, ಚಿತ್ತೂರು ಜಿಲ್ಲೆ'
       },
       masjid: {
         title: 'ಮಸೀದಿ ಅಭಿವೃದ್ಧಿ ಯೋಜನೆ',
-        subtitle: 'ಮುಚ್ಚಿದ ಮಸೀದಿಗಳ ಪುನರಾರಂಭ ಮತ್ತು ಗ್ರಾಮೀಣ ಆಧ್ಯಾತ್ಮಿಕ ಕೇಂದ್ರಗಳ ಬಲಪಡಿಸುವುದು',
+        subtitle: 'ಸಮುದಾಯ + ಬೆಂಬಲ + ಸುಸ್ಥಿರತೆ',
         badge: 'ಆಧ್ಯಾತ್ಮಿಕ ಸಮುದಾಯ',
         overview:
-          'ಕೈಬಿಡಲಾದ ಗ್ರಾಮೀಣ ಮಸೀದಿಗಳಿಗೆ ಪ್ರಾರ್ಥನೆ ಮತ್ತು ಸಮುದಾಯ ಶಿಕ್ಷಣದ ಜೀವಕಳೆ ತುಂಬುವುದು ಮತ್ತು ಸೌಲಭ್ಯವಂಚಿತ ಪ್ರದೇಶಗಳಲ್ಲಿ ಹೊಸ ಆರಾಧನಾ ಕೇಂದ್ರಗಳನ್ನು ನಿರ್ಮಿಸುವುದು.',
-        statReopened: '150+ ಮಸೀದಿಗಳು ಪುನರಾರಂಭ',
-        statNewBuilt: '8 ಮಸೀದಿಗಳ ನಿರ್ಮಾಣ/ಜೀರ್ಣೋದ್ಧಾರ',
+          'ಚಿಂತಾಮಣಿ ಬಳಿ ಮುಚ್ಚಿದ್ದ ಒಂದು ಮಸೀದಿಯಿಂದ ಶುರುವಾಗಿ, ಈಗ 176 ಮಸೀದಿಗಳನ್ನು ಪುನರಾರಂಭಿಸಿ ಬೆಂಬಲಿಸುವ ಚಳುವಳಿಯಾಗಿದೆ, ಅಲ್ಹಮ್ದುಲಿಲ್ಲಾಹ್.',
+        statReopened: '176 ಮಸೀದಿಗಳಿಗೆ ಬೆಂಬಲ',
+        statNewBuilt: '1 ಮಸೀದಿಯಿಂದ ಆರಂಭ',
         statReach: 'ಕರ್ನಾಟಕ ಮತ್ತು ಆಂಧ್ರಪ್ರದೇಶ'
       },
       educationCity: {
@@ -1547,9 +1547,9 @@ export const translations: Record<Language, any> = {
       housingTitle: 'आवास मिशन',
       housingDesc: 'जरूरतमंद परिवारों के लिए स्थायी आशियाना घर',
       orphanCareTitle: 'अनाथ संरक्षण',
-      orphanCareDesc: 'चित्तूर आश्रम में 225 बालकों का लालन-पालन',
+      orphanCareDesc: 'चिन्नपल्ली, चित्तूर में वंचितों के लिए आश्रय',
       masjidRevivalTitle: 'मस्जिद जीर्णोद्धार',
-      masjidRevivalDesc: '150+ ग्रामीण मस्जिदों का पुनरुद्धार और रख-रखाव',
+      masjidRevivalDesc: '176 ग्रामीण मस्जिदों का पुनरारंभ और समर्थन',
       healthcareTitle: 'स्वास्थ्य सेवा',
       healthcareDesc: 'निःशुल्क मेडीबैंक उपकरण और रक्तदाताओं का नेटवर्क'
     },
@@ -1575,23 +1575,23 @@ export const translations: Record<Language, any> = {
         statAvgCost: 'औसत लागत ₹6.5 – ₹8 लाख'
       },
       chittor: {
-        title: 'चित्तूर ड्रीम प्रोजेक्ट',
-        subtitle: 'HIF यतीमखाना – अनाथ बालकों के लिए 2 एकड़ का प्रेमपूर्ण आश्रय',
-        badge: 'अनाथ आश्रम',
+        title: 'HIF CHITOOR – D.U.R.J',
+        subtitle: 'वंचितों के लिए आश्रय',
+        badge: 'वंचितों के लिए आश्रय',
         overview:
-          '100 वर्ष पुराने ऐतिहासिक परिसर को आधुनिक रूप देकर अनाथ बालकों को विश्वस्तरीय अंग्रेजी माध्यम शिक्षा, कुरआन हिफ़्ज़ और नैतिक संस्कार प्रदान किए जाते हैं।',
-        statBoys: '225 बालक नामांकित',
-        statCampus: '2.0 एकड़ परिसर',
-        statCurriculum: 'स्कूली शिक्षा + हिफ्ज़ + आलिम'
+          'पुरानी इमारत से समृद्ध परिसर तक — चिन्नपल्ली, चित्तूर ज़िला, आंध्र प्रदेश में 2.5 एकड़ का वंचितों के लिए आश्रय।',
+        statBoys: '2.5 एकड़ परिसर',
+        statCampus: '20,000 वर्ग फुट भवन',
+        statCurriculum: 'चिन्नपल्ली, चित्तूर ज़िला'
       },
       masjid: {
-        title: 'मस्जिद विकास कार्यक्रम',
-        subtitle: 'बंद मस्जिदों को फिर से खोलना और ग्रामीण आध्यात्मिक केंद्रों का मजबूत बनाना',
+        title: 'मस्जिद विकास परियोजना',
+        subtitle: 'समुदाय + समर्थन + स्थिरता',
         badge: 'आध्यात्मिक समुदाय',
         overview:
-          'वीराने में पड़ी ग्रामीण मस्जिदों में नमाज और सामुदायिक शिक्षा को पुनर्जीवित करना तथा वंचित क्षेत्रों में नए इबादतगाहों का निर्माण करना।',
-        statReopened: '150+ मस्जिदें पुनर्जीवित',
-        statNewBuilt: '8 मस्जिदों का निर्माण/जीर्णोद्धार',
+          'चिंतमणि के पास बंद एक मस्जिद से शुरू होकर, यह अब 176 मस्जिदों को फिर से खोलने और समर्थन देने वाला आंदोलन बन गया है, अल्हम्दुलिल्लाह।',
+        statReopened: '176 मस्जिदों का समर्थन',
+        statNewBuilt: '1 मस्जिद से आरंभ',
         statReach: 'कर्नाटक और आंध्र प्रदेश'
       },
       educationCity: {

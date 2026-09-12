@@ -26,14 +26,14 @@ export const PillarsOrbit3D: React.FC = () => {
     {
       icon: HeartHandshake,
       title: t('pillars.orphanCareTitle', 'Orphan Care'),
-      desc: t('pillars.orphanCareDesc', 'Chittor sanctuary nurturing 225 boys'),
+      desc: t('pillars.orphanCareDesc', 'Shelter for Underprivileged in Chinnapalli, Chittoor'),
       tint: 'from-amber-500 to-amber-600',
       pos: 'right'
     },
     {
       icon: Landmark,
       title: t('pillars.masjidRevivalTitle', 'Masjid Revival'),
-      desc: t('pillars.masjidRevivalDesc', '150+ rural masjids restored & maintained'),
+      desc: t('pillars.masjidRevivalDesc', '176 rural masjids reopened & supported'),
       tint: 'from-emerald-600 to-emerald-800',
       pos: 'bottom'
     },
