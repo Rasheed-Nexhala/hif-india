@@ -32,7 +32,7 @@ import { localizeImpact } from '../lib/localizeContent'
 import { buildWhatsAppUrl } from '../lib/submitForm'
 
 export const GetInvolvedPage: React.FC = () => {
-  const [amount, setAmount] = useState(5000)
+  const [amount, setAmount] = useState(9000)
   const { openDonate } = useDonate()
   const { t, language } = useLanguage()
   const impact = useMemo(() => localizeImpact(amount, language), [amount, language])

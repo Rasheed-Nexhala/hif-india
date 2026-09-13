@@ -260,16 +260,18 @@ export const HIF_PROJECTS: ProjectData[] = [
         isPopular: true
       },
       {
-        title: 'Special Campus Feast Day',
-        amount: 8000,
-        unit: 'per day (225 boys)',
-        description: 'Sponsor a festive, special nutritious meal (Biryani, fruits, sweets) for all 225 boys on your special family occasion.'
+        title: 'Special Food',
+        amount: 14500,
+        unit: 'per day (225 students)',
+        description:
+          'Full-day special meals for all 225 students: breakfast (dosa/poha/idli), Chicken Biryani + Chicken Kebab for lunch, tea & biscuit, and chapathi or rice for dinner.'
       },
       {
-        title: 'One Day Regular Food Sponsor',
-        amount: 5000,
-        unit: 'per day (all meals)',
-        description: 'Provides breakfast, lunch, evening snack, and dinner for the entire 225-student campus.'
+        title: 'Normal Food',
+        amount: 9000,
+        unit: 'per day (225 students)',
+        description:
+          'Full-day normal meals for all 225 students: breakfast (dosa/poha/idli), Ghee Rice + Dal + Chicken Kebab for lunch, tea & biscuit, and chapathi or rice for dinner.'
       },
       {
         title: 'Annual Clothing & Uniform Kit',
@@ -1245,8 +1247,8 @@ export const HIF_GALLERY: GalleryItem[] = [
 export const IMPACT_CALCULATOR_PRESETS = [
   { amount: 1000, label: '₹1,000' },
   { amount: 2500, label: '₹2,500' },
-  { amount: 5000, label: '₹5,000' },
-  { amount: 8000, label: '₹8,000' },
+  { amount: 9000, label: '₹9,000' },
+  { amount: 14500, label: '₹14,500' },
   { amount: 15000, label: '₹15,000' },
   { amount: 35000, label: '₹35,000' },
   { amount: 50000, label: '₹50,000' },
@@ -1272,7 +1274,7 @@ export function calculateImpactFromAmount(amount: number): {
       suggestedPledge: 'Micro Charity / Sadaqah',
       recommendedProgram: 'HIF Education & Medical Cell'
     }
-  } else if (amount < 5000) {
+  } else if (amount < 9000) {
     return {
       headline: 'Student Clothing & Medical Care',
       primaryImpact: 'Provides complete annual clothing, uniforms, winter wear, and medical checkups for 1 orphan student at HIF CHITOOR – D.U.R.J.',
@@ -1284,29 +1286,31 @@ export function calculateImpactFromAmount(amount: number): {
       suggestedPledge: 'Orphan Care Supporter',
       recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
-  } else if (amount < 8000) {
+  } else if (amount < 14500) {
     return {
-      headline: 'Full Campus Daily Food Feast',
-      primaryImpact: 'Sponsors breakfast, lunch, tea, and dinner for the entire 225-student orphan campus at Chittor for a full day.',
+      headline: 'DURJ Normal Food Day',
+      primaryImpact:
+        'Sponsors a full day of normal meals for all 225 students at HIF CHITOOR – D.U.R.J: breakfast, Ghee Rice + Dal + Chicken Kebab, tea & biscuit, and dinner.',
       tangibles: [
-        { label: 'Orphans Fed (All Day)', count: '225 Boys', icon: 'Utensils' },
-        { label: 'Dialysis Aid', count: '2 Sessions', icon: 'Activity' },
-        { label: 'Emergency Blood Support', count: '5 Units', icon: 'Heart' }
+        { label: 'Students Fed (All Day)', count: '225 Students', icon: 'Utensils' },
+        { label: 'Normal Food Day', count: '₹9,000', icon: 'Sparkles' },
+        { label: 'Meals Covered', count: 'Breakfast to Dinner', icon: 'Heart' }
       ],
-      suggestedPledge: 'One Day Food Patron',
+      suggestedPledge: 'One Day Normal Food Patron',
       recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
   } else if (amount < 15000) {
     return {
-      headline: 'Special Grand Festive Feast & Health Fund',
-      primaryImpact: 'Provides a special celebratory feast (Biryani, dessert, fruit) for all 225 boys in Chittor plus critical medicines for rural elderly.',
+      headline: 'DURJ Special Food Day',
+      primaryImpact:
+        'Sponsors a full day of special meals for all 225 students at HIF CHITOOR – D.U.R.J: breakfast, Chicken Biryani + Chicken Kebab, tea & biscuit, and dinner.',
       tangibles: [
-        { label: 'Grand Special Meal', count: '225 Students', icon: 'Sparkles' },
-        { label: 'Imam Monthly Honorarium', count: '1 Rural Masjid', icon: 'Landmark' },
-        { label: 'Oxygen Concentrator Support', count: '1 Month Loan', icon: 'HeartPulse' }
+        { label: 'Students Fed (All Day)', count: '225 Students', icon: 'Utensils' },
+        { label: 'Special Food Day', count: '₹14,500', icon: 'Sparkles' },
+        { label: 'Meals Covered', count: 'Breakfast to Dinner', icon: 'Heart' }
       ],
-      suggestedPledge: 'Special Occasion Sponsor',
-      recommendedProgram: 'HIF CHITOOR – D.U.R.J & Masjid Cell'
+      suggestedPledge: 'One Day Special Food Patron',
+      recommendedProgram: 'HIF CHITOOR – D.U.R.J'
     }
   } else if (amount < 35000) {
     return {

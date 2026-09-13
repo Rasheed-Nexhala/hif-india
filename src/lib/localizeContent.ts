@@ -108,9 +108,9 @@ export function localizeImpact(amount: number, language: Language) {
   const band =
     amount < 2000
       ? 'a'
-      : amount < 5000
+      : amount < 9000
         ? 'b'
-        : amount < 8000
+        : amount < 14500
           ? 'c'
           : amount < 15000
             ? 'd'
