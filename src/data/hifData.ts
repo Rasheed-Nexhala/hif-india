@@ -419,8 +419,12 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Water Security',
     category: 'Water',
     icon: 'Droplet',
-    image: '/images/projects/water1.jpg',
+    image: '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
     images: [
+      '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
+      '/images/gallery/boondh-water-cooler-memorial-ahmed-ak.jpg',
+      '/images/gallery/boondh-water-unit-inauguration-dua.jpg',
+      '/images/gallery/boondh-water-flow-community-test.jpg',
       '/images/gallery/water-purification-shepherds-academy.jpg',
       '/images/gallery/project-boondh-cutchi-memon-masjid.jpg',
       '/images/gallery/boondh-water-supply-inauguration-2016.jpg',
@@ -809,6 +813,42 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Cutchi Memon Masjid, Mangaluru',
     description: 'Public drinking water station inaugurated under Project Boondh at Cutchi Memon Masjid with community members.',
     year: '2024'
+  },
+  {
+    id: 'gal-63',
+    title: 'Project Boondh Unit at Masjid-ul-Ehsaan',
+    category: 'Community',
+    imageUrl: '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
+    location: 'Masjid-ul-Ehsaan, Mangaluru',
+    description: 'Stainless steel purified drinking water dispenser installed under Project Boondh at Masjid-ul-Ehsaan, with hot, cold, and normal taps.',
+    year: '2025'
+  },
+  {
+    id: 'gal-64',
+    title: 'Project Boondh Memorial Water Cooler',
+    category: 'Community',
+    imageUrl: '/images/gallery/boondh-water-cooler-memorial-ahmed-ak.jpg',
+    location: 'Mangaluru',
+    description: 'Community members with a Project Boondh water cooler dedicated in memory of Marhoom Ahmed Ak.',
+    year: '2025'
+  },
+  {
+    id: 'gal-65',
+    title: 'Project Boondh Water Unit Dedication',
+    category: 'Community',
+    imageUrl: '/images/gallery/boondh-water-unit-inauguration-dua.jpg',
+    location: 'Mangaluru Region',
+    description: 'Community dedication and dua at the inauguration of a Project Boondh public drinking water unit.',
+    year: '2025'
+  },
+  {
+    id: 'gal-66',
+    title: 'Project Boondh Water Flow Success',
+    category: 'Community',
+    imageUrl: '/images/gallery/boondh-water-flow-community-test.jpg',
+    location: 'Rural Karnataka',
+    description: 'Community members celebrate successful water flow from a newly completed Project Boondh water supply installation.',
+    year: '2025'
   },
   {
     id: 'gal-47',
