@@ -13,10 +13,15 @@ export const ProjectDetailPage: React.FC = () => {
   const { openDonate } = useDonate()
   const { t, language } = useLanguage()
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const [beforeLightboxIndex, setBeforeLightboxIndex] = useState<number | null>(null)
+  const [afterLightboxIndex, setAfterLightboxIndex] = useState<number | null>(null)
 
   if (!rawProject) return <Navigate to="/projects" replace />
 
   const project = localizeProject(rawProject, t, language)
+  const beforeImages = project.beforeImages ?? []
+  const afterImages = project.afterImages ?? []
+  const hasBeforeAfter = beforeImages.length > 0 || afterImages.length > 0
 
   return (
     <>
@@ -63,6 +68,66 @@ export const ProjectDetailPage: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {hasBeforeAfter && (
+              <div>
+                <h2 className="font-display text-2xl font-semibold text-text-main">
+                  {t('projects.beforeAfterTitle', 'Before & After')}
+                </h2>
+                <div className="mt-5 space-y-8">
+                  {beforeImages.length > 0 && (
+                    <div>
+                      <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted mb-3">
+                        {t('projects.beforeLabel', 'Before')}
+                      </h3>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {beforeImages.map((img, i) => (
+                          <button
+                            key={img}
+                            onClick={() => setBeforeLightboxIndex(i)}
+                            className="aspect-[4/3] rounded-xl overflow-hidden border border-border group"
+                          >
+                            <img
+                              src={img}
+                              alt={`${project.title} ${t('projects.beforeLabel', 'Before')}`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted mb-3">
+                      {t('projects.afterLabel', 'After')}
+                    </h3>
+                    {afterImages.length > 0 ? (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {afterImages.map((img, i) => (
+                          <button
+                            key={img}
+                            onClick={() => setAfterLightboxIndex(i)}
+                            className="aspect-[4/3] rounded-xl overflow-hidden border border-border group"
+                          >
+                            <img
+                              src={img}
+                              alt={`${project.title} ${t('projects.afterLabel', 'After')}`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-sm text-text-muted italic">
+                        {t('projects.afterComingSoon', 'Completed homes will appear here next.')}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
 
             {project.images.length > 1 && (
               <div className="grid grid-cols-2 gap-4">
@@ -163,6 +228,20 @@ export const ProjectDetailPage: React.FC = () => {
         alt={project.title}
         onClose={() => setLightboxIndex(null)}
         onSelect={setLightboxIndex}
+      />
+      <ImageLightbox
+        images={beforeImages}
+        index={beforeLightboxIndex}
+        alt={`${project.title} ${t('projects.beforeLabel', 'Before')}`}
+        onClose={() => setBeforeLightboxIndex(null)}
+        onSelect={setBeforeLightboxIndex}
+      />
+      <ImageLightbox
+        images={afterImages}
+        index={afterLightboxIndex}
+        alt={`${project.title} ${t('projects.afterLabel', 'After')}`}
+        onClose={() => setAfterLightboxIndex(null)}
+        onSelect={setAfterLightboxIndex}
       />
     </>
   )
