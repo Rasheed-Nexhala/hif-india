@@ -679,7 +679,7 @@ export const translations: Record<Language, any> = {
         subtitle: 'Dignity in Celebration for Underprivileged Brides & Grooms',
         badge: 'Dignity & Celebration',
         overview:
-          'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity.'
+          'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity. We also accept good-condition bridal clothes as in-kind donations.'
       }
     },
     activities: {
@@ -1146,7 +1146,7 @@ export const translations: Record<Language, any> = {
         subtitle: 'ಸೌಲಭ್ಯವಂಚಿತ ವಧು-ವರರಿಗೆ ಘನತೆಯ ಆಚರಣೆ',
         badge: 'ಘನತೆ ಮತ್ತು ಆಚರಣೆ',
         overview:
-          'ಪ್ರಾಜೆಕ್ಟ್ ಲಿಬಾಸ್ ಸೌಲಭ್ಯವಂಚಿತ ಕುಟುಂಬಗಳ ವಧು-ವರರಿಗೆ ಮದುವೆ ಉಡುಪುಗಳನ್ನು ಒದಗಿಸಿ, ಅವರ ವಿಶೇಷ ದಿನವನ್ನು ಘನತೆಯಿಂದ ಆಚರಿಸಲು ನೆರವಾಗುತ್ತದೆ.'
+          'ಪ್ರಾಜೆಕ್ಟ್ ಲಿಬಾಸ್ ಸೌಲಭ್ಯವಂಚಿತ ಕುಟುಂಬಗಳ ವಧು-ವರರಿಗೆ ಮದುವೆ ಉಡುಪುಗಳನ್ನು ಒದಗಿಸಿ, ಅವರ ವಿಶೇಷ ದಿನವನ್ನು ಘನತೆಯಿಂದ ಆಚರಿಸಲು ನೆರವಾಗುತ್ತದೆ. ಒಳ್ಳೆಯ ಸ್ಥಿತಿಯ ವಧು ಬಟ್ಟೆಗಳನ್ನೂ ಸ್ವೀಕರಿಸುತ್ತೇವೆ.'
       }
     },
     activities: {
@@ -1613,7 +1613,7 @@ export const translations: Record<Language, any> = {
         subtitle: 'वंचित दूल्हा-दुल्हन के लिए गरिमामय उत्सव',
         badge: 'गरिमा और उत्सव',
         overview:
-          'प्रोजेक्ट लिबास वंचित परिवारों के दूल्हा-दुल्हन के लिए शादी के कपड़े उपलब्ध कराकर उन्हें अपने खास दिन को गरिमा के साथ मनाने में मदद करता है।'
+          'प्रोजेक्ट लिबास वंचित परिवारों के दूल्हा-दुल्हन के लिए शादी के कपड़े उपलब्ध कराकर उन्हें अपने खास दिन को गरिमा के साथ मनाने में मदद करता है। अच्छी हालत वाली दुल्हन की पोशाकें भी स्वीकार करते हैं।'
       }
     },
     activities: {

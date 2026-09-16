@@ -202,7 +202,7 @@ export const HIF_PROJECTS: ProjectData[] = [
       },
       {
         title: 'Water & Sanitation Infrastructure',
-        amount: 50000,
+        amount: 100000,
         unit: 'per household',
         description: 'Build an attached modern bathroom, septic tank, and pipeline connection.'
       },
@@ -278,6 +278,12 @@ export const HIF_PROJECTS: ProjectData[] = [
         amount: 2500,
         unit: 'per student / year',
         description: 'Provides 2 sets of school uniforms, traditional attire, shoes, winter wear, and bedding essentials.'
+      },
+      {
+        title: 'Future Expansion Land',
+        amount: 4000000,
+        unit: 'per acre',
+        description: 'Contribute towards acquiring land for future campus expansion (₹40 lakh per acre).'
       }
     ]
   },
@@ -327,15 +333,21 @@ export const HIF_PROJECTS: ProjectData[] = [
       {
         title: 'Rural Imam Monthly Honorarium',
         amount: 10000,
-        unit: 'per month',
-        description: 'Support a dedicated Imam and teacher serving in a remote rural village masjid.',
+        unit: 'per month (₹8,000–₹10,000)',
+        description: 'Support a dedicated Imam and teacher serving in a remote rural village masjid (₹8,000–₹10,000 monthly).',
         isPopular: true
       },
       {
-        title: 'New Rural Masjid Construction Share',
-        amount: 100000,
-        unit: 'per share (Total: ₹8-10 Lakh)',
-        description: 'Contribute a foundation share towards building an entire new village masjid.'
+        title: 'New Masjid Construction',
+        amount: 2000000,
+        unit: 'per masjid (full cost)',
+        description: 'Fund the complete construction of a new village masjid.'
+      },
+      {
+        title: 'New Masjid Half Payment',
+        amount: 1000000,
+        unit: 'per masjid (half cost)',
+        description: 'Cover half the cost of building a new village masjid.'
       },
       {
         title: 'Masjid Solar & Wudhu Infrastructure',
@@ -344,10 +356,22 @@ export const HIF_PROJECTS: ProjectData[] = [
         description: 'Provide solar backup power, PA system, and clean water filtration setup.'
       },
       {
-        title: 'Rural Madrasa Kit & Quran Distribution',
-        amount: 5000,
-        unit: 'per batch',
-        description: 'Supplies Arabic primers, Qurans, whiteboards, and stationery for 30 village children.'
+        title: 'Wudhu Khana',
+        amount: 80000,
+        unit: 'per masjid (approx)',
+        description: 'Build or upgrade the wudhu (ablution) facility for a masjid.'
+      },
+      {
+        title: 'Mayyath Structure',
+        amount: 30000,
+        unit: 'per unit',
+        description: 'Support construction of a mayyath (funeral) structure for the community.'
+      },
+      {
+        title: 'Water Connection',
+        amount: 45000,
+        unit: 'per masjid',
+        description: 'Provide a water connection for masjid use.'
       }
     ]
   },
@@ -469,10 +493,22 @@ export const HIF_PROJECTS: ProjectData[] = [
         isPopular: true
       },
       {
-        title: 'Water Tanker Emergency Relief',
-        amount: 15000,
-        unit: 'per tanker deployment',
-        description: 'Deliver free drinking water by tanker to households facing acute water scarcity.'
+        title: 'Borewell',
+        amount: 150000,
+        unit: '₹1.5–₹2.5 Lakh',
+        description: 'Fund a borewell for an underserved community. Cost typically ranges from ₹1.5 to ₹2.5 lakh.'
+      },
+      {
+        title: 'Well',
+        amount: 150000,
+        unit: 'per well',
+        description: 'Fund construction of a well to provide lasting access to water.'
+      },
+      {
+        title: 'Water Dispenser',
+        amount: 55000,
+        unit: '₹55,000–₹85,000',
+        description: 'Provide a water dispenser unit for community drinking water access.'
       },
       {
         title: 'Filtration Unit Contribution',
@@ -489,8 +525,22 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Dignity & Celebration',
     category: 'Celebration',
     icon: 'Shirt',
-    image: '/images/projects/libaas-cover.png',
+    image: '/images/gallery/libaas-womens-wing-team-sign.jpg',
     images: [
+      '/images/gallery/libaas-womens-wing-team-sign.jpg',
+      '/images/gallery/libaas-bridal-storage-team.jpg',
+      '/images/gallery/libaas-distribution-hall.jpg',
+      '/images/gallery/libaas-volunteers-sorting-garments.jpg',
+      '/images/gallery/libaas-rack-with-banner.jpg',
+      '/images/gallery/libaas-wooden-shelf-inventory.jpg',
+      '/images/gallery/libaas-storage-room-shelves.jpg',
+      '/images/gallery/libaas-white-shelf-inventory.jpg',
+      '/images/gallery/libaas-maroon-velvet-lehenga.jpg',
+      '/images/gallery/libaas-ice-blue-anarkali.jpg',
+      '/images/gallery/libaas-gold-lace-lehenga.jpg',
+      '/images/gallery/libaas-black-embroidered-gown.jpg',
+      '/images/gallery/libaas-gold-red-border-gown.jpg',
+      '/images/gallery/libaas-silver-blue-floral-gown.jpg',
       '/images/projects/libaas-cover.png',
       '/images/gallery/libaas-wedding-dress-distribution-2015.jpg'
     ],
@@ -500,7 +550,7 @@ export const HIF_PROJECTS: ProjectData[] = [
       { label: 'Beneficiaries', value: 'Brides & Grooms' },
       { label: 'Focus', value: 'Dignity in Celebration' }
     ],
-    overview: 'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity.',
+    overview: 'Project Libaas provides wedding dresses for brides and grooms from underprivileged families, helping them celebrate their special day with dignity. We also accept good-condition bridal clothes as in-kind donations.',
     fullStory: [
       'For many underprivileged families, even a wedding — a day meant for joy — can become a source of financial strain and quiet shame when a proper wedding outfit is out of reach.',
       'Project Libaas was created to remove that burden, providing dignified wedding attire to brides and grooms from low-income families so their special day is marked with celebration, not compromise.',
@@ -531,10 +581,28 @@ export const HIF_PROJECTS: ProjectData[] = [
         description: 'Provide a dignified wedding dress for a bride from a low-income family.'
       },
       {
+        title: 'Cloth Set for Bride',
+        amount: 15000,
+        unit: 'per bride',
+        description: 'Provide a complete cloth set for a bride from a low-income family. We also accept good-condition bridal clothes.'
+      },
+      {
         title: 'Groom\'s Attire Contribution',
         amount: 5000,
         unit: 'per groom',
         description: 'Provide wedding attire for a groom from an underprivileged family.'
+      },
+      {
+        title: 'Quran, Jubba & Janamaz',
+        amount: 5000,
+        unit: 'per set',
+        description: 'Sponsor a Quran, jubba, and janamaz set for a couple starting married life.'
+      },
+      {
+        title: 'Sandal & Slipper',
+        amount: 3000,
+        unit: 'per set',
+        description: 'Provide sandals and slippers as part of wedding support for underprivileged couples.'
       }
     ]
   }
@@ -561,7 +629,10 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       '/images/projects/hif11.jpg',
       '/images/gallery/blood-donation-camp-june-2023.jpg',
       '/images/gallery/wenlock-hospital-volunteers.jpg',
-      '/images/gallery/orphan-day-medical-checkup-2018.jpg'
+      '/images/gallery/orphan-day-medical-checkup-2018.jpg',
+      '/images/gallery/orphan-day-stethoscope-checkup.jpg',
+      '/images/gallery/orphan-day-eye-screening.jpg',
+      '/images/gallery/orphan-day-hand-checkup.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -975,6 +1046,204 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Mangaluru',
     description: 'Wedding dress distribution to underprivileged brides under Project Libaas, helping couples celebrate with dignity.',
     year: '2015'
+  },
+  {
+    id: 'gal-67',
+    title: 'Libaas by HIF Women\'s Wing',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-womens-wing-team-sign.jpg',
+    location: 'Mangaluru',
+    description: 'HIF team at the Libaas by HIF Women\'s Wing space, stocked with sarees and formal wear for underprivileged brides.',
+    year: '2025'
+  },
+  {
+    id: 'gal-68',
+    title: 'Libaas Bridal Storage Visit',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-bridal-storage-team.jpg',
+    location: 'Mangaluru',
+    description: 'Team visit to the Libaas bridal inventory area with packaged lehengas and formal attire ready for distribution.',
+    year: '2025'
+  },
+  {
+    id: 'gal-69',
+    title: 'Libaas Clothing Distribution Hall',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-distribution-hall.jpg',
+    location: 'Mangaluru',
+    description: 'Organized clothing distribution under Project Libaas, with boxes and racks of garments for families in need.',
+    year: '2025'
+  },
+  {
+    id: 'gal-70',
+    title: 'Libaas Volunteers Sorting Garments',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-volunteers-sorting-garments.jpg',
+    location: 'Mangaluru',
+    description: 'Women\'s Wing volunteers sorting and preparing donated and sponsored garments for Project Libaas beneficiaries.',
+    year: '2025'
+  },
+  {
+    id: 'gal-71',
+    title: 'Libaas Garment Rack and Banner',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-rack-with-banner.jpg',
+    location: 'Mangaluru',
+    description: 'Packaged wedding and formal attire on racks beneath the Project Libaas banner at HIF India.',
+    year: '2025'
+  },
+  {
+    id: 'gal-72',
+    title: 'Libaas Wooden Shelf Inventory',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-wooden-shelf-inventory.jpg',
+    location: 'Mangaluru',
+    description: 'Shelves of packaged ethnic and bridal wear maintained for Project Libaas sponsorships.',
+    year: '2025'
+  },
+  {
+    id: 'gal-73',
+    title: 'Libaas Storage Room Shelves',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-storage-room-shelves.jpg',
+    location: 'Mangaluru',
+    description: 'Wider view of the Libaas storage room with multi-tier wooden shelves of packaged garments.',
+    year: '2025'
+  },
+  {
+    id: 'gal-74',
+    title: 'Libaas White Shelf Inventory',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-white-shelf-inventory.jpg',
+    location: 'Mangaluru',
+    description: 'Wall shelves stacked with individually packaged Libaas garments ready for bridal sponsorship.',
+    year: '2025'
+  },
+  {
+    id: 'gal-75',
+    title: 'Libaas Maroon Velvet Lehenga',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-maroon-velvet-lehenga.jpg',
+    location: 'Mangaluru',
+    description: 'Maroon velvet bridal lehenga with gold embroidery prepared for a Project Libaas beneficiary.',
+    year: '2025'
+  },
+  {
+    id: 'gal-76',
+    title: 'Libaas Ice Blue Anarkali',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-ice-blue-anarkali.jpg',
+    location: 'Mangaluru',
+    description: 'Ice-blue embroidered Anarkali gown from the Project Libaas bridal attire collection.',
+    year: '2025'
+  },
+  {
+    id: 'gal-77',
+    title: 'Libaas Gold Lace Lehenga',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-gold-lace-lehenga.jpg',
+    location: 'Mangaluru',
+    description: 'Gold lace bridal lehenga set held for distribution under Project Libaas.',
+    year: '2025'
+  },
+  {
+    id: 'gal-78',
+    title: 'Libaas Black Embroidered Gown',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-black-embroidered-gown.jpg',
+    location: 'Mangaluru',
+    description: 'Black formal gown with embroidered jacket from the Project Libaas attire collection.',
+    year: '2025'
+  },
+  {
+    id: 'gal-79',
+    title: 'Libaas Gold Gown with Red Border',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-gold-red-border-gown.jpg',
+    location: 'Mangaluru',
+    description: 'Gold embroidered bridal gown with a red border prepared for a Project Libaas bride.',
+    year: '2025'
+  },
+  {
+    id: 'gal-80',
+    title: 'Libaas Silver Blue Floral Gown',
+    category: 'Community',
+    imageUrl: '/images/gallery/libaas-silver-blue-floral-gown.jpg',
+    location: 'Mangaluru',
+    description: 'Silver-blue floral gown from the Project Libaas collection for underprivileged brides.',
+    year: '2025'
+  },
+  {
+    id: 'gal-81',
+    title: 'A Day With Orphan - Gift Ceremony',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-gift-ceremony.jpg',
+    location: 'Masjid Ul Ehsaan, Mangaluru',
+    description: 'A young boy receives a gift bag at HIF India\'s Day With Orphans event, featuring free health checkups, gifts, and community care.',
+    year: '2025'
+  },
+  {
+    id: 'gal-82',
+    title: 'A Day With Orphan - Registration Hall',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-registration-hall.jpg',
+    location: 'Highland Educational & Cultural Centre, Mangaluru',
+    description: 'Families and children gather for registration and support stations during HIF India\'s Day With Orphan event.',
+    year: '2025'
+  },
+  {
+    id: 'gal-83',
+    title: 'A Day With Orphan - Hand Checkup',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-hand-checkup.jpg',
+    location: 'Mangaluru',
+    description: 'A doctor examines a child\'s hand during free medical screenings at the Day With Orphan event.',
+    year: '2025'
+  },
+  {
+    id: 'gal-84',
+    title: 'A Day With Orphan - Stethoscope Checkup',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-stethoscope-checkup.jpg',
+    location: 'Mangaluru',
+    description: 'A medical volunteer uses a stethoscope to check a young boy during Day With Orphan health screenings.',
+    year: '2025'
+  },
+  {
+    id: 'gal-85',
+    title: 'A Day With Orphan - Eye Screening',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-eye-screening.jpg',
+    location: 'Mangaluru',
+    description: 'Vision screening for an orphan child as part of free health checkups at Day With Orphan.',
+    year: '2025'
+  },
+  {
+    id: 'gal-86',
+    title: 'A Day With Orphan - ENT Examination',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-ent-exam.jpg',
+    location: 'Mangaluru',
+    description: 'Specialized ENT screening with diagnostic equipment during the Day With Orphan medical camp.',
+    year: '2025'
+  },
+  {
+    id: 'gal-87',
+    title: 'A Day With Orphan - Dental Checkup',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-dental-checkup.jpg',
+    location: 'Mangaluru',
+    description: 'A volunteer examines a child\'s oral health during free medical care at Day With Orphan.',
+    year: '2025'
+  },
+  {
+    id: 'gal-88',
+    title: 'A Day With Orphan - Girls Medical Exam',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/orphan-day-girl-medical-exam.jpg',
+    location: 'Mangaluru',
+    description: 'A caregiver provides a medical checkup for a young girl during HIF India\'s Day With Orphan event.',
+    year: '2025'
   },
   {
     id: 'gal-61',
