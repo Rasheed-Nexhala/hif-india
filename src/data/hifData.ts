@@ -145,8 +145,10 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Housing Mission',
     category: 'Housing',
     icon: 'Home',
-    image: '/images/projects/ashiyana3.jpg',
+    image: '/images/projects/ashiyana13.jpg',
     images: [
+      '/images/projects/ashiyana13.jpg',
+      '/images/projects/ashiyana14.jpg',
       '/images/gallery/ashiyana-foundation-laying-ceremony.jpg',
       '/images/gallery/ashiyana-home-handover-2016.jpg',
       '/images/gallery/ashiyana-house-construction-2013.jpg',
@@ -159,9 +161,7 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/projects/ashiyana9.jpg',
       '/images/projects/ashiyana10.jpg',
       '/images/projects/ashiyana11.jpg',
-      '/images/projects/ashiyana12.jpg',
-      '/images/projects/ashiyana13.jpg',
-      '/images/projects/ashiyana14.jpg'
+      '/images/projects/ashiyana12.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -848,6 +848,141 @@ export const HIF_GALLERY: GalleryItem[] = [
     imageUrl: '/images/gallery/boondh-water-flow-community-test.jpg',
     location: 'Rural Karnataka',
     description: 'Community members celebrate successful water flow from a newly completed Project Boondh water supply installation.',
+    year: '2025'
+  },
+  {
+    id: 'gal-67',
+    title: 'HIF CHITOOR Campus Building',
+    category: 'Orphanage',
+    imageUrl: '/images/projects/chitttor.jpg',
+    location: 'Chinnapalli, Chittoor, A.P.',
+    description: 'The completed D.U.R.J campus building with arched veranda at HIF CHITOOR — Shelter for Underprivileged in Chinnapalli.',
+    year: '2026'
+  },
+  {
+    id: 'gal-68',
+    title: 'D.U.R.J Annual Concluding Programme',
+    category: 'Orphanage',
+    imageUrl: '/images/projects/chittor2.jpg',
+    location: 'Chinnapalli, Chittoor, A.P.',
+    description: 'Students and HIF India team members at the Darul Uloom Riyazul Jannah annual concluding programme.',
+    year: '2025'
+  },
+  {
+    id: 'gal-69',
+    title: 'CHITOOR Campus Kitchen Facilities',
+    category: 'Orphanage',
+    imageUrl: '/images/projects/chittor3.jpg',
+    location: 'Chinnapalli, Chittoor, A.P.',
+    description: 'Basic kitchen facilities at the HIF CHITOOR campus, part of the ongoing effort to improve living conditions for resident students.',
+    year: '2024'
+  },
+  {
+    id: 'gal-70',
+    title: 'D.U.R.J Students in Study Hall',
+    category: 'Orphanage',
+    imageUrl: '/images/projects/chittor4.jpg',
+    location: 'Chinnapalli, Chittoor, A.P.',
+    description: 'Resident students gathered in the study hall at Darul Uloom Riyazul Jannah under the HIF CHITOOR project.',
+    year: '2025'
+  },
+  {
+    id: 'gal-71',
+    title: 'CHITOOR Campus Water Dedication',
+    category: 'Orphanage',
+    imageUrl: '/images/projects/chittor5.jpg',
+    location: 'Chinnapalli, Chittoor, A.P.',
+    description: 'Community leaders pour water during a dedication ceremony for campus water facilities at HIF CHITOOR.',
+    year: '2024'
+  },
+  {
+    id: 'gal-72',
+    title: 'Rural Masjid Supported by MDP',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid.jpg',
+    location: 'Rural Karnataka',
+    description: 'A restored rural masjid with minaret and courtyard, reopened and supported under the Masjid Development Project.',
+    year: '2025'
+  },
+  {
+    id: 'gal-73',
+    title: 'Village Masjid Community Visit',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid6.jpg',
+    location: 'Rural Karnataka',
+    description: 'HIF team members with a local imam outside a village masjid supported through the Masjid Development Project.',
+    year: '2024'
+  },
+  {
+    id: 'gal-74',
+    title: 'Rural Masjid Construction in Progress',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid7.jpg',
+    location: 'Rural Karnataka',
+    description: 'Community members and workers building a rural masjid with concrete blocks under Masjid Development Project support.',
+    year: '2024'
+  },
+  {
+    id: 'gal-75',
+    title: 'Masjid Minaret Finishing Work',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid8.jpg',
+    location: 'Rural Karnataka',
+    description: 'Workers completing paint and finishing on a brightly coloured rural masjid minaret under the Masjid Development Project.',
+    year: '2025'
+  },
+  {
+    id: 'gal-76',
+    title: 'Masjid Campus Expansion Underway',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid9.jpg',
+    location: 'Rural Karnataka',
+    description: 'Second-storey construction with scaffolding at a masjid campus supported by HIF\'s Masjid Development Project.',
+    year: '2025'
+  },
+  {
+    id: 'gal-77',
+    title: 'Completed Rural Masjid with Minaret',
+    category: 'Masjid',
+    imageUrl: '/images/projects/masjid10.jpg',
+    location: 'Rural Karnataka',
+    description: 'A completed rural masjid with tiled platform, arched openings, and minaret — built and supported under the Masjid Development Project.',
+    year: '2025'
+  },
+  {
+    id: 'gal-78',
+    title: 'HIF India Van at Government Hospital',
+    category: 'Healthcare',
+    imageUrl: '/images/projects/hif1.jpg',
+    location: 'Government Hospital, Mangaluru',
+    description: 'HIF India service van stationed at a government hospital courtyard during nighttime medical support operations.',
+    year: '2024'
+  },
+  {
+    id: 'gal-79',
+    title: 'HIF Medical Cell Field Van',
+    category: 'Healthcare',
+    imageUrl: '/images/projects/hif2.jpg',
+    location: 'Mangaluru',
+    description: 'Highland Islamic Forum medical cell van with official branding during a field healthcare support deployment.',
+    year: '2024'
+  },
+  {
+    id: 'gal-80',
+    title: 'MEDIBANK Wheelchair Equipment Pool',
+    category: 'Healthcare',
+    imageUrl: '/images/projects/hif6.jpg',
+    location: 'Kudroli, Mangaluru',
+    description: 'Newly prepared HIF_INDIA wheelchairs in the MEDIBANK equipment pool, ready for free loan to families in need.',
+    year: '2025'
+  },
+  {
+    id: 'gal-81',
+    title: 'Wheelchair Delivery at Hospital Casualty',
+    category: 'Healthcare',
+    imageUrl: '/images/projects/hif7.jpg',
+    location: 'Mangaluru',
+    description: 'HIF Medical Cell delivering a new wheelchair at a hospital casualty entrance as part of free medical equipment support.',
     year: '2025'
   },
   {
