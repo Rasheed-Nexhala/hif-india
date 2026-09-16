@@ -123,20 +123,13 @@ export const HIF_ORGANIZATION = {
       '/images/projects/slider-4.jpg'
     ],
     about: '/images/projects/about-us.jpg',
-    aboutAlt: '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
+    aboutAlt: '/images/gallery/team-outdoor-trip-luggage.jpg',
     mission: '/images/projects/mission.jpg'
   },
   teamPhotos: [
-    '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
-    '/images/gallery/hif-team-outdoor-volunteers.jpg',
-    '/images/gallery/team-group-selfie-wefie.jpg',
-    '/images/gallery/hif-auditorium-packed-event.jpg',
     '/images/gallery/iftar-al-qalam-arabic-academy.jpg',
     '/images/gallery/team-outdoor-trip-luggage.jpg',
-    '/images/gallery/airport-welcome-flowers.jpg',
     '/images/gallery/hif-sports-meet-cricket-winners-2025.jpg',
-    '/images/gallery/ramadan-fajr-bicycle-handover.jpg',
-    '/images/gallery/hif-team-stage-gathering.jpg',
     '/images/gallery/youth-community-meeting-living-room.jpg'
   ]
 }
@@ -151,7 +144,6 @@ export const HIF_PROJECTS: ProjectData[] = [
     icon: 'Home',
     image: '/images/projects/ashiyana3.jpg',
     images: [
-      '/images/gallery/ashiyana-foundation-laying-ceremony.jpg',
       '/images/gallery/ashiyana-home-handover-2016.jpg',
       '/images/gallery/ashiyana-house-construction-2013.jpg',
       '/images/projects/ashiyana3.jpg',
@@ -162,10 +154,8 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/projects/ashiyana8.jpg',
       '/images/projects/ashiyana9.jpg',
       '/images/projects/ashiyana10.jpg',
-      '/images/projects/ashiyana11.jpg',
       '/images/projects/ashiyana12.jpg',
       '/images/projects/ashiyana13.jpg',
-      '/images/projects/ashiyana14.jpg'
     ],
     beforeImages: [
       '/images/gallery/ashiyana-before-brick-shack.jpg',
@@ -180,14 +170,12 @@ export const HIF_PROJECTS: ProjectData[] = [
     ],
     afterImages: [
       '/images/gallery/ashiyana-after-cream-mashallah-home.jpg',
-      '/images/gallery/ashiyana-after-community-gathering.jpg',
       '/images/gallery/ashiyana-after-white-mashallah-home.jpg',
       '/images/gallery/ashiyana-after-purple-mashallah-home.jpg',
       '/images/gallery/ashiyana-after-handover-ceremony.jpg',
       '/images/gallery/ashiyana-after-completed-home-yard.jpg',
       '/images/gallery/ashiyana-after-first-key-opening.jpg',
       '/images/gallery/ashiyana-after-porch-home.jpg',
-      '/images/gallery/ashiyana-after-36th-key-handover.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -478,8 +466,6 @@ export const HIF_PROJECTS: ProjectData[] = [
     image: '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
     images: [
       '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
-      '/images/gallery/boondh-water-cooler-memorial-ahmed-ak.jpg',
-      '/images/gallery/boondh-water-unit-inauguration-dua.jpg',
       '/images/gallery/boondh-water-flow-community-test.jpg',
       '/images/gallery/water-purification-shepherds-academy.jpg',
       '/images/gallery/project-boondh-cutchi-memon-masjid.jpg',
@@ -659,7 +645,6 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       '/images/projects/hif9.jpg',
       '/images/projects/hif10.jpg',
       '/images/projects/hif11.jpg',
-      '/images/gallery/blood-donation-camp-june-2023.jpg',
       '/images/gallery/wenlock-hospital-volunteers.jpg',
       '/images/gallery/orphan-day-medical-checkup-2018.jpg',
       '/images/gallery/orphan-day-stethoscope-checkup.jpg',
@@ -754,14 +739,10 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       '/images/projects/youth16.jpg',
       '/images/projects/youth17.jpg',
       '/images/projects/youth18.jpg',
-      '/images/gallery/team-group-selfie-wefie.jpg',
       '/images/gallery/hif-sports-meet-cricket-winners-2025.jpg',
-      '/images/gallery/ramadan-fajr-bicycle-handover.jpg',
       '/images/gallery/youth-leadership-training-2018.jpg',
       '/images/gallery/youth-circle-meeting-core-values.jpg',
       '/images/gallery/ramadan-fajr-salah-winners.jpg',
-      '/images/gallery/hif-forum-speaker-podium.jpg',
-      '/images/gallery/hif-forum-seminar-podium-2026.jpg'
     ],
     color: 'emerald',
     stats: [
@@ -792,42 +773,6 @@ export const HIF_ACTIVITIES: ActivityData[] = [
 
 export const HIF_GALLERY: GalleryItem[] = [
   {
-    id: 'gal-28',
-    title: 'Ashiyana Home Handover #36',
-    category: 'Housing',
-    imageUrl: '/images/gallery/28.jpg',
-    location: 'Meenadi, Kadaba',
-    description: 'HIF India and HIF Qatar mark the 36th home handover under Project Ashiyana, with community leaders and the elderly beneficiary at the new house.',
-    year: '2026'
-  },
-  {
-    id: 'gal-29',
-    title: 'Ashiyana Beneficiary Family Meeting',
-    category: 'Housing',
-    imageUrl: '/images/gallery/29.jpg',
-    location: 'Meenadi, Kadaba',
-    description: 'HIF India leadership meets with the beneficiary family inside their newly handed-over home during the 36th Project Ashiyana ceremony.',
-    year: '2026'
-  },
-  {
-    id: 'gal-35',
-    title: 'HIF India Team Celebration Selfie',
-    category: 'Community',
-    imageUrl: '/images/gallery/team-group-selfie-wefie.jpg',
-    location: 'Mangaluru',
-    description: 'A cheerful group of HIF India volunteers and team members celebrating together at a community event.',
-    year: '2025'
-  },
-  {
-    id: 'gal-36',
-    title: 'Packed HIF Auditorium Event',
-    category: 'Community',
-    imageUrl: '/images/gallery/hif-auditorium-packed-event.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'A large auditorium filled with attendees at a Highland Islamic Forum community programme.',
-    year: '2025'
-  },
-  {
     id: 'gal-37',
     title: 'Iftar Communal Meal at Al Qalam Academy',
     category: 'Community',
@@ -846,39 +791,12 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2025'
   },
   {
-    id: 'gal-39',
-    title: 'Airport Welcome with Flowers',
-    category: 'Community',
-    imageUrl: '/images/gallery/airport-welcome-flowers.jpg',
-    location: 'Mangaluru Airport',
-    description: 'HIF India volunteers welcoming a guest at the airport arrivals with flower garlands.',
-    year: '2025'
-  },
-  {
     id: 'gal-40',
     title: 'HIF Sports Meet 2025 Cricket Winners',
     category: 'Youth',
     imageUrl: '/images/gallery/hif-sports-meet-cricket-winners-2025.jpg',
     location: 'Mangaluru',
     description: 'Cricket tournament winners celebrating at the HIF Sports Meet 2025 with trophies and team spirit.',
-    year: '2025'
-  },
-  {
-    id: 'gal-41',
-    title: 'Ramadan Fajr Salah Bicycle Handover',
-    category: 'Youth',
-    imageUrl: '/images/gallery/ramadan-fajr-bicycle-handover.jpg',
-    location: 'Mangaluru',
-    description: 'Bicycle prize handover ceremony for winners of the Ramadan Fajr Salah Competition, with children and HIF volunteers.',
-    year: '2025'
-  },
-  {
-    id: 'gal-42',
-    title: 'HIF Team Stage Gathering',
-    category: 'Community',
-    imageUrl: '/images/gallery/hif-team-stage-gathering.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'A large group of HIF India team members, youth, and volunteers gathered on stage at a formal HIF programme.',
     year: '2025'
   },
   {
@@ -889,15 +807,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Mangaluru',
     description: 'HIF youth and volunteers in an informal community meeting and discussion session.',
     year: '2024'
-  },
-  {
-    id: 'gal-44',
-    title: 'Ashiyana Foundation Laying Ceremony',
-    category: 'Housing',
-    imageUrl: '/images/gallery/ashiyana-foundation-laying-ceremony.jpg',
-    location: 'Karnataka',
-    description: 'Foundation laying ceremony at a Project Ashiyana construction site with HIF volunteers and community elders.',
-    year: '2025'
   },
   {
     id: 'gal-45',
@@ -924,24 +833,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     imageUrl: '/images/gallery/boondh-water-unit-masjid-ul-ehsaan.jpg',
     location: 'Masjid-ul-Ehsaan, Mangaluru',
     description: 'Stainless steel purified drinking water dispenser installed under Project Boondh at Masjid-ul-Ehsaan, with hot, cold, and normal taps.',
-    year: '2025'
-  },
-  {
-    id: 'gal-64',
-    title: 'Project Boondh Memorial Water Cooler',
-    category: 'Community',
-    imageUrl: '/images/gallery/boondh-water-cooler-memorial-ahmed-ak.jpg',
-    location: 'Mangaluru',
-    description: 'Community members with a Project Boondh water cooler dedicated in memory of Marhoom Ahmed Ak.',
-    year: '2025'
-  },
-  {
-    id: 'gal-65',
-    title: 'Project Boondh Water Unit Dedication',
-    category: 'Community',
-    imageUrl: '/images/gallery/boondh-water-unit-inauguration-dua.jpg',
-    location: 'Mangaluru Region',
-    description: 'Community dedication and dua at the inauguration of a Project Boondh public drinking water unit.',
     year: '2025'
   },
   {
@@ -972,57 +863,12 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2023'
   },
   {
-    id: 'gal-49',
-    title: 'Hajj Training Camp April 2025',
-    category: 'Community',
-    imageUrl: '/images/gallery/hajj-training-camp-april-2025.jpg',
-    location: 'HIF Auditorium, Mangaluru',
-    description: 'Hajj training camp session held at the HIF Auditorium in April 2025 for prospective pilgrims.',
-    year: '2025'
-  },
-  {
-    id: 'gal-50',
-    title: 'Highland Islamic Forum Seminar 2026',
-    category: 'Youth',
-    imageUrl: '/images/gallery/hif-forum-seminar-podium-2026.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'A speaker addresses the audience from the podium at a Highland Islamic Forum seminar.',
-    year: '2026'
-  },
-  {
-    id: 'gal-51',
-    title: 'HIF Forum Seminar Speaker Session',
-    category: 'Youth',
-    imageUrl: '/images/gallery/hif-forum-seminar-speaker-2025.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'A speaker at the Highland Islamic Forum podium during a formal seminar session.',
-    year: '2025'
-  },
-  {
     id: 'gal-52',
     title: 'Food Ration Doorstep Delivery',
     category: 'Community',
     imageUrl: '/images/gallery/food-ration-doorstep-delivery.jpg',
     location: 'Mangaluru',
     description: 'HIF volunteers delivering food ration kits directly to a family\'s doorstep.',
-    year: '2025'
-  },
-  {
-    id: 'gal-53',
-    title: 'Farewell to Moulana Althaf Hussain',
-    category: 'Community',
-    imageUrl: '/images/gallery/farewell-moulana-althaf-hussain.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'Farewell gathering for Moulana Althaf Hussain with the HIF India banner and community members.',
-    year: '2025'
-  },
-  {
-    id: 'gal-54',
-    title: 'Gift Presentation at HIF Exclusive Session',
-    category: 'Community',
-    imageUrl: '/images/gallery/gift-presentation-exclusive-session.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'Gift presentation ceremony during an HIF India exclusive session with community leaders.',
     year: '2025'
   },
   {
@@ -1332,24 +1178,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2015'
   },
   {
-    id: 'gal-95',
-    title: 'HIF Team - Aspire To Inspire',
-    category: 'Community',
-    imageUrl: '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
-    location: 'Mangaluru',
-    description: 'HIF India team and youth volunteers gathered on stage at the Aspire To Inspire programme.',
-    year: '2025'
-  },
-  {
-    id: 'gal-96',
-    title: 'HIF Team Outdoor Group Photo',
-    category: 'Community',
-    imageUrl: '/images/gallery/hif-team-outdoor-volunteers.jpg',
-    location: 'Mangaluru',
-    description: 'HIF India volunteers in white shirts and lanyards posing together outdoors at a community event.',
-    year: '2025'
-  },
-  {
     id: 'gal-97',
     title: 'Ashiyana Before - Brick Shack',
     category: 'Housing',
@@ -1440,15 +1268,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2024'
   },
   {
-    id: 'gal-107',
-    title: 'Ashiyana After - Community Gathering',
-    category: 'Housing',
-    imageUrl: '/images/gallery/ashiyana-after-community-gathering.jpg',
-    location: 'Karnataka',
-    description: 'Community members gathered outside a completed Ashiyana home during a handover visit.',
-    year: '2024'
-  },
-  {
     id: 'gal-108',
     title: 'Ashiyana After - White Mashallah Home',
     category: 'Housing',
@@ -1503,15 +1322,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2024'
   },
   {
-    id: 'gal-114',
-    title: 'Ashiyana After - 36th Home Key Handover',
-    category: 'Housing',
-    imageUrl: '/images/gallery/ashiyana-after-36th-key-handover.jpg',
-    location: 'Meenadi, Kadaba',
-    description: 'HIF India and HIF Qatar 36th Home Key Handover Ceremony for Project Ashiyana at Meenadi, Kadaba.',
-    year: '2026'
-  },
-  {
     id: 'gal-61',
     title: 'Youth Leadership Training Event',
     category: 'Youth',
@@ -1528,15 +1338,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Highland Educational & Cultural Centre, Mangaluru',
     description: 'Free medical checkup for orphan children during the annual A Day With Orphan event.',
     year: '2018'
-  },
-  {
-    id: 'gal-30',
-    title: 'HIF India Blood Donation Camp',
-    category: 'Healthcare',
-    imageUrl: '/images/gallery/blood-donation-camp-june-2023.jpg',
-    location: 'Mangaluru',
-    description: 'HIF India Medical Cell volunteers and medical staff at a community blood donation camp, with a donor on cot and group photo beneath the HIF India banner.',
-    year: '2023'
   },
   {
     id: 'gal-31',
@@ -1563,15 +1364,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     imageUrl: '/images/gallery/ramadan-fajr-salah-winners.jpg',
     location: 'Mangaluru',
     description: 'Celebration graphic for 87 winners of the Ramadan Fajr Salah competition jointly organized by HIF India and HIF Youth, with bicycle prizes.',
-    year: '2025'
-  },
-  {
-    id: 'gal-34',
-    title: 'Highland Islamic Forum Speaker Session',
-    category: 'Youth',
-    imageUrl: '/images/gallery/hif-forum-speaker-podium.jpg',
-    location: 'HIF Center, Mangaluru',
-    description: 'A speaker addresses the audience from the podium at a formal HIF Highland Islamic Forum event.',
     year: '2025'
   },
   {
@@ -1728,15 +1520,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     year: '2024'
   },
   {
-    id: 'gal-18',
-    title: 'Disaster Relief at Collapsed Home',
-    category: 'Community',
-    imageUrl: '/images/gallery/18.jpg',
-    location: 'Coastal Karnataka',
-    description: 'HIF volunteers provide relief assistance to a family at their home severely damaged by structural collapse after heavy rains.',
-    year: '2023'
-  },
-  {
     id: 'gal-19',
     title: 'HIF Kapda Bank Clothing Drive',
     category: 'Community',
@@ -1780,33 +1563,6 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Rural Dakshina Kannada',
     description: 'A free electricity connection installed for a family that had been living without power, bringing light to their home for the first time.',
     year: '2013'
-  },
-  {
-    id: 'gal-24',
-    title: 'HIF Ramadan Kit Distribution',
-    category: 'Community',
-    imageUrl: '/images/gallery/24.jpg',
-    location: 'Mangaluru & Rural Karnataka',
-    description: 'Ration kits with rice, oil, and daily essentials delivered door-to-door to needy families during the holy month of Ramadan.',
-    year: '2014'
-  },
-  {
-    id: 'gal-25',
-    title: 'Kerala Flood Relief',
-    category: 'Community',
-    imageUrl: '/images/gallery/25.jpg',
-    location: 'Wayanad, Kerala',
-    description: 'HIF volunteers delivered relief kits and surveyed damaged homes for families affected by severe Kerala flooding.',
-    year: '2018'
-  },
-  {
-    id: 'gal-26',
-    title: 'United Mangaluru Interfaith Harmony Programme',
-    category: 'Community',
-    imageUrl: '/images/gallery/26.jpg',
-    location: 'Town Hall, Mangaluru',
-    description: 'Religious leaders of different faiths shared one stage to promote communal harmony and mutual respect across Mangaluru.',
-    year: '2018'
   },
   {
     id: 'gal-27',
