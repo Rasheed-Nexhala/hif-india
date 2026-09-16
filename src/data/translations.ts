@@ -179,6 +179,10 @@ export interface TranslationDictionary {
     achievementsTitle: string
     futureGoalsTitle: string
     tiersTitle: string
+    beforeAfterTitle: string
+    beforeLabel: string
+    afterLabel: string
+    afterComingSoon: string
     ashiyana: {
       title: string
       subtitle: string
@@ -630,6 +634,10 @@ export const translations: Record<Language, any> = {
       achievementsTitle: 'Key Achievements',
       futureGoalsTitle: 'Future Goals',
       tiersTitle: 'Sponsorship Tiers',
+      beforeAfterTitle: 'Before & After',
+      beforeLabel: 'Before',
+      afterLabel: 'After',
+      afterComingSoon: 'Completed homes will appear here next.',
       ashiyana: {
         title: 'Project Ashiyana',
         subtitle: 'Shelter of Dignity for Homeless & Destitute Families',
@@ -1097,6 +1105,10 @@ export const translations: Record<Language, any> = {
       achievementsTitle: 'ಮುಖ್ಯ ಸಾಧನೆಗಳು',
       futureGoalsTitle: 'ಮುಂದಿನ ಗುರಿ',
       tiersTitle: 'ಸಹಾಯದ ಮೊತ್ತ',
+      beforeAfterTitle: 'ಮೊದಲು ಮತ್ತು ನಂತರ',
+      beforeLabel: 'ಮೊದಲು',
+      afterLabel: 'ನಂತರ',
+      afterComingSoon: 'ಪೂರ್ಣಗೊಂಡ ಮನೆಗಳು ಮುಂದೆ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ.',
       ashiyana: {
         title: 'ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾ',
         subtitle: 'ನಿರಾಶ್ರಿತ ಮತ್ತು ನಿರ್ಗತಿಕ ಕುಟುಂಬಗಳಿಗೆ ಘನತೆಯ ಆಸರೆ',
@@ -1564,6 +1576,10 @@ export const translations: Record<Language, any> = {
       achievementsTitle: 'मुख्य काम',
       futureGoalsTitle: 'आगे का लक्ष्य',
       tiersTitle: 'मदद की राशि',
+      beforeAfterTitle: 'पहले और बाद में',
+      beforeLabel: 'पहले',
+      afterLabel: 'बाद में',
+      afterComingSoon: 'पूर्ण घर आगे यहाँ दिखेंगे।',
       ashiyana: {
         title: 'प्रोजेक्ट आशियाना',
         subtitle: 'बेघर और जरूरतमंद परिवारों के लिए गरिमामय आश्रय',
