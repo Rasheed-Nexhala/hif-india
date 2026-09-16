@@ -121,10 +121,12 @@ export const HIF_ORGANIZATION = {
       '/images/projects/slider-4.jpg'
     ],
     about: '/images/projects/about-us.jpg',
-    aboutAlt: '/images/gallery/team-group-selfie-wefie.jpg',
+    aboutAlt: '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
     mission: '/images/projects/mission.jpg'
   },
   teamPhotos: [
+    '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
+    '/images/gallery/hif-team-outdoor-volunteers.jpg',
     '/images/gallery/team-group-selfie-wefie.jpg',
     '/images/gallery/hif-auditorium-packed-event.jpg',
     '/images/gallery/iftar-al-qalam-arabic-academy.jpg',
@@ -221,8 +223,14 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Shelter for Underprivileged',
     category: 'Orphanage',
     icon: 'HeartHandshake',
-    image: '/images/projects/chitttor.jpg',
+    image: '/images/gallery/chittor-now-masjid-a-suffa.jpg',
     images: [
+      '/images/gallery/chittor-now-masjid-a-suffa.jpg',
+      '/images/gallery/chittor-now-school-campus.jpg',
+      '/images/gallery/chittor-before-old-building.jpg',
+      '/images/gallery/chittor-before-living-conditions.jpg',
+      '/images/gallery/chittor-before-facilities.jpg',
+      '/images/gallery/chittor-before-site-planning.jpg',
       '/images/projects/chitttor.jpg',
       '/images/projects/chittor2.jpg',
       '/images/projects/chittor3.jpg',
@@ -1243,6 +1251,78 @@ export const HIF_GALLERY: GalleryItem[] = [
     imageUrl: '/images/gallery/orphan-day-girl-medical-exam.jpg',
     location: 'Mangaluru',
     description: 'A caregiver provides a medical checkup for a young girl during HIF India\'s Day With Orphan event.',
+    year: '2025'
+  },
+  {
+    id: 'gal-89',
+    title: 'Chittoor Now - Masjid-A-Suffa',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-now-masjid-a-suffa.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'Masjid-A-Suffa on the HIF CHITOOR – D.U.R.J campus, part of the transformed shelter for underprivileged children.',
+    year: '2026'
+  },
+  {
+    id: 'gal-90',
+    title: 'Chittoor Now - School Campus',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-now-school-campus.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'Razul Jannah English Medium Upper Primary School and campus buildings at HIF CHITOOR – D.U.R.J.',
+    year: '2026'
+  },
+  {
+    id: 'gal-91',
+    title: 'Chittoor Before - Old Building',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-before-old-building.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'The original Darul Uloom Riyaz-ul-Jannah building where children lived before the new campus was built.',
+    year: '2014'
+  },
+  {
+    id: 'gal-92',
+    title: 'Chittoor Before - Living Conditions',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-before-living-conditions.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'Before: cramped kitchen, damaged walls, overcrowded rooms, and worn interiors at the old Chittoor shelter.',
+    year: '2014'
+  },
+  {
+    id: 'gal-93',
+    title: 'Chittoor Before - Basic Facilities',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-before-facilities.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'Before: classroom, kitchen, washroom, and dining spaces in the old building lacking proper facilities.',
+    year: '2014'
+  },
+  {
+    id: 'gal-94',
+    title: 'Chittoor Before - Site Planning & Foundation',
+    category: 'Orphanage',
+    imageUrl: '/images/gallery/chittor-before-site-planning.jpg',
+    location: 'Chinnapalli, Chittoor District, AP',
+    description: 'Early planning, water testing, and foundation work for the new HIF CHITOOR – D.U.R.J campus.',
+    year: '2015'
+  },
+  {
+    id: 'gal-95',
+    title: 'HIF Team - Aspire To Inspire',
+    category: 'Community',
+    imageUrl: '/images/gallery/hif-team-aspire-to-inspire-stage.jpg',
+    location: 'Mangaluru',
+    description: 'HIF India team and youth volunteers gathered on stage at the Aspire To Inspire programme.',
+    year: '2025'
+  },
+  {
+    id: 'gal-96',
+    title: 'HIF Team Outdoor Group Photo',
+    category: 'Community',
+    imageUrl: '/images/gallery/hif-team-outdoor-volunteers.jpg',
+    location: 'Mangaluru',
+    description: 'HIF India volunteers in white shirts and lanyards posing together outdoors at a community event.',
     year: '2025'
   },
   {
