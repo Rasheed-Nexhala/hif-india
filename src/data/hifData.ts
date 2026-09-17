@@ -130,7 +130,9 @@ export const HIF_ORGANIZATION = {
     '/images/gallery/iftar-al-qalam-arabic-academy.jpg',
     '/images/gallery/team-outdoor-trip-luggage.jpg',
     '/images/gallery/hif-sports-meet-cricket-winners-2025.jpg',
-    '/images/gallery/youth-community-meeting-living-room.jpg'
+    '/images/gallery/youth-community-meeting-living-room.jpg',
+    '/images/gallery/wenlock-hospital-volunteers.jpg',
+    '/images/gallery/youth-circle-meeting-core-values.jpg'
   ]
 }
 

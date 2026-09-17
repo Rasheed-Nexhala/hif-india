@@ -37,12 +37,12 @@ export const HomePage: React.FC = () => {
               {t('about.teamTitle', 'The people behind the mission')}
             </h2>
           </Reveal>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
             {HIF_ORGANIZATION.teamPhotos.slice(0, 6).map((photo) => (
               <Link
                 key={photo}
                 to="/about"
-                className="relative aspect-square rounded-xl overflow-hidden border border-border/60 group"
+                className="relative aspect-[3/4] sm:aspect-square rounded-xl overflow-hidden border border-border/60 group"
               >
                 <img
                   src={photo}

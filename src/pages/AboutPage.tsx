@@ -96,7 +96,7 @@ export const AboutPage: React.FC = () => {
               )}
             </p>
           </Reveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {HIF_ORGANIZATION.teamPhotos.map((photo, idx) => (
               <Reveal key={photo} delay={idx * 0.05} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border/60 shadow-sm">
                 <img
