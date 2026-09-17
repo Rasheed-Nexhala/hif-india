@@ -656,7 +656,7 @@ export const translations: Record<Language, any> = {
           'Project Ashiyana provides solid, dignified homes for widowed mothers, impoverished rural families, and disabled breadwinners living in dilapidated shacks.',
         statHomesBuilt: '36 Homes Built',
         statTarget: 'Target: 150 Homes by 2030',
-        statAvgCost: '₹6.5 – ₹8 Lakh Avg Cost'
+        statAvgCost: '₹7.5 – ₹10 Lakh Avg Cost'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',
@@ -1138,7 +1138,7 @@ export const translations: Record<Language, any> = {
           'ಶಿಥಿಲಾವಸ್ಥೆಯ ಗುಡಿಸಲುಗಳಲ್ಲಿ ವಾಸಿಸುತ್ತಿರುವ ವಿಧವಾ ತಾಯಂದಿರು, ಬಡ ಗ್ರಾಮೀಣ ಕುಟುಂಬಗಳು ಮತ್ತು ವಿಕಲಚೇತನರಿಗೆ ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾ ಗಟ್ಟಿಮುಟ್ಟಾದ ಶಾಶ್ವತ ಮನೆಗಳನ್ನು ನಿರ್ಮಿಸಿಕೊಡುತ್ತದೆ.',
         statHomesBuilt: '36 ನಿರ್ಮಿಸಿದ ಮನೆಗಳು',
         statTarget: 'ಗುರಿ: 2030 ರ ವೇಳೆಗೆ 150 ಮನೆಗಳು',
-        statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹6.5 – ₹8 ಲಕ್ಷ'
+        statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹7.5 – ₹10 ಲಕ್ಷ'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',
@@ -1620,7 +1620,7 @@ export const translations: Record<Language, any> = {
           'कच्ची झोपड़ियों में रहने वाली विधवा माताओं, निर्धन ग्रामीण परिवारों और दिव्यांगजनों के लिए प्रोजेक्ट आशियाना मजबूत, स्थायी पक्के मकान बनाता है।',
         statHomesBuilt: '36 निर्मित मकान',
         statTarget: 'लक्ष्य: 2030 तक 150 मकान',
-        statAvgCost: 'औसत लागत ₹6.5 – ₹8 लाख'
+        statAvgCost: 'औसत लागत ₹7.5 – ₹10 लाख'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',
