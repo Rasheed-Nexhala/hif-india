@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Heart } from 'lucide-react'
 import { HIF_PROJECTS, HIF_ACTIVITIES, HIF_GALLERY, HIF_ORGANIZATION } from '../data/hifData'
@@ -10,6 +10,7 @@ import { FeatureVideoShowcase } from '../components/home/FeatureVideoShowcase'
 import MissionAccentCanvas from '../components/canvas/MissionAccentCanvas'
 import { ProjectCard } from '../components/cards/ProjectCard'
 import { ActivityCard } from '../components/cards/ActivityCard'
+import { ImageLightbox } from '../components/common/ImageLightbox'
 import { useDonate } from '../context/DonateContext'
 import { useLanguage } from '../context/LanguageContext'
 import { localizeGalleryItem, tx } from '../lib/localizeContent'
@@ -20,6 +21,9 @@ export const HomePage: React.FC = () => {
   const { openDonate } = useDonate()
   const { t, language } = useLanguage()
   const galleryPreview = HIF_GALLERY.slice(0, 6).map((item) => localizeGalleryItem(item, language))
+  const [teamLightboxIndex, setTeamLightboxIndex] = useState<number | null>(null)
+  const [galleryLightboxIndex, setGalleryLightboxIndex] = useState<number | null>(null)
+  const galleryPreviewUrls = galleryPreview.map((g) => g.imageUrl)
 
   return (
     <>
@@ -42,11 +46,13 @@ export const HomePage: React.FC = () => {
             </h2>
           </Reveal>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
-            {HIF_ORGANIZATION.teamPhotos.slice(0, 6).map((photo) => (
-              <Link
+            {HIF_ORGANIZATION.teamPhotos.slice(0, 6).map((photo, idx) => (
+              <button
                 key={photo}
-                to="/about"
-                className="relative aspect-[3/4] sm:aspect-square rounded-xl overflow-hidden border border-border/60 group"
+                type="button"
+                onClick={() => setTeamLightboxIndex(idx)}
+                className="relative aspect-[3/4] sm:aspect-square rounded-xl overflow-hidden border border-border/60 group cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label={t('about.viewPhoto', 'View photo')}
               >
                 <img
                   src={photo}
@@ -54,7 +60,7 @@ export const HomePage: React.FC = () => {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </Link>
+              </button>
             ))}
           </div>
         </div>
@@ -175,11 +181,13 @@ export const HomePage: React.FC = () => {
             </Link>
           </Reveal>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {galleryPreview.map((g) => (
-              <Link
+            {galleryPreview.map((g, idx) => (
+              <button
                 key={g.id}
-                to="/gallery"
-                className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt border border-border/60 group"
+                type="button"
+                onClick={() => setGalleryLightboxIndex(idx)}
+                className="relative aspect-square rounded-xl overflow-hidden bg-bg-alt border border-border/60 group cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label={g.title}
               >
                 <img
                   src={g.imageUrl}
@@ -187,7 +195,7 @@ export const HomePage: React.FC = () => {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </Link>
+              </button>
             ))}
           </div>
         </div>
@@ -212,6 +220,25 @@ export const HomePage: React.FC = () => {
           </button>
         </Reveal>
       </section>
+
+      <ImageLightbox
+        images={HIF_ORGANIZATION.teamPhotos.slice(0, 6)}
+        index={teamLightboxIndex}
+        alt={t('about.teamPhotoAlt', 'HIF India team and community')}
+        onClose={() => setTeamLightboxIndex(null)}
+        onSelect={setTeamLightboxIndex}
+      />
+      <ImageLightbox
+        images={galleryPreviewUrls}
+        index={galleryLightboxIndex}
+        alt={
+          galleryLightboxIndex !== null
+            ? galleryPreview[galleryLightboxIndex]?.title ?? t('gallery.title', 'Moments from the ground')
+            : t('gallery.title', 'Moments from the ground')
+        }
+        onClose={() => setGalleryLightboxIndex(null)}
+        onSelect={setGalleryLightboxIndex}
+      />
     </>
   )
 }

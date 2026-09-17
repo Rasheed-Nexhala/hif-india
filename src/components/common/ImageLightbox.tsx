@@ -52,13 +52,6 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ images, index, alt
             onClick={onClose}
             className="fixed inset-0 bg-stone-950/90"
           />
-          <button
-            onClick={onClose}
-            className="fixed top-4 right-4 sm:top-5 sm:right-5 z-[110] p-2.5 rounded-full bg-card/10 hover:bg-card/20 active:bg-card/30 text-white transition-colors"
-            aria-label="Close"
-          >
-            <X className="w-5 h-5" />
-          </button>
           {images.length > 1 && (
             <>
               <button
@@ -98,6 +91,13 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ images, index, alt
                   draggable={false}
                   className="w-full h-full object-contain max-h-[75vh] pointer-events-none select-none"
                 />
+                <button
+                  onClick={onClose}
+                  className="absolute top-3 right-3 z-10 p-2.5 rounded-full bg-black/50 hover:bg-black/70 active:bg-black/80 text-white transition-colors"
+                  aria-label="Close"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
               {images.length > 1 && (
                 <div className="px-5 py-3 border-t border-border flex items-center justify-center">

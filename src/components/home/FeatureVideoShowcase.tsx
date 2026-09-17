@@ -19,7 +19,7 @@ export const FeatureVideoShowcase: React.FC = () => {
 
   const videos = HIF_FEATURE_VIDEOS.map((v) => localizeFeatureVideo(v, language))
   const active = videos[activeIndex]
-  const { sectionRef, videoRef, isInView } = useAutoplayOnView(active?.id ?? '')
+  const { sectionRef, videoRef } = useAutoplayOnView(active?.id ?? '')
 
   const goTo = useCallback(
     (index: number) => {
@@ -54,7 +54,7 @@ export const FeatureVideoShowcase: React.FC = () => {
                 ref={videoRef}
                 src={active.videoUrl}
                 poster={active.posterUrl}
-                preload={isInView ? 'auto' : 'metadata'}
+                preload="auto"
                 muted={isMuted}
                 playsInline
                 onEnded={() => goTo(activeIndex + 1)}

@@ -21,7 +21,7 @@ export const ReelsShowcase: React.FC = () => {
 
   const reels = HIF_REELS.map((r) => localizeReel(r, language))
   const active = reels[activeIndex]
-  const { sectionRef, videoRef, isInView } = useAutoplayOnView(active?.id ?? '')
+  const { sectionRef, videoRef } = useAutoplayOnView(active?.id ?? '')
 
   const goTo = useCallback(
     (index: number) => {
@@ -114,7 +114,7 @@ export const ReelsShowcase: React.FC = () => {
                   ref={videoRef}
                   src={active.videoUrl}
                   poster={active.posterUrl}
-                  preload={isInView ? 'auto' : 'metadata'}
+                  preload="auto"
                   muted={isMuted}
                   playsInline
                   onEnded={() => goTo(activeIndex + 1)}

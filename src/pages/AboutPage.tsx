@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Eye, Target, MapPin, ShieldCheck, Building2, Heart, Award, Users } from 'lucide-react'
 import { HIF_ORGANIZATION } from '../data/hifData'
 import { PageHeader } from '../components/common/PageHeader'
+import { ImageLightbox } from '../components/common/ImageLightbox'
 import { UNSPLASH } from '../data/unsplashImages'
 import { Reveal } from '../components/common/Reveal'
 import { useLanguage } from '../context/LanguageContext'
 
 export const AboutPage: React.FC = () => {
   const { t } = useLanguage()
+  const [lightboxImages, setLightboxImages] = useState<string[]>([])
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const [lightboxAlt, setLightboxAlt] = useState('')
+
+  const openLightbox = (images: string[], index: number, alt: string) => {
+    setLightboxImages(images)
+    setLightboxAlt(alt)
+    setLightboxIndex(index)
+  }
 
   const coreValues = [
     {
@@ -64,7 +74,25 @@ export const AboutPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm border border-border order-2 lg:order-1">
-            <img src={HIF_ORGANIZATION.siteImages.aboutAlt} alt="HIF India field work" className="w-full h-full object-cover" loading="lazy" />
+            <button
+              type="button"
+              onClick={() =>
+                openLightbox(
+                  [HIF_ORGANIZATION.siteImages.aboutAlt],
+                  0,
+                  t('about.whoWeArePhotoAlt', 'HIF India field work')
+                )
+              }
+              className="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+              aria-label={t('about.viewPhoto', 'View photo')}
+            >
+              <img
+                src={HIF_ORGANIZATION.siteImages.aboutAlt}
+                alt={t('about.whoWeArePhotoAlt', 'HIF India field work')}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </button>
           </Reveal>
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <span className="badge">{t('about.whoWeAreBadge', 'Who We Are')}</span>
@@ -99,12 +127,25 @@ export const AboutPage: React.FC = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {HIF_ORGANIZATION.teamPhotos.map((photo, idx) => (
               <Reveal key={photo} delay={idx * 0.05} className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border/60 shadow-sm">
-                <img
-                  src={photo}
-                  alt={t('about.teamPhotoAlt', 'HIF India team and community')}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <button
+                  type="button"
+                  onClick={() =>
+                    openLightbox(
+                      HIF_ORGANIZATION.teamPhotos,
+                      idx,
+                      t('about.teamPhotoAlt', 'HIF India team and community')
+                    )
+                  }
+                  className="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                  aria-label={t('about.viewPhoto', 'View photo')}
+                >
+                  <img
+                    src={photo}
+                    alt={t('about.teamPhotoAlt', 'HIF India team and community')}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </button>
               </Reveal>
             ))}
           </div>
@@ -233,6 +274,14 @@ export const AboutPage: React.FC = () => {
           </Reveal>
         </div>
       </section>
+
+      <ImageLightbox
+        images={lightboxImages}
+        index={lightboxIndex}
+        alt={lightboxAlt}
+        onClose={() => setLightboxIndex(null)}
+        onSelect={setLightboxIndex}
+      />
     </>
   )
 }

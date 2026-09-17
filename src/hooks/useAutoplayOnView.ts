@@ -27,12 +27,15 @@ export function useAutoplayOnView(activeKey: string) {
           /* Autoplay can still be blocked if unmuted; mute + playsInline covers most cases. */
         })
       }
-      if (video.readyState >= 2) {
-        play()
-      } else {
-        video.addEventListener('loadeddata', play, { once: true })
-        return () => video.removeEventListener('loadeddata', play)
-      }
+      // Always attempt immediately — play() is safe to call before enough
+      // data is buffered; the browser queues it internally. We additionally
+      // retry on 'canplay' because some mobile browsers (which honor
+      // preload="metadata" strictly and barely buffer anything ahead of
+      // time) can reject the very first play() call before any data has
+      // arrived, and never fire 'loadeddata' in that case.
+      play()
+      video.addEventListener('canplay', play)
+      return () => video.removeEventListener('canplay', play)
     } else {
       video.pause()
     }
