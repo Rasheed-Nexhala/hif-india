@@ -19,7 +19,7 @@ export const FeatureVideoShowcase: React.FC = () => {
 
   const videos = HIF_FEATURE_VIDEOS.map((v) => localizeFeatureVideo(v, language))
   const active = videos[activeIndex]
-  const { sectionRef, videoRef } = useAutoplayOnView(active?.id ?? '')
+  const { sectionRef, videoRef, setVideoNode } = useAutoplayOnView(active?.id ?? '')
 
   const goTo = useCallback(
     (index: number) => {
@@ -51,7 +51,7 @@ export const FeatureVideoShowcase: React.FC = () => {
             <AnimatePresence mode="wait">
               <motion.video
                 key={active.id}
-                ref={videoRef}
+                ref={setVideoNode}
                 src={active.videoUrl}
                 poster={active.posterUrl}
                 preload="auto"
