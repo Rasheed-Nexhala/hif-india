@@ -6,6 +6,7 @@ import { Hero } from '../components/home/Hero'
 import { ImpactStatsBand } from '../components/home/ImpactStatsBand'
 import { PillarsOrbit3D } from '../components/home/PillarsOrbit3D'
 import { ReelsShowcase } from '../components/home/ReelsShowcase'
+import { FeatureVideoShowcase } from '../components/home/FeatureVideoShowcase'
 import MissionAccentCanvas from '../components/canvas/MissionAccentCanvas'
 import { ProjectCard } from '../components/cards/ProjectCard'
 import { ActivityCard } from '../components/cards/ActivityCard'
@@ -27,6 +28,9 @@ export const HomePage: React.FC = () => {
 
       {/* Reels showcase */}
       <ReelsShowcase />
+
+      {/* Landscape feature videos */}
+      <FeatureVideoShowcase />
 
       {/* Community & team strip */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg-alt">

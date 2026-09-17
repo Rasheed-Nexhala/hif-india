@@ -1,4 +1,5 @@
 import type { ActivityData, GalleryItem, ProjectData } from '../data/hifData'
+import type { HifFeatureVideo } from '../data/hifFeatureVideos'
 import type { HifReel } from '../data/hifReels'
 import { calculateImpactFromAmount } from '../data/hifData'
 import type { Language } from '../data/translations'
@@ -86,6 +87,16 @@ export function localizeReel(reel: HifReel, language: Language): HifReel {
   return {
     ...reel,
     caption: tx(language, `reel.${reel.id}.caption`, reel.caption)
+  }
+}
+
+export function localizeFeatureVideo(
+  video: HifFeatureVideo,
+  language: Language
+): HifFeatureVideo {
+  return {
+    ...video,
+    caption: tx(language, `feature.${video.id}.caption`, video.caption)
   }
 }
 

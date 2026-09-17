@@ -363,7 +363,9 @@ const en: Record<string, string> = {
   'reel.reel-1.caption': 'Project Boondh, 11th edition — community football at Nehru Maidan.',
   'reel.reel-2.caption': 'Inside a home visit with HIF Qatar — seeing the need on the ground together.',
   'reel.reel-3.caption': "A children's activity day — games, balloons, and community outdoors.",
-  'reel.reel-4.caption': 'HIF Youth Wing — a reflection exercise from a mentoring session.'
+  'reel.reel-4.caption': 'HIF Youth Wing — a reflection exercise from a mentoring session.',
+  'feature.feature-1.caption': 'Field story 1 — moments from our work on the ground.',
+  'feature.feature-2.caption': 'Field story 2 — a closer look at compassion in action.'
 }
 
 const kn: Record<string, string> = {
@@ -688,7 +690,9 @@ const kn: Record<string, string> = {
   "reel.reel-1.caption": "ಪ್ರಾಜೆಕ್ಟ್ ಬೂಂದ್, 11ನೇ ಆವೃತ್ತಿ — ನೆಹರು ಮೈದಾನದಲ್ಲಿ ಸಮುದಾಯ ಫುಟ್‌ಬಾಲ್.",
   "reel.reel-2.caption": "HIF ಖತರ್ ಜೊತೆ ಮನೆ ಭೇಟಿ — ನೆಲದ ಅಗತ್ಯವನ್ನು ಒಟ್ಟಿಗೆ ಕಂಡುಕೊಳ್ಳುವುದು.",
   "reel.reel-3.caption": "ಮಕ್ಕಳ ಚಟುವಟಿಕೆ ದಿನ — ಆಟಗಳು, ಬಲೂನ್‌ಗಳು ಮತ್ತು ಸಮುದಾಯ ಹೊರಾಂಗಣದಲ್ಲಿ.",
-  "reel.reel-4.caption": "HIF ಯುವ ವಿಭಾಗ — ಮಾರ್ಗದರ್ಶನ ಅಧಿವೇಶನದ ಆತ್ಮಾವಲೋಕನ ಚಟುವಟಿಕೆ."
+  "reel.reel-4.caption": "HIF ಯುವ ವಿಭಾಗ — ಮಾರ್ಗದರ್ಶನ ಅಧಿವೇಶನದ ಆತ್ಮಾವಲೋಕನ ಚಟುವಟಿಕೆ.",
+  "feature.feature-1.caption": "ಕ್ಷೇತ್ರ ಕಥೆ 1 — ನಮ್ಮ ಕಾರ್ಯದ ನೆಲದ ಕ್ಷಣಗಳು.",
+  "feature.feature-2.caption": "ಕ್ಷೇತ್ರ ಕಥೆ 2 — ಕರುಣೆಯ ಕ್ರಿಯೆಯ ಹತ್ತಿರದ ನೋಟ."
 }
 
 const hi: Record<string, string> = {
@@ -1049,7 +1053,9 @@ const hi: Record<string, string> = {
   'reel.reel-1.caption': 'प्रोजेक्ट बूंद, 11वां संस्करण — नेहरू मैदान में सामुदायिक फुटबॉल।',
   'reel.reel-2.caption': 'HIF कतर के साथ घर का दौरा — ज़मीनी ज़रूरत को साथ मिलकर समझना।',
   'reel.reel-3.caption': 'बच्चों का गतिविधि दिवस — खेल, गुब्बारे और बाहर सामुदायिक मेल-मिलाप।',
-  'reel.reel-4.caption': 'HIF युवा विंग — मेंटरिंग सत्र से एक आत्म-चिंतन अभ्यास।'
+  'reel.reel-4.caption': 'HIF युवा विंग — मेंटरिंग सत्र से एक आत्म-चिंतन अभ्यास।',
+  'feature.feature-1.caption': 'मैदानी कहानी 1 — ज़मीन पर हमारे काम के पल।',
+  'feature.feature-2.caption': 'मैदानी कहानी 2 — करुणा की कार्रवाई की एक करीबी झलक।'
 }
 
 export const extraStrings: Record<Language, Record<string, string>> = { en, kn, hi }

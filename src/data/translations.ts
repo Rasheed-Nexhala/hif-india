@@ -304,6 +304,16 @@ export interface TranslationDictionary {
     mute: string
     unmute: string
   }
+  featureVideos: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    previous: string
+    next: string
+    viewVideo: string
+    mute: string
+    unmute: string
+  }
   getInvolved: {
     eyebrow: string
     title: string
@@ -770,6 +780,17 @@ export const translations: Record<Language, any> = {
       next: 'Next reel',
       viewReel: 'View reel',
       followUs: 'Follow @hif_india for more',
+      mute: 'Mute',
+      unmute: 'Unmute'
+    },
+    featureVideos: {
+      eyebrow: 'On the ground',
+      title: 'Moments that stay with us',
+      subtitle:
+        'Longer stories from the field — the people, places, and days that define our mission.',
+      previous: 'Previous video',
+      next: 'Next video',
+      viewVideo: 'View video',
       mute: 'Mute',
       unmute: 'Unmute'
     },
@@ -1244,6 +1265,17 @@ export const translations: Record<Language, any> = {
       mute: 'ಮ್ಯೂಟ್',
       unmute: 'ಅನ್‌ಮ್ಯೂಟ್'
     },
+    featureVideos: {
+      eyebrow: 'ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ',
+      title: 'ನೆನಪಿನಲ್ಲಿ ಉಳಿಯುವ ಕ್ಷಣಗಳು',
+      subtitle:
+        'ಕ್ಷೇತ್ರದಿಂದ ದೀರ್ಘ ಕಥೆಗಳು — ನಮ್ಮ ಧ್ಯೇಯವನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಜನರು, ಸ್ಥಳಗಳು ಮತ್ತು ದಿನಗಳು.',
+      previous: 'ಹಿಂದಿನ ವೀಡಿಯೊ',
+      next: 'ಮುಂದಿನ ವೀಡಿಯೊ',
+      viewVideo: 'ವೀಡಿಯೊ ನೋಡಿ',
+      mute: 'ಮ್ಯೂಟ್',
+      unmute: 'ಅನ್‌ಮ್ಯೂಟ್'
+    },
     getInvolved: {
       eyebrow: 'ಭಾಗವಹಿಸಿ',
       title: 'ಸಮಾಜ ಬದಲಾವಣೆಯಲ್ಲಿ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಪಾತ್ರವಿದೆ.',
@@ -1712,6 +1744,17 @@ export const translations: Record<Language, any> = {
       next: 'अगली रील',
       viewReel: 'रील देखें',
       followUs: 'अधिक के लिए @hif_india को फॉलो करें',
+      mute: 'म्यूट',
+      unmute: 'अनम्यूट'
+    },
+    featureVideos: {
+      eyebrow: 'ज़मीन पर',
+      title: 'पल जो हमारे साथ रहते हैं',
+      subtitle:
+        'मैदान से लंबी कहानियाँ — वे लोग, जगहें और दिन जो हमारे मिशन को परिभाषित करते हैं।',
+      previous: 'पिछला वीडियो',
+      next: 'अगला वीडियो',
+      viewVideo: 'वीडियो देखें',
       mute: 'म्यूट',
       unmute: 'अनम्यूट'
     },
