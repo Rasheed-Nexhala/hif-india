@@ -558,7 +558,7 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/gallery/libaas-black-embroidered-gown.jpg',
       '/images/gallery/libaas-gold-red-border-gown.jpg',
       '/images/gallery/libaas-silver-blue-floral-gown.jpg',
-      '/images/projects/libaas-cover.png',
+      '/images/projects/libaas-cover.jpg',
       '/images/gallery/libaas-wedding-dress-distribution-2015.jpg'
     ],
     color: 'amber',
@@ -693,8 +693,8 @@ export const HIF_ACTIVITIES: ActivityData[] = [
       '/images/projects/youth10.jpg',
       '/images/projects/youth14.jpg',
       '/images/projects/youth19.jpg',
-      '/images/projects/edu-wali-rehmani.png',
-      '/images/projects/edu-munawar-zama.png'
+      '/images/projects/edu-wali-rehmani.jpg',
+      '/images/projects/edu-munawar-zama.jpg'
     ],
     color: 'amber',
     stats: [
