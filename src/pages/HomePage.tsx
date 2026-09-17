@@ -215,7 +215,7 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
           <button
-            onClick={() => openDonate('General Humanitarian Fund')}
+            onClick={() => openDonate(t('donateModal.generalFund', 'General Humanitarian Fund'))}
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-emerald-950 font-semibold text-sm shadow-lg shadow-black/30 ring-1 ring-amber-300/60 transition-colors shrink-0"
           >
             <Heart className="w-4 h-4 fill-current" /> {t('common.donateNow', 'Donate Now')}

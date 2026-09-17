@@ -244,7 +244,7 @@ export const Navbar: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              onClick={() => openDonate('General Humanitarian Fund')}
+              onClick={() => openDonate(t('donateModal.generalFund', 'General Humanitarian Fund'))}
               aria-label={t('nav.donate', 'Donate')}
               className="relative group overflow-hidden inline-flex items-center justify-center gap-1.5 p-2 sm:px-3.5 sm:py-2 lg:px-5 lg:py-2.5 rounded-full bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-800 dark:from-emerald-600 dark:via-emerald-500 dark:to-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md shadow-emerald-900/20 hover:shadow-lg hover:shadow-emerald-700/30 transition-all duration-300"
             >
@@ -344,7 +344,7 @@ export const Navbar: React.FC = () => {
                   <button
                     onClick={() => {
                       setMenuOpen(false)
-                      openDonate('General Humanitarian Fund')
+                      openDonate(t('donateModal.generalFund', 'General Humanitarian Fund'))
                     }}
                     className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-800 dark:from-emerald-600 dark:via-emerald-500 dark:to-emerald-700 text-white text-sm font-bold shadow-md shadow-emerald-900/20"
                   >

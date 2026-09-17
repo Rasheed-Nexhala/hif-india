@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
             </motion.p>
             <motion.div variants={item} className="mt-8 flex flex-wrap items-center justify-center gap-5">
               <motion.button
-                onClick={() => openDonate('General Humanitarian Fund')}
+                onClick={() => openDonate(t('donateModal.generalFund', 'General Humanitarian Fund'))}
                 whileHover={{ scale: 1.045 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-emerald-950 font-semibold text-sm shadow-lg shadow-black/30 ring-1 ring-amber-300/60 transition-colors"

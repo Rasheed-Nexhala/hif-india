@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
               <p className="font-mono text-amber-300">{HIF_ORGANIZATION.bankDetails.accountNumber}</p>
               <p className="text-emerald-200/70">IFSC: {HIF_ORGANIZATION.bankDetails.ifscCode}</p>
               <button
-                onClick={() => openDonate('General Humanitarian Fund')}
+                onClick={() => openDonate(t('donateModal.generalFund', 'General Humanitarian Fund'))}
                 className="w-full mt-2 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-semibold text-xs flex items-center justify-center gap-1.5"
               >
                 <Heart className="w-3.5 h-3.5" />
