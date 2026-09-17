@@ -29,7 +29,7 @@ export const ActivityDetailPage: React.FC = () => {
     <>
       <section className="relative page-header overflow-hidden">
         <div className="absolute inset-0">
-          <img src={activity.image} alt={activity.title} className="w-full h-full object-cover opacity-30" />
+          <img src={activity.image} alt={activity.title} className="w-full h-full object-cover opacity-30" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark)]/85 via-[var(--color-bg-dark)]/90 to-[var(--color-bg-dark)]" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center animate-fade-up">

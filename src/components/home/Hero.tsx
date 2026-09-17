@@ -32,6 +32,8 @@ export const Hero: React.FC = () => {
         alt="HIF India volunteers and beneficiaries"
         className="absolute inset-0 w-full h-full object-cover scale-105 brightness-[0.55] saturate-[0.85]"
         loading="eager"
+        fetchPriority="high"
+        decoding="async"
       />
 
       {/* Legibility gradients — balanced for centered copy */}
