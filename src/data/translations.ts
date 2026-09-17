@@ -1147,7 +1147,7 @@ export const translations: Record<Language, any> = {
         statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹7.5 – ₹10 ಲಕ್ಷ'
       },
       chittor: {
-        title: 'HIF CHITOOR – D.U.R.J',
+        title: 'HIF ಚಿತ್ತೂರು – D.U.R.J',
         subtitle: 'ಅನುಕೂಲವಂಚಿತರಿಗೆ ಆಶ್ರಯ',
         badge: 'ಅನುಕೂಲವಂಚಿತರಿಗೆ ಆಶ್ರಯ',
         overview:
@@ -1631,7 +1631,7 @@ export const translations: Record<Language, any> = {
         statAvgCost: 'औसत लागत ₹7.5 – ₹10 लाख'
       },
       chittor: {
-        title: 'HIF CHITOOR – D.U.R.J',
+        title: 'HIF चित्तूर – D.U.R.J',
         subtitle: 'वंचितों के लिए आश्रय',
         badge: 'वंचितों के लिए आश्रय',
         overview:
