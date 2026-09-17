@@ -117,6 +117,8 @@ export interface TranslationDictionary {
     teamTitle: string
     teamDesc: string
     teamPhotoAlt: string
+    viewPhoto: string
+    whoWeArePhotoAlt: string
     visionTitle: string
     visionText: string
     missionTitle: string
@@ -573,6 +575,8 @@ export const translations: Record<Language, any> = {
       teamDesc:
         'HIF India is powered by hundreds of volunteers, youth leaders, and community members who show up with compassion at every event, programme, and relief drive.',
       teamPhotoAlt: 'HIF India team and community',
+      viewPhoto: 'View photo',
+      whoWeArePhotoAlt: 'HIF India field work and community outreach',
       visionTitle: 'Our Vision',
       visionText:
         'To build a righteous, self-reliant, and compassionate society where no family is left shelterless, every orphan finds a loving sanctuary of growth, rural places of worship flourish with knowledge, and healthcare is accessible to all regardless of socio-economic standing.',
@@ -656,7 +660,7 @@ export const translations: Record<Language, any> = {
           'Project Ashiyana provides solid, dignified homes for widowed mothers, impoverished rural families, and disabled breadwinners living in dilapidated shacks.',
         statHomesBuilt: '36 Homes Built',
         statTarget: 'Target: 150 Homes by 2030',
-        statAvgCost: '₹6.5 – ₹8 Lakh Avg Cost'
+        statAvgCost: '₹7.5 – ₹10 Lakh Avg Cost'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',
@@ -1056,6 +1060,8 @@ export const translations: Record<Language, any> = {
       teamDesc:
         'HIF India ಅನ್ನು ನೂರಾರು ಸ್ವಯಂಸೇವಕರು, ಯುವ ನಾಯಕರು ಮತ್ತು ಸಮುದಾಯ ಸದಸ್ಯರು ಪ್ರತಿ ಕಾರ್ಯಕ್ರಮ, ಸಭೆ ಮತ್ತು ನೆರವು ಕಾರ್ಯದಲ್ಲಿ ಸಹಾನುಭೂತಿಯಿಂದ ಕೆಲಸ ಮಾಡುವ ಮೂಲಕ ನಡೆಸುತ್ತಾರೆ.',
       teamPhotoAlt: 'HIF India ತಂಡ ಮತ್ತು ಸಮುದಾಯ',
+      viewPhoto: 'ಫೋಟೋ ನೋಡಿ',
+      whoWeArePhotoAlt: 'HIF India ಕ್ಷೇತ್ರ ಕಾರ್ಯ ಮತ್ತು ಸಮುದಾಯ ಸೇವೆ',
       visionTitle: 'ನಮ್ಮ ಗುರಿ',
       visionText:
         'ಯಾವುದೇ ಕುಟುಂಬವು ಆಸರೆರಹಿತವಾಗಿ ಉಳಿಯದ, ಪ್ರತಿಯೊಬ್ಬ ಅನಾಥ ಮಗುವೂ ಪ್ರೀತಿ ಮತ್ತು ಬೆಳವಣಿಗೆಯ ಆಶ್ರಯ ಪಡೆಯುವ, ಗ್ರಾಮೀಣ ಆರಾಧನಾ ಸ್ಥಳಗಳು ಜ್ಞಾನದಿಂದ ಕಂಗೊಳಿಸುವ ಮತ್ತು ಸಾಮಾಜಿಕ-ಆರ್ಥಿಕ ಸ್ಥಿತಿಯನ್ನು ಲೆಕ್ಕಿಸದೆ ಎಲ್ಲರಿಗೂ ಆರೋಗ್ಯ ರಕ್ಷಣೆ ಸಿಗುವ ಧಾರ್ಮಿಕ, ಸ್ವಾವಲಂಬಿ ಮತ್ತು ಸಹಾನುಭೂತಿಯ ಸಮಾಜವನ್ನು ನಿರ್ಮಿಸುವುದು.',
@@ -1138,7 +1144,7 @@ export const translations: Record<Language, any> = {
           'ಶಿಥಿಲಾವಸ್ಥೆಯ ಗುಡಿಸಲುಗಳಲ್ಲಿ ವಾಸಿಸುತ್ತಿರುವ ವಿಧವಾ ತಾಯಂದಿರು, ಬಡ ಗ್ರಾಮೀಣ ಕುಟುಂಬಗಳು ಮತ್ತು ವಿಕಲಚೇತನರಿಗೆ ಪ್ರಾಜೆಕ್ಟ್ ಆಶಿಯಾನಾ ಗಟ್ಟಿಮುಟ್ಟಾದ ಶಾಶ್ವತ ಮನೆಗಳನ್ನು ನಿರ್ಮಿಸಿಕೊಡುತ್ತದೆ.',
         statHomesBuilt: '36 ನಿರ್ಮಿಸಿದ ಮನೆಗಳು',
         statTarget: 'ಗುರಿ: 2030 ರ ವೇಳೆಗೆ 150 ಮನೆಗಳು',
-        statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹6.5 – ₹8 ಲಕ್ಷ'
+        statAvgCost: 'ಸರಾಸರಿ ವೆಚ್ಚ ₹7.5 – ₹10 ಲಕ್ಷ'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',
@@ -1538,6 +1544,8 @@ export const translations: Record<Language, any> = {
       teamDesc:
         'HIF India सैकड़ों स्वयंसेवकों, युवा नेताओं और समुदाय के सदस्यों द्वारा संचालित है, जो हर कार्यक्रम, सत्र और राहत अभियान में सहानुभूति के साथ मैदान में उतरते हैं।',
       teamPhotoAlt: 'HIF India टीम और समुदाय',
+      viewPhoto: 'फ़ोटो देखें',
+      whoWeArePhotoAlt: 'HIF India का मैदानी कार्य और सामुदायिक सेवा',
       visionTitle: 'हमारा लक्ष्य',
       visionText:
         'एक धर्मपरायण, आत्मनिर्भर और करुणामय समाज का निर्माण करना जहाँ कोई भी परिवार बेघर न रहे, हर अनाथ बच्चे को प्यार और विकास का आश्रय मिले, ग्रामीण इबादतगाह ज्ञान से रोशन हों और सामाजिक-आर्थिक स्थिति की परवाह किए बिना स्वास्थ्य सेवा सभी के लिए सुलभ हो।',
@@ -1620,7 +1628,7 @@ export const translations: Record<Language, any> = {
           'कच्ची झोपड़ियों में रहने वाली विधवा माताओं, निर्धन ग्रामीण परिवारों और दिव्यांगजनों के लिए प्रोजेक्ट आशियाना मजबूत, स्थायी पक्के मकान बनाता है।',
         statHomesBuilt: '36 निर्मित मकान',
         statTarget: 'लक्ष्य: 2030 तक 150 मकान',
-        statAvgCost: 'औसत लागत ₹6.5 – ₹8 लाख'
+        statAvgCost: 'औसत लागत ₹7.5 – ₹10 लाख'
       },
       chittor: {
         title: 'HIF CHITOOR – D.U.R.J',

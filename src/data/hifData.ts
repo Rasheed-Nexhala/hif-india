@@ -180,7 +180,7 @@ export const HIF_PROJECTS: ProjectData[] = [
     stats: [
       { label: 'Homes Built', value: '36' },
       { label: 'Target by 2030', value: '150 Homes' },
-      { label: 'Avg Cost per Home', value: '₹6.5 - ₹8 Lakh' }
+      { label: 'Avg Cost per Home', value: '₹7.5 - ₹10 Lakh' }
     ],
     overview: 'Project Ashiyana provides solid, dignified homes for widowed mothers, impoverished rural families, and disabled breadwinners living in dilapidated shacks.',
     fullStory: [
