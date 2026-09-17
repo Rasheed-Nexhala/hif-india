@@ -146,18 +146,7 @@ export const HIF_PROJECTS: ProjectData[] = [
     icon: 'Home',
     image: '/images/projects/ashiyana3.jpg',
     images: [
-      '/images/gallery/ashiyana-home-handover-2016.jpg',
-      '/images/gallery/ashiyana-house-construction-2013.jpg',
       '/images/projects/ashiyana3.jpg',
-      '/images/projects/ashiyana4.jpg',
-      '/images/projects/ashiyana5.jpg',
-      '/images/projects/ashiyana6.jpg',
-      '/images/projects/ashiyana7.jpg',
-      '/images/projects/ashiyana8.jpg',
-      '/images/projects/ashiyana9.jpg',
-      '/images/projects/ashiyana10.jpg',
-      '/images/projects/ashiyana12.jpg',
-      '/images/projects/ashiyana13.jpg',
     ],
     beforeImages: [
       '/images/gallery/ashiyana-before-brick-shack.jpg',
@@ -168,16 +157,24 @@ export const HIF_PROJECTS: ProjectData[] = [
       '/images/gallery/ashiyana-before-plastic-tarpaulin-home.jpg',
       '/images/gallery/ashiyana-before-family-survey.jpg',
       '/images/gallery/ashiyana-before-tin-roof-hut.jpg',
-      '/images/gallery/ashiyana-before-painted-brick-home.jpg'
+      '/images/gallery/ashiyana-before-painted-brick-home.jpg',
+      '/images/gallery/ashiyana-before-laterite-tarp-shack.jpg',
+      '/images/gallery/ashiyana-before-old-tiled-cottage.jpg',
+      '/images/projects/ashiyana9.jpg',
+      '/images/projects/ashiyana10.jpg',
+      '/images/gallery/ashiyana-home-handover-2016.jpg',
     ],
     afterImages: [
       '/images/gallery/ashiyana-after-cream-mashallah-home.jpg',
       '/images/gallery/ashiyana-after-white-mashallah-home.jpg',
       '/images/gallery/ashiyana-after-purple-mashallah-home.jpg',
-      '/images/gallery/ashiyana-after-handover-ceremony.jpg',
       '/images/gallery/ashiyana-after-completed-home-yard.jpg',
-      '/images/gallery/ashiyana-after-first-key-opening.jpg',
       '/images/gallery/ashiyana-after-porch-home.jpg',
+      '/images/projects/ashiyana3.jpg',
+      '/images/gallery/ashiyana-after-cream-home-stairs.jpg',
+      '/images/gallery/ashiyana-after-handover-ceremony.jpg',
+      '/images/gallery/ashiyana-after-first-key-opening.jpg',
+      '/images/projects/ashiyana13.jpg',
     ],
     color: 'emerald',
     stats: [
@@ -902,20 +899,20 @@ export const HIF_GALLERY: GalleryItem[] = [
   },
   {
     id: 'gal-58',
-    title: 'Ashiyana House Construction 2013',
+    title: 'Ashiyana Before - Weathered House Visit',
     category: 'Housing',
     imageUrl: '/images/gallery/ashiyana-house-construction-2013.jpg',
     location: 'Karnataka',
-    description: 'Early Project Ashiyana home construction work providing shelter for a destitute family.',
+    description: 'HIF team members inspect a stained, unfinished dwelling identified for Project Ashiyana support.',
     year: '2013'
   },
   {
     id: 'gal-59',
-    title: 'Ashiyana Home Handover 2016',
+    title: 'Ashiyana Before - Laterite Shack Visit',
     category: 'Housing',
     imageUrl: '/images/gallery/ashiyana-home-handover-2016.jpg',
     location: 'Karnataka',
-    description: 'Handover of a completed Ashiyana home to a beneficiary family with HIF volunteers and community members.',
+    description: 'HIF volunteers walk toward a laterite brick shack with clothes hung to dry, documented before Ashiyana construction.',
     year: '2016'
   },
   {
@@ -1322,6 +1319,51 @@ export const HIF_GALLERY: GalleryItem[] = [
     location: 'Karnataka',
     description: 'A completed Ashiyana house with a covered porch, tiled floor, and plastered walls.',
     year: '2024'
+  },
+  {
+    id: 'gal-115',
+    title: 'Ashiyana Before - Laterite Tarp Shack',
+    category: 'Housing',
+    imageUrl: '/images/gallery/ashiyana-before-laterite-tarp-shack.jpg',
+    location: 'Karnataka',
+    description: 'A laterite-brick shack with a blue tarpaulin roof and plastic-covered window, documented before Ashiyana construction.',
+    year: '2016'
+  },
+  {
+    id: 'gal-116',
+    title: 'Ashiyana Before - Old Tiled Cottage',
+    category: 'Housing',
+    imageUrl: '/images/gallery/ashiyana-before-old-tiled-cottage.jpg',
+    location: 'Karnataka',
+    description: 'An ageing tiled cottage with laundry on the verandah, surveyed for Project Ashiyana support.',
+    year: '2016'
+  },
+  {
+    id: 'gal-117',
+    title: 'Ashiyana Before - Makeshift Tarp Camp',
+    category: 'Housing',
+    imageUrl: '/images/projects/ashiyana9.jpg',
+    location: 'Karnataka',
+    description: 'A shelter pieced together from tarpaulin, sacks, and scrap boards, the kind of dwelling Project Ashiyana replaces.',
+    year: '2016'
+  },
+  {
+    id: 'gal-118',
+    title: 'Ashiyana After - Cream Home with Stairs',
+    category: 'Housing',
+    imageUrl: '/images/gallery/ashiyana-after-cream-home-stairs.jpg',
+    location: 'Karnataka',
+    description: 'A completed Ashiyana pucca home with a covered porch, terrace stairs, and plastered walls.',
+    year: '2024'
+  },
+  {
+    id: 'gal-119',
+    title: 'Ashiyana After - White and Blue Home',
+    category: 'Housing',
+    imageUrl: '/images/projects/ashiyana3.jpg',
+    location: 'Karnataka',
+    description: 'A finished Ashiyana home with white and blue banding, timber windows, and a brick-accent porch.',
+    year: '2025'
   },
   {
     id: 'gal-61',
