@@ -6,13 +6,13 @@ import { HIF_REELS } from '../../data/hifReels'
 import { HIF_ORGANIZATION } from '../../data/hifData'
 import { useLanguage } from '../../context/LanguageContext'
 import { localizeReel } from '../../lib/localizeContent'
+import { useAutoplayOnView } from '../../hooks/useAutoplayOnView'
 import { Reveal } from '../common/Reveal'
 
 /**
  * Homepage "reels" showcase: a phone-mockup carousel of self-hosted vertical
  * clips (see src/data/hifReels.ts — drop the .mp4 files into public/videos/reels/).
- * Each clip autoplays muted and, once it ends, advances to the next one; it can
- * also be switched manually via the arrows/dots at any time.
+ * Plays muted when the section scrolls into view; advances on end or via controls.
  */
 export const ReelsShowcase: React.FC = () => {
   const { t, language } = useLanguage()
@@ -21,6 +21,7 @@ export const ReelsShowcase: React.FC = () => {
 
   const reels = HIF_REELS.map((r) => localizeReel(r, language))
   const active = reels[activeIndex]
+  const { sectionRef, videoRef, isInView } = useAutoplayOnView(active?.id ?? '')
 
   const goTo = useCallback(
     (index: number) => {
@@ -32,7 +33,7 @@ export const ReelsShowcase: React.FC = () => {
   if (reels.length === 0) return null
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt overflow-hidden">
+    <section ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-alt overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <Reveal>
           <span className="badge">{t('reels.eyebrow', 'Our Reels')}</span>
@@ -110,10 +111,10 @@ export const ReelsShowcase: React.FC = () => {
               <AnimatePresence>
                 <motion.video
                   key={active.id}
+                  ref={videoRef}
                   src={active.videoUrl}
                   poster={active.posterUrl}
-                  preload="auto"
-                  autoPlay
+                  preload={isInView ? 'auto' : 'metadata'}
                   muted={isMuted}
                   playsInline
                   onEnded={() => goTo(activeIndex + 1)}
@@ -127,7 +128,13 @@ export const ReelsShowcase: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => setIsMuted((m) => !m)}
+                onClick={() => {
+                  setIsMuted((m) => {
+                    const next = !m
+                    if (videoRef.current) videoRef.current.muted = next
+                    return next
+                  })
+                }}
                 aria-label={isMuted ? t('reels.unmute', 'Unmute') : t('reels.mute', 'Mute')}
                 className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-black/50 backdrop-blur flex items-center justify-center text-white hover:bg-black/70 transition-colors"
               >

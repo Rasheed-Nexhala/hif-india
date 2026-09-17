@@ -4,12 +4,13 @@ import { ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react'
 import { HIF_FEATURE_VIDEOS } from '../../data/hifFeatureVideos'
 import { useLanguage } from '../../context/LanguageContext'
 import { localizeFeatureVideo } from '../../lib/localizeContent'
+import { useAutoplayOnView } from '../../hooks/useAutoplayOnView'
 import { Reveal } from '../common/Reveal'
 
 /**
  * Homepage landscape feature-video showcase: a wide 16:9 player with a simple
  * two-clip switcher (see src/data/hifFeatureVideos.ts — drop .mp4 files into
- * public/videos/features/). Each clip autoplays muted and advances on end.
+ * public/videos/features/). Plays muted when the section scrolls into view.
  */
 export const FeatureVideoShowcase: React.FC = () => {
   const { t, language } = useLanguage()
@@ -18,6 +19,7 @@ export const FeatureVideoShowcase: React.FC = () => {
 
   const videos = HIF_FEATURE_VIDEOS.map((v) => localizeFeatureVideo(v, language))
   const active = videos[activeIndex]
+  const { sectionRef, videoRef, isInView } = useAutoplayOnView(active?.id ?? '')
 
   const goTo = useCallback(
     (index: number) => {
@@ -29,7 +31,7 @@ export const FeatureVideoShowcase: React.FC = () => {
   if (videos.length === 0) return null
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center max-w-2xl mx-auto mb-10">
           <span className="badge">{t('featureVideos.eyebrow', 'On the ground')}</span>
@@ -49,10 +51,10 @@ export const FeatureVideoShowcase: React.FC = () => {
             <AnimatePresence mode="wait">
               <motion.video
                 key={active.id}
+                ref={videoRef}
                 src={active.videoUrl}
                 poster={active.posterUrl}
-                preload="metadata"
-                autoPlay
+                preload={isInView ? 'auto' : 'metadata'}
                 muted={isMuted}
                 playsInline
                 onEnded={() => goTo(activeIndex + 1)}
@@ -66,7 +68,13 @@ export const FeatureVideoShowcase: React.FC = () => {
 
             <button
               type="button"
-              onClick={() => setIsMuted((m) => !m)}
+              onClick={() => {
+                setIsMuted((m) => {
+                  const next = !m
+                  if (videoRef.current) videoRef.current.muted = next
+                  return next
+                })
+              }}
               aria-label={
                 isMuted
                   ? t('featureVideos.unmute', 'Unmute')
