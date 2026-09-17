@@ -234,10 +234,10 @@ export const HIF_PROJECTS: ProjectData[] = [
     badge: 'Shelter for Underprivileged',
     category: 'Orphanage',
     icon: 'HeartHandshake',
-    image: '/images/gallery/chittor-now-masjid-a-suffa.jpg',
+    image: '/images/gallery/chittor-now-school-campus.jpg',
     images: [
-      '/images/gallery/chittor-now-masjid-a-suffa.jpg',
       '/images/gallery/chittor-now-school-campus.jpg',
+      '/images/gallery/chittor-now-masjid-a-suffa.jpg',
       '/images/gallery/chittor-before-old-building.jpg',
       '/images/gallery/chittor-before-living-conditions.jpg',
       '/images/gallery/chittor-before-facilities.jpg',
