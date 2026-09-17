@@ -58,6 +58,7 @@ export const HomePage: React.FC = () => {
                   src={photo}
                   alt={t('about.teamPhotoAlt', 'HIF India team and community')}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </button>
@@ -193,6 +194,7 @@ export const HomePage: React.FC = () => {
                   src={g.imageUrl}
                   alt={g.title}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </button>

@@ -13,7 +13,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ eyebrow, title, descript
     <section className="relative page-header overflow-hidden">
       {image && (
         <div className="absolute inset-0">
-          <img src={image} alt="" className="w-full h-full object-cover opacity-30" loading="eager" />
+          <img src={image} alt="" className="w-full h-full object-cover opacity-30" loading="eager" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-dark)]/88 via-[var(--color-bg-dark)]/90 to-[var(--color-bg-dark)]" />
         </div>
       )}

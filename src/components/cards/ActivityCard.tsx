@@ -48,6 +48,7 @@ export const ActivityCard: React.FC<{ activity: ActivityData; index?: number }> 
               src={activity.image}
               alt={localized.title}
               loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <span className={`absolute top-3 left-3 z-10 badge badge-on-photo ${activity.color === 'amber' ? 'badge-amber' : ''}`}>
