@@ -38,7 +38,7 @@ export function localizeProject(project: ProjectData, t: TFn, language: Language
     badge: t(`${prefix}.badge`, project.badge),
     overview: t(`${prefix}.overview`, project.overview),
     stats: project.stats.map((s, i) => ({
-      value: s.value,
+      value: tx(language, `${key}.stat${i + 1}Value`, s.value),
       label: tx(language, `${key}.stat${i + 1}`, s.label)
     })),
     fullStory: project.fullStory.map((para, i) => tx(language, `${key}.story${i + 1}`, para)),
@@ -65,7 +65,7 @@ export function localizeActivity(activity: ActivityData, t: TFn, language: Langu
     badge: t(`${prefix}.badge`, activity.badge),
     overview: t(`${prefix}.overview`, activity.overview),
     stats: activity.stats.map((s, i) => ({
-      value: s.value,
+      value: tx(language, `${key}.stat${i + 1}Value`, s.value),
       label: tx(language, `${key}.stat${i + 1}`, s.label)
     })),
     fullStory: activity.fullStory.map((para, i) => tx(language, `${key}.story${i + 1}`, para)),
@@ -139,6 +139,7 @@ export function localizeImpact(amount: number, language: Language) {
     recommendedProgram: tx(language, `impact.${band}.program`, raw.recommendedProgram),
     tangibles: raw.tangibles.map((item, i) => ({
       ...item,
+      count: tx(language, `impact.${band}.t${i + 1}Count`, item.count),
       label: tx(language, `impact.${band}.t${i + 1}`, item.label)
     }))
   }
