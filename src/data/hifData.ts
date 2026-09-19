@@ -235,18 +235,21 @@ export const HIF_PROJECTS: ProjectData[] = [
     category: 'Orphanage',
     icon: 'HeartHandshake',
     image: '/images/gallery/chittor-now-school-campus.jpg',
-    images: [
-      '/images/gallery/chittor-now-school-campus.jpg',
-      '/images/gallery/chittor-now-masjid-a-suffa.jpg',
+    images: ['/images/gallery/chittor-now-school-campus.jpg'],
+    beforeImages: [
       '/images/gallery/chittor-before-old-building.jpg',
       '/images/gallery/chittor-before-living-conditions.jpg',
       '/images/gallery/chittor-before-facilities.jpg',
       '/images/gallery/chittor-before-site-planning.jpg',
-      '/images/projects/chitttor.jpg',
       '/images/projects/chittor2.jpg',
       '/images/projects/chittor3.jpg',
       '/images/projects/chittor4.jpg',
       '/images/projects/chittor5.jpg'
+    ],
+    afterImages: [
+      '/images/gallery/chittor-now-masjid-a-suffa.jpg',
+      '/images/gallery/chittor-now-school-campus.jpg',
+      '/images/projects/chitttor.jpg'
     ],
     color: 'amber',
     stats: [
